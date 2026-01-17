@@ -4,12 +4,29 @@
   "description": "A courtroom for \"works on my machine\" bugs: compare two setups and put the likely cause on trial.",
   "type": "module",
   "license": "MIT",
-  "bin": { "womm": "dist/cli.js" },
-  "files": ["dist", "rules"],
-  "engines": { "node": ">=20" },
+  "bin": {
+    "womm": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "rules"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build": "tsup",
     "test": "vitest run",
     "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsup": "^9.0.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "picocolors": "^1.1.1",
+    "yaml": "^2.9.1"
   }
 }
