@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { runCommand } from "../src/detectors/run.js";
+import { runCommand, windowsShimCall } from "../src/detectors/run.js";
 
 describe("runCommand", () => {
   it("returns trimmed stdout", async () => {
@@ -28,4 +28,21 @@ describe("runCommand", () => {
     ]);
     expect(out).toBe("$(echo hacked)");
   });
+});
+
+describe("windowsShimCall", () => {
+  it("builds a cmd.exe call for plain words", () => {
+    expect(windowsShimCall("npm", ["--version"])).toEqual([
+      "cmd.exe",
+      ["/d", "/s", "/c", "npm --version"],
+    ]);
+  });
+
+  it.each(["&", "|", "%PATH%", "a b", '"', "^", ">", "<"])(
+    "refuses unsafe word %s",
+    (word) => {
+      expect(windowsShimCall("npm", [word])).toBeNull();
+      expect(windowsShimCall(word, [])).toBeNull();
+    },
+  );
 });
