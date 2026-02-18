@@ -1,11 +1,11 @@
-import { execFileSync, spawnSync } from "node:child_process";
+import { spawnSync } from "node:child_process";
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 const dir = mkdtempSync(join(tmpdir(), "womm-"));
-const cli = join(dir, "cli.mjs");
+const cli = resolve("dist/cli.js");
 const womm = (...args: string[]) =>
   spawnSync(process.execPath, [cli, ...args], { encoding: "utf8", cwd: dir });
 const snapshot = (node: string) =>
@@ -16,23 +16,9 @@ const snapshot = (node: string) =>
   });
 
 beforeAll(() => {
-  execFileSync(
-    process.execPath,
-    [
-      "node_modules/tsup/dist/cli-default.js",
-      "src/cli.ts",
-      "--format",
-      "esm",
-      "--out-dir",
-      dir,
-      "--no-config",
-      "--out-extension.js=.mjs",
-    ],
-    { stdio: "ignore" },
-  );
   writeFileSync(join(dir, "a.json"), snapshot("18.0.0"));
   writeFileSync(join(dir, "b.json"), snapshot("22.0.0"));
-}, 60000);
+});
 
 afterAll(() => rmSync(dir, { recursive: true, force: true }));
 
