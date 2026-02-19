@@ -9,6 +9,7 @@ const samples: [string, string, string][] = [
   ["git", "git version 2.52.0.windows.1", "2.52.0"],
   ["python", "Python 3.12.1", "3.12.1"],
   ["pip", "pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)", "24.0"],
+  ["poetry", "Poetry (version 1.8.4)", "1.8.4"],
   // New samples go above this line.
 ];
 
