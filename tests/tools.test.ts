@@ -10,6 +10,7 @@ const samples: [string, string, string][] = [
   ["python", "Python 3.12.1", "3.12.1"],
   ["pip", "pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)", "24.0"],
   ["poetry", "Poetry (version 1.8.4)", "1.8.4"],
+  ["uv", "uv 0.4.30", "0.4.30"],
   // New samples go above this line.
 ];
 

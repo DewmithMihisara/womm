@@ -20,6 +20,7 @@ export const tools: ToolSpec[] = [
   { id: "python", label: "Python", command: "python3", fallback: "python" },
   { id: "pip", label: "pip", command: "pip3", fallback: "pip" },
   { id: "poetry", label: "Poetry", command: "poetry" },
+  { id: "uv", label: "uv", command: "uv" },
   // New tools go above this line.
 ];
 
