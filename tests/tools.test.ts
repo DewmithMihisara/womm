@@ -7,6 +7,7 @@ const samples: [string, string, string][] = [
   ["node", "v22.11.0", "22.11.0"],
   ["npm", "10.9.0", "10.9.0"],
   ["git", "git version 2.52.0.windows.1", "2.52.0"],
+  ["python", "Python 3.12.1", "3.12.1"],
   // New samples go above this line.
 ];
 
