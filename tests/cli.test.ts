@@ -42,7 +42,7 @@ describe("womm CLI", () => {
   it("rejects an unknown option cleanly", () => {
     const result = womm("--dance");
     expect(result.status).toBe(2);
-    expect(result.stderr).not.toContain("at ");
+    expect(result.stderr).not.toMatch(/\n\s+at /);
   });
 
   it("prints valid JSON to stdout from snapshot", () => {
