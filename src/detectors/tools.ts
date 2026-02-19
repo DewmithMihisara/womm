@@ -18,6 +18,7 @@ export const tools: ToolSpec[] = [
   { id: "npm", label: "npm", command: "npm" },
   { id: "git", label: "Git", command: "git" },
   { id: "python", label: "Python", command: "python3", fallback: "python" },
+  { id: "pip", label: "pip", command: "pip3", fallback: "pip" },
   // New tools go above this line.
 ];
 
