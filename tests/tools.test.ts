@@ -16,6 +16,7 @@ const samples: [string, string, string][] = [
   ["gradle", "\n------\nGradle 8.10.2\n------", "8.10.2"],
   ["go", "go version go1.22.3 linux/amd64", "1.22.3"],
   ["rust", "rustc 1.82.0 (f6e511eec 2024-10-15)", "1.82.0"],
+  ["cargo", "cargo 1.82.0 (8f40fc59f 2024-08-21)", "1.82.0"],
   // New samples go above this line.
 ];
 

@@ -26,6 +26,7 @@ export const tools: ToolSpec[] = [
   { id: "gradle", label: "Gradle", command: "gradle" },
   { id: "go", label: "Go", command: "go", args: ["version"] },
   { id: "rust", label: "Rust", command: "rustc" },
+  { id: "cargo", label: "Cargo", command: "cargo" },
   // New tools go above this line.
 ];
 
