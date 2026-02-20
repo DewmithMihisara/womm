@@ -24,6 +24,7 @@ export const tools: ToolSpec[] = [
   { id: "java", label: "Java", command: "java", args: ["-version"] },
   { id: "maven", label: "Maven", command: "mvn" },
   { id: "gradle", label: "Gradle", command: "gradle" },
+  { id: "go", label: "Go", command: "go", args: ["version"] },
   // New tools go above this line.
 ];
 
