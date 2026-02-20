@@ -13,6 +13,7 @@ const samples: [string, string, string][] = [
   ["uv", "uv 0.4.30", "0.4.30"],
   ["java", "openjdk version \"21.0.2\" 2024-01-16", "21.0.2"],
   ["maven", "Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)", "3.9.9"],
+  ["gradle", "\n------\nGradle 8.10.2\n------", "8.10.2"],
   // New samples go above this line.
 ];
 
