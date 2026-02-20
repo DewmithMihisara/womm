@@ -22,6 +22,7 @@ export const tools: ToolSpec[] = [
   { id: "poetry", label: "Poetry", command: "poetry" },
   { id: "uv", label: "uv", command: "uv" },
   { id: "java", label: "Java", command: "java", args: ["-version"] },
+  { id: "maven", label: "Maven", command: "mvn" },
   // New tools go above this line.
 ];
 
