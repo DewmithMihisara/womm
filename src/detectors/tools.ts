@@ -27,6 +27,7 @@ export const tools: ToolSpec[] = [
   { id: "go", label: "Go", command: "go", args: ["version"] },
   { id: "rust", label: "Rust", command: "rustc" },
   { id: "cargo", label: "Cargo", command: "cargo" },
+  { id: "docker", label: "Docker", command: "docker" },
   // New tools go above this line.
 ];
 
