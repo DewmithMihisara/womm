@@ -29,6 +29,7 @@ export const tools: ToolSpec[] = [
   { id: "cargo", label: "Cargo", command: "cargo" },
   { id: "docker", label: "Docker", command: "docker" },
   { id: "docker.compose", label: "Docker Compose", command: "docker", args: ["compose","version"] },
+  { id: "kubectl", label: "kubectl", command: "kubectl", args: ["version","--client"] },
   // New tools go above this line.
 ];
 
