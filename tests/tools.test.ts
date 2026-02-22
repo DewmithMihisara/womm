@@ -20,6 +20,7 @@ const samples: [string, string, string][] = [
   ["docker", "Docker version 27.3.1, build ce12230", "27.3.1"],
   ["docker.compose", "Docker Compose version v2.29.7", "2.29.7"],
   ["kubectl", "Client Version: v1.31.2", "1.31.2"],
+  ["helm", "v3.16.2+g13654a5", "3.16.2+g13654a5"],
   // New samples go above this line.
 ];
 
