@@ -18,6 +18,7 @@ const samples: [string, string, string][] = [
   ["rust", "rustc 1.82.0 (f6e511eec 2024-10-15)", "1.82.0"],
   ["cargo", "cargo 1.82.0 (8f40fc59f 2024-08-21)", "1.82.0"],
   ["docker", "Docker version 27.3.1, build ce12230", "27.3.1"],
+  ["docker.compose", "Docker Compose version v2.29.7", "2.29.7"],
   // New samples go above this line.
 ];
 

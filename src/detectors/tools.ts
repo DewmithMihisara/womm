@@ -28,6 +28,7 @@ export const tools: ToolSpec[] = [
   { id: "rust", label: "Rust", command: "rustc" },
   { id: "cargo", label: "Cargo", command: "cargo" },
   { id: "docker", label: "Docker", command: "docker" },
+  { id: "docker.compose", label: "Docker Compose", command: "docker", args: ["compose","version"] },
   // New tools go above this line.
 ];
 
