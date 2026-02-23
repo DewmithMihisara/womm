@@ -26,6 +26,7 @@ const samples: [string, string, string][] = [
   ["curl", "curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0", "8.5.0"],
   ["gcc", "13.2.0", "13.2.0"],
   ["clang", "Apple clang version 15.0.0 (clang-1500.3.9.4)", "15.0.0"],
+  ["make", "GNU Make 4.3", "4.3"],
   // New samples go above this line.
 ];
 
