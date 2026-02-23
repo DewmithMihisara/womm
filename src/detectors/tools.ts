@@ -34,6 +34,7 @@ export const tools: ToolSpec[] = [
   { id: "terraform", label: "Terraform", command: "terraform", args: ["version"] },
   { id: "openssl", label: "OpenSSL", command: "openssl", args: ["version"] },
   { id: "curl", label: "curl", command: "curl" },
+  { id: "gcc", label: "GCC", command: "gcc", args: ["-dumpfullversion"] },
   // New tools go above this line.
 ];
 
