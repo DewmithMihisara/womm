@@ -32,6 +32,7 @@ const samples: [string, string, string][] = [
   ["zsh", "zsh 5.9 (x86_64-apple-darwin23.0)", "5.9"],
   ["pwsh", "PowerShell 7.4.6", "7.4.6"],
   ["yarn", "1.22.22", "1.22.22"],
+  ["pnpm", "9.12.3", "9.12.3"],
   // New samples go above this line.
 ];
 
