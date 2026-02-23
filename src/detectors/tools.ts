@@ -40,6 +40,7 @@ export const tools: ToolSpec[] = [
   { id: "cmake", label: "CMake", command: "cmake" },
   { id: "bash", label: "Bash", command: "bash" },
   { id: "zsh", label: "Zsh", command: "zsh" },
+  { id: "pwsh", label: "PowerShell", command: "pwsh" },
   // New tools go above this line.
 ];
 

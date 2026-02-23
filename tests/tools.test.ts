@@ -30,6 +30,7 @@ const samples: [string, string, string][] = [
   ["cmake", "cmake version 3.28.3", "3.28.3"],
   ["bash", "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)", "5.2.21"],
   ["zsh", "zsh 5.9 (x86_64-apple-darwin23.0)", "5.9"],
+  ["pwsh", "PowerShell 7.4.6", "7.4.6"],
   // New samples go above this line.
 ];
 
