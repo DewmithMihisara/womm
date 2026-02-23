@@ -33,6 +33,7 @@ const samples: [string, string, string][] = [
   ["pwsh", "PowerShell 7.4.6", "7.4.6"],
   ["yarn", "1.22.22", "1.22.22"],
   ["pnpm", "9.12.3", "9.12.3"],
+  ["bun", "1.1.34", "1.1.34"],
   // New samples go above this line.
 ];
 
