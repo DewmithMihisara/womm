@@ -27,6 +27,7 @@ const samples: [string, string, string][] = [
   ["gcc", "13.2.0", "13.2.0"],
   ["clang", "Apple clang version 15.0.0 (clang-1500.3.9.4)", "15.0.0"],
   ["make", "GNU Make 4.3", "4.3"],
+  ["cmake", "cmake version 3.28.3", "3.28.3"],
   // New samples go above this line.
 ];
 

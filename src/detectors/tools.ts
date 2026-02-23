@@ -37,6 +37,7 @@ export const tools: ToolSpec[] = [
   { id: "gcc", label: "GCC", command: "gcc", args: ["-dumpfullversion"] },
   { id: "clang", label: "Clang", command: "clang" },
   { id: "make", label: "Make", command: "make" },
+  { id: "cmake", label: "CMake", command: "cmake" },
   // New tools go above this line.
 ];
 
