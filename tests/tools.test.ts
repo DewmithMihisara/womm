@@ -23,6 +23,7 @@ const samples: [string, string, string][] = [
   ["helm", "v3.16.2+g13654a5", "3.16.2+g13654a5"],
   ["terraform", "Terraform v1.9.8", "1.9.8"],
   ["openssl", "OpenSSL 3.4.0 22 Oct 2024", "3.4.0"],
+  ["curl", "curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0", "8.5.0"],
   // New samples go above this line.
 ];
 
