@@ -38,6 +38,7 @@ export const tools: ToolSpec[] = [
   { id: "clang", label: "Clang", command: "clang" },
   { id: "make", label: "Make", command: "make" },
   { id: "cmake", label: "CMake", command: "cmake" },
+  { id: "bash", label: "Bash", command: "bash" },
   // New tools go above this line.
 ];
 
