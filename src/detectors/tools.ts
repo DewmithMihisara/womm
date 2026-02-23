@@ -35,6 +35,7 @@ export const tools: ToolSpec[] = [
   { id: "openssl", label: "OpenSSL", command: "openssl", args: ["version"] },
   { id: "curl", label: "curl", command: "curl" },
   { id: "gcc", label: "GCC", command: "gcc", args: ["-dumpfullversion"] },
+  { id: "clang", label: "Clang", command: "clang" },
   // New tools go above this line.
 ];
 

@@ -25,6 +25,7 @@ const samples: [string, string, string][] = [
   ["openssl", "OpenSSL 3.4.0 22 Oct 2024", "3.4.0"],
   ["curl", "curl 8.5.0 (x86_64-pc-linux-gnu) libcurl/8.5.0", "8.5.0"],
   ["gcc", "13.2.0", "13.2.0"],
+  ["clang", "Apple clang version 15.0.0 (clang-1500.3.9.4)", "15.0.0"],
   // New samples go above this line.
 ];
 
