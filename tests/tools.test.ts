@@ -34,6 +34,7 @@ const samples: [string, string, string][] = [
   ["yarn", "1.22.22", "1.22.22"],
   ["pnpm", "9.12.3", "9.12.3"],
   ["bun", "1.1.34", "1.1.34"],
+  ["deno", "deno 2.0.6 (stable, release, x86_64-pc-windows-msvc)", "2.0.6"],
   // New samples go above this line.
 ];
 
