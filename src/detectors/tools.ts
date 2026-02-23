@@ -32,6 +32,7 @@ export const tools: ToolSpec[] = [
   { id: "kubectl", label: "kubectl", command: "kubectl", args: ["version","--client"] },
   { id: "helm", label: "Helm", command: "helm", args: ["version","--short"] },
   { id: "terraform", label: "Terraform", command: "terraform", args: ["version"] },
+  { id: "openssl", label: "OpenSSL", command: "openssl", args: ["version"] },
   // New tools go above this line.
 ];
 

@@ -22,6 +22,7 @@ const samples: [string, string, string][] = [
   ["kubectl", "Client Version: v1.31.2", "1.31.2"],
   ["helm", "v3.16.2+g13654a5", "3.16.2+g13654a5"],
   ["terraform", "Terraform v1.9.8", "1.9.8"],
+  ["openssl", "OpenSSL 3.4.0 22 Oct 2024", "3.4.0"],
   // New samples go above this line.
 ];
 
