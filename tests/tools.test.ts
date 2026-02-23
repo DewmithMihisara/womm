@@ -31,6 +31,7 @@ const samples: [string, string, string][] = [
   ["bash", "GNU bash, version 5.2.21(1)-release (x86_64-pc-linux-gnu)", "5.2.21"],
   ["zsh", "zsh 5.9 (x86_64-apple-darwin23.0)", "5.9"],
   ["pwsh", "PowerShell 7.4.6", "7.4.6"],
+  ["yarn", "1.22.22", "1.22.22"],
   // New samples go above this line.
 ];
 

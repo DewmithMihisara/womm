@@ -41,6 +41,7 @@ export const tools: ToolSpec[] = [
   { id: "bash", label: "Bash", command: "bash" },
   { id: "zsh", label: "Zsh", command: "zsh" },
   { id: "pwsh", label: "PowerShell", command: "pwsh" },
+  { id: "yarn", label: "Yarn", command: "yarn" },
   // New tools go above this line.
 ];
 
