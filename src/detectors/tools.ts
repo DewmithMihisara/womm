@@ -45,6 +45,7 @@ export const tools: ToolSpec[] = [
   { id: "pnpm", label: "pnpm", command: "pnpm" },
   { id: "bun", label: "Bun", command: "bun" },
   { id: "deno", label: "Deno", command: "deno" },
+  { id: "node-gyp", label: "node-gyp", command: "node-gyp" },
   // New tools go above this line.
 ];
 
