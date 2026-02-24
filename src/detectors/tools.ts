@@ -46,6 +46,7 @@ export const tools: ToolSpec[] = [
   { id: "bun", label: "Bun", command: "bun" },
   { id: "deno", label: "Deno", command: "deno" },
   { id: "node-gyp", label: "node-gyp", command: "node-gyp" },
+  { id: "ruby", label: "Ruby", command: "ruby" },
   // New tools go above this line.
 ];
 
