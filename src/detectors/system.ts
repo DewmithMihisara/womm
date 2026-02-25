@@ -26,6 +26,13 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
       { id: "timezone", label: "Timezone", value: facts.timeZone ?? null },
     ],
     async () => [{ id: "locale", label: "Locale", value: facts.locale ?? null }],
+    async () => [
+      {
+        id: "eol",
+        label: "Default line ending",
+        value: facts.eol === "\r\n" ? "CRLF" : "LF",
+      },
+    ],
     // New system detectors go above this line.
   ];
 }

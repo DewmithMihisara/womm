@@ -28,6 +28,13 @@ describe("system detectors", () => {
     expect(found.get("locale")).toBe("de-DE");
   });
 
+  it.each([
+    ["\r\n", "CRLF"],
+    ["\n", "LF"],
+  ])("reports line ending %j as %s", async (eol, expected) => {
+    expect((await detect({ eol })).get("eol")).toBe(expected);
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });
