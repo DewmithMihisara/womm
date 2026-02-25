@@ -39,6 +39,7 @@ const samples: [string, string, string][] = [
   ["ruby", "ruby 3.3.5 (2024-09-03 revision ef084cc8f4) +YJIT [x86_64-linux]", "3.3.5"],
   ["php", "PHP 8.3.6 (cli) (built: Apr 15 2024 19:21:47) (NTS)", "8.3.6"],
   ["composer", "Composer version 2.7.1 2024-02-09 15:26:28", "2.7.1"],
+  ["dotnet", "8.0.404", "8.0.404"],
   // New samples go above this line.
 ];
 
