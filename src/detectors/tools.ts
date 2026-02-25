@@ -48,6 +48,7 @@ export const tools: ToolSpec[] = [
   { id: "node-gyp", label: "node-gyp", command: "node-gyp" },
   { id: "ruby", label: "Ruby", command: "ruby" },
   { id: "php", label: "PHP", command: "php" },
+  { id: "composer", label: "Composer", command: "composer" },
   // New tools go above this line.
 ];
 
