@@ -57,6 +57,7 @@ export const tools: ToolSpec[] = [
   { id: "sqlite", label: "SQLite", command: "sqlite3" },
   { id: "redis", label: "Redis client", command: "redis-cli" },
   { id: "aws", label: "AWS CLI", command: "aws" },
+  { id: "ffmpeg", label: "FFmpeg", command: "ffmpeg", args: ["-version"] },
   // New tools go above this line.
 ];
 
