@@ -25,6 +25,7 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
     async () => [
       { id: "timezone", label: "Timezone", value: facts.timeZone ?? null },
     ],
+    async () => [{ id: "locale", label: "Locale", value: facts.locale ?? null }],
     // New system detectors go above this line.
   ];
 }

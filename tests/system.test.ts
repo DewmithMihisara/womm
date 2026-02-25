@@ -23,6 +23,11 @@ describe("system detectors", () => {
     expect(found.get("timezone")).toBe("Asia/Colombo");
   });
 
+  it("reports the locale", async () => {
+    const found = await detect({ locale: "de-DE" });
+    expect(found.get("locale")).toBe("de-DE");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });
