@@ -50,6 +50,7 @@ export const tools: ToolSpec[] = [
   { id: "php", label: "PHP", command: "php" },
   { id: "composer", label: "Composer", command: "composer" },
   { id: "dotnet", label: ".NET SDK", command: "dotnet" },
+  { id: "perl", label: "Perl", command: "perl" },
   // New tools go above this line.
 ];
 
