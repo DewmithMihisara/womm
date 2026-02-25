@@ -1,7 +1,8 @@
 import { execFile } from "node:child_process";
 import type { CommandRunner } from "./types.js";
 
-const TIMEOUT_MS = 5000;
+// JVM tools such as Gradle can take several seconds just to print a version.
+const TIMEOUT_MS = 15000;
 
 /** Only plain words may reach the Windows command interpreter. */
 const SAFE_WORD = /^[\w.\-=/]+$/;
