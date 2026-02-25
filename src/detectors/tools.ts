@@ -54,6 +54,7 @@ export const tools: ToolSpec[] = [
   { id: "swift", label: "Swift", command: "swift" },
   { id: "lua", label: "Lua", command: "lua", args: ["-v"] },
   { id: "psql", label: "PostgreSQL client", command: "psql" },
+  { id: "sqlite", label: "SQLite", command: "sqlite3" },
   // New tools go above this line.
 ];
 

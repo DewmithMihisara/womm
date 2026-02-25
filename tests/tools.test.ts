@@ -44,6 +44,7 @@ const samples: [string, string, string][] = [
   ["swift", "Swift version 5.10 (swift-5.10-RELEASE)", "5.10"],
   ["lua", "Lua 5.4.6  Copyright (C) 1994-2023 Lua.org, PUC-Rio", "5.4.6"],
   ["psql", "psql (PostgreSQL) 16.4", "16.4"],
+  ["sqlite", "3.45.1 2024-01-15 17:01:13 e876e51a0ed5c5b3", "3.45.1"],
   // New samples go above this line.
 ];
 
