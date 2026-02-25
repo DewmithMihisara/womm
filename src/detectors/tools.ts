@@ -47,6 +47,7 @@ export const tools: ToolSpec[] = [
   { id: "deno", label: "Deno", command: "deno" },
   { id: "node-gyp", label: "node-gyp", command: "node-gyp" },
   { id: "ruby", label: "Ruby", command: "ruby" },
+  { id: "php", label: "PHP", command: "php" },
   // New tools go above this line.
 ];
 
