@@ -53,6 +53,7 @@ export const tools: ToolSpec[] = [
   { id: "perl", label: "Perl", command: "perl" },
   { id: "swift", label: "Swift", command: "swift" },
   { id: "lua", label: "Lua", command: "lua", args: ["-v"] },
+  { id: "psql", label: "PostgreSQL client", command: "psql" },
   // New tools go above this line.
 ];
 
