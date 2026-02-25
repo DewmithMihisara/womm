@@ -52,6 +52,7 @@ export const tools: ToolSpec[] = [
   { id: "dotnet", label: ".NET SDK", command: "dotnet" },
   { id: "perl", label: "Perl", command: "perl" },
   { id: "swift", label: "Swift", command: "swift" },
+  { id: "lua", label: "Lua", command: "lua", args: ["-v"] },
   // New tools go above this line.
 ];
 

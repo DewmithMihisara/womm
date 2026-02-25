@@ -42,6 +42,7 @@ const samples: [string, string, string][] = [
   ["dotnet", "8.0.404", "8.0.404"],
   ["perl", "This is perl 5, version 38, subversion 2 (v5.38.2) built for x86_64-linux", "5.38.2"],
   ["swift", "Swift version 5.10 (swift-5.10-RELEASE)", "5.10"],
+  ["lua", "Lua 5.4.6  Copyright (C) 1994-2023 Lua.org, PUC-Rio", "5.4.6"],
   // New samples go above this line.
 ];
 
