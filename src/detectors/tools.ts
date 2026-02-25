@@ -55,6 +55,7 @@ export const tools: ToolSpec[] = [
   { id: "lua", label: "Lua", command: "lua", args: ["-v"] },
   { id: "psql", label: "PostgreSQL client", command: "psql" },
   { id: "sqlite", label: "SQLite", command: "sqlite3" },
+  { id: "redis", label: "Redis client", command: "redis-cli" },
   // New tools go above this line.
 ];
 
