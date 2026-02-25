@@ -56,6 +56,7 @@ export const tools: ToolSpec[] = [
   { id: "psql", label: "PostgreSQL client", command: "psql" },
   { id: "sqlite", label: "SQLite", command: "sqlite3" },
   { id: "redis", label: "Redis client", command: "redis-cli" },
+  { id: "aws", label: "AWS CLI", command: "aws" },
   // New tools go above this line.
 ];
 

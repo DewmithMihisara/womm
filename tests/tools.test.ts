@@ -46,6 +46,7 @@ const samples: [string, string, string][] = [
   ["psql", "psql (PostgreSQL) 16.4", "16.4"],
   ["sqlite", "3.45.1 2024-01-15 17:01:13 e876e51a0ed5c5b3", "3.45.1"],
   ["redis", "redis-cli 7.2.4", "7.2.4"],
+  ["aws", "aws-cli/2.18.0 Python/3.12.6 Linux/6.8.0 exe/x86_64", "2.18.0"],
   // New samples go above this line.
 ];
 
