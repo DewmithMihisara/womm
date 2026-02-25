@@ -41,6 +41,7 @@ const samples: [string, string, string][] = [
   ["composer", "Composer version 2.7.1 2024-02-09 15:26:28", "2.7.1"],
   ["dotnet", "8.0.404", "8.0.404"],
   ["perl", "This is perl 5, version 38, subversion 2 (v5.38.2) built for x86_64-linux", "5.38.2"],
+  ["swift", "Swift version 5.10 (swift-5.10-RELEASE)", "5.10"],
   // New samples go above this line.
 ];
 
