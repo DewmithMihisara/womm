@@ -18,6 +18,11 @@ const detect = async (overrides: Partial<SystemFacts> = {}) => {
 };
 
 describe("system detectors", () => {
+  it("reports the timezone", async () => {
+    const found = await detect({ timeZone: "Asia/Colombo" });
+    expect(found.get("timezone")).toBe("Asia/Colombo");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });

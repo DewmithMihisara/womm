@@ -22,6 +22,9 @@ export function realFacts(): SystemFacts {
 /** Detectors reading only from SystemFacts. Add new ones to this list. */
 export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
   return [
+    async () => [
+      { id: "timezone", label: "Timezone", value: facts.timeZone ?? null },
+    ],
     // New system detectors go above this line.
   ];
 }
