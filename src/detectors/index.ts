@@ -1,4 +1,5 @@
 import { osDetector } from "./os.js";
+import { filesystemDetector } from "./filesystem.js";
 import { gitConfigDetector } from "./gitconfig.js";
 import { runtimeDetector } from "./runtime.js";
 import { systemDetectors } from "./system.js";
@@ -10,6 +11,7 @@ export const detectors: Detector[] = [
   osDetector,
   runtimeDetector(),
   gitConfigDetector,
+  filesystemDetector(),
   ...systemDetectors(),
   ...tools.map(toolDetector),
 ];
