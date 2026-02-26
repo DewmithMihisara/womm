@@ -35,6 +35,17 @@ describe("system detectors", () => {
     expect((await detect({ eol })).get("eol")).toBe(expected);
   });
 
+  it("reports the shell without its directory", async () => {
+    const unix = await detect({ env: { SHELL: "/home/sam/bin/zsh" } });
+    expect(unix.get("shell")).toBe("zsh");
+    const win = await detect({ env: { ComSpec: "C:\\Windows\\cmd.exe" } });
+    expect(win.get("shell")).toBe("cmd.exe");
+  });
+
+  it("reports no shell when none is set", async () => {
+    expect((await detect()).get("shell")).toBeNull();
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });

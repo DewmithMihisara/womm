@@ -33,6 +33,12 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
         value: facts.eol === "\r\n" ? "CRLF" : "LF",
       },
     ],
+    async () => {
+      // Only the file name: the full path can reveal the user's directories.
+      const path = facts.env.SHELL ?? facts.env.ComSpec;
+      const name = path?.split(/[\\/]/).pop() ?? null;
+      return [{ id: "shell", label: "Shell", value: name }];
+    },
     // New system detectors go above this line.
   ];
 }
