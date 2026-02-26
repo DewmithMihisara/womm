@@ -16,5 +16,6 @@ export function runtimeDetector(
       label: "Node.js native module ABI",
       value: versions.modules ?? null,
     },
+    { id: "node.v8", label: "Node.js V8", value: versions.v8 ?? null },
   ];
 }

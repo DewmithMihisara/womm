@@ -21,5 +21,8 @@ describe("runtimeDetector", () => {
   it("reports the native module ABI", async () => {
     expect((await findings()).get("node.abi")).toBe("127");
   });
+  it("reports V8", async () => {
+    expect((await findings()).get("node.v8")).toContain("12.4");
+  });
   // New runtime tests go above this line.
 });
