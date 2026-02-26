@@ -3,6 +3,7 @@ import type { Detector } from "./types.js";
 /** Settings read directly from Git. Only an allowlisted set of keys. */
 const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.autocrlf", "Git core.autocrlf", "core.autocrlf"],
+  ["git.eol", "Git core.eol", "core.eol"],
   // New Git settings go above this line.
 ];
 
