@@ -46,6 +46,12 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
       const shown = value === undefined ? null : known.includes(value) ? value : "other";
       return [{ id: "env.NODE_ENV", label: "NODE_ENV", value: shown }];
     },
+    async () => {
+      // Proxy URLs often contain passwords, so only record that one exists.
+      const names = ["HTTP_PROXY", "HTTPS_PROXY", "http_proxy", "https_proxy"];
+      const set = names.some((name) => facts.env[name]);
+      return [{ id: "proxy", label: "Proxy", value: set ? "configured" : null }];
+    },
     // New system detectors go above this line.
   ];
 }

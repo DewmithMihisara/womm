@@ -56,6 +56,13 @@ describe("system detectors", () => {
     expect(found.get("env.NODE_ENV")).toBe("other");
   });
 
+  it("reports a proxy without its address or password", async () => {
+    const url = "http://me:secret@proxy.local:8080";
+    const found = await detect({ env: { HTTPS_PROXY: url } });
+    expect(found.get("proxy")).toBe("configured");
+    expect([...found.values()].join()).not.toContain("secret");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });
