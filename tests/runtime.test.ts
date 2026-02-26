@@ -24,5 +24,8 @@ describe("runtimeDetector", () => {
   it("reports V8", async () => {
     expect((await findings()).get("node.v8")).toContain("12.4");
   });
+  it("reports ICU", async () => {
+    expect((await findings()).get("node.icu")).toBe("75.1");
+  });
   // New runtime tests go above this line.
 });
