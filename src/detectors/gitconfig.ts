@@ -4,6 +4,7 @@ import type { Detector } from "./types.js";
 const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.autocrlf", "Git core.autocrlf", "core.autocrlf"],
   ["git.eol", "Git core.eol", "core.eol"],
+  ["git.filemode", "Git core.filemode", "core.filemode"],
   // New Git settings go above this line.
 ];
 
