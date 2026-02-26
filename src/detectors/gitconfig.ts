@@ -5,6 +5,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.autocrlf", "Git core.autocrlf", "core.autocrlf"],
   ["git.eol", "Git core.eol", "core.eol"],
   ["git.filemode", "Git core.filemode", "core.filemode"],
+  ["git.ignorecase", "Git core.ignorecase", "core.ignorecase"],
   // New Git settings go above this line.
 ];
 
