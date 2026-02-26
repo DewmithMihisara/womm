@@ -63,6 +63,11 @@ describe("system detectors", () => {
     expect([...found.values()].join()).not.toContain("secret");
   });
 
+  it("reports CI", async () => {
+    expect((await detect({ env: { CI: "true" } })).get("ci")).toBe("yes");
+    expect((await detect()).get("ci")).toBe("no");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });

@@ -52,6 +52,9 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
       const set = names.some((name) => facts.env[name]);
       return [{ id: "proxy", label: "Proxy", value: set ? "configured" : null }];
     },
+    async () => [
+      { id: "ci", label: "Running in CI", value: facts.env.CI ? "yes" : "no" },
+    ],
     // New system detectors go above this line.
   ];
 }
