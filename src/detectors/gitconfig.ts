@@ -7,6 +7,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.filemode", "Git core.filemode", "core.filemode"],
   ["git.ignorecase", "Git core.ignorecase", "core.ignorecase"],
   ["git.symlinks", "Git core.symlinks", "core.symlinks"],
+  ["git.longpaths", "Git core.longpaths", "core.longpaths"],
   // New Git settings go above this line.
 ];
 
