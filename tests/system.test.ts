@@ -46,6 +46,16 @@ describe("system detectors", () => {
     expect((await detect()).get("shell")).toBeNull();
   });
 
+  it("reports known NODE_ENV values", async () => {
+    const found = await detect({ env: { NODE_ENV: "production" } });
+    expect(found.get("env.NODE_ENV")).toBe("production");
+  });
+
+  it("hides unexpected NODE_ENV values", async () => {
+    const found = await detect({ env: { NODE_ENV: "my-private-value" } });
+    expect(found.get("env.NODE_ENV")).toBe("other");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });

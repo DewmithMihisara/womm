@@ -39,6 +39,13 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
       const name = path?.split(/[\\/]/).pop() ?? null;
       return [{ id: "shell", label: "Shell", value: name }];
     },
+    async () => {
+      // Only well-known values, in case someone stored something odd here.
+      const value = facts.env.NODE_ENV;
+      const known = ["development", "production", "test"];
+      const shown = value === undefined ? null : known.includes(value) ? value : "other";
+      return [{ id: "env.NODE_ENV", label: "NODE_ENV", value: shown }];
+    },
     // New system detectors go above this line.
   ];
 }
