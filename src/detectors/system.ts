@@ -55,6 +55,13 @@ export function systemDetectors(facts: SystemFacts = realFacts()): Detector[] {
     async () => [
       { id: "ci", label: "Running in CI", value: facts.env.CI ? "yes" : "no" },
     ],
+    async () => [
+      {
+        id: "wsl",
+        label: "Windows Subsystem for Linux",
+        value: facts.env.WSL_DISTRO_NAME ? "yes" : "no",
+      },
+    ],
     // New system detectors go above this line.
   ];
 }

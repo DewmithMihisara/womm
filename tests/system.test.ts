@@ -68,6 +68,11 @@ describe("system detectors", () => {
     expect((await detect()).get("ci")).toBe("no");
   });
 
+  it("reports WSL without the distro name", async () => {
+    const found = await detect({ env: { WSL_DISTRO_NAME: "Ubuntu" } });
+    expect(found.get("wsl")).toBe("yes");
+  });
+
   // New system tests go above this line.
   it("never reads an environment variable it was not asked for", async () => {
     const found = await detect({ env: { MY_SECRET: "hunter2" } });
