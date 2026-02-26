@@ -10,5 +10,11 @@ export function runtimeDetector(
       label: "Node.js OpenSSL",
       value: versions.openssl ?? null,
     },
+    {
+      // Native addons built for one ABI will not load on another.
+      id: "node.abi",
+      label: "Node.js native module ABI",
+      value: versions.modules ?? null,
+    },
   ];
 }

@@ -18,5 +18,8 @@ describe("runtimeDetector", () => {
   it("reports the bundled OpenSSL", async () => {
     expect((await findings()).get("node.openssl")).toBe("3.0.13");
   });
+  it("reports the native module ABI", async () => {
+    expect((await findings()).get("node.abi")).toBe("127");
+  });
   // New runtime tests go above this line.
 });
