@@ -104,5 +104,6 @@ const packageJson: Parser = (text) => {
 /** Every file womm reads requirements from. */
 export const sources: Source[] = [
   { file: ".nvmrc", parse: versionFile("node") },
+  { file: ".node-version", parse: versionFile("node") },
   // New sources go above this line.
 ];

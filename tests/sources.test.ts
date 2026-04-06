@@ -4,6 +4,7 @@ import { pep440ToRange, sources } from "../src/project/sources.js";
 /** [file name, file content, expected [tool, range] pairs] */
 const samples: [string, string, [string, string][]][] = [
   [".nvmrc", "v22.11.0\n", [["node","22.11.0"]]],
+  [".node-version", "20.10\n", [["node","20.10"]]],
   // New source samples go above this line.
 ];
 
