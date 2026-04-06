@@ -108,5 +108,6 @@ export const sources: Source[] = [
   { file: ".python-version", parse: versionFile("python") },
   { file: ".ruby-version", parse: versionFile("ruby") },
   { file: ".java-version", parse: versionFile("java") },
+  { file: ".terraform-version", parse: versionFile("terraform") },
   // New sources go above this line.
 ];
