@@ -7,6 +7,7 @@ const samples: [string, string, [string, string][]][] = [
   [".node-version", "20.10\n", [["node","20.10"]]],
   [".python-version", "3.12.1\n", [["python","3.12.1"]]],
   [".ruby-version", "ruby-3.3.0\n", [["ruby","3.3.0"]]],
+  [".java-version", "21\n", [["java","21"]]],
   // New source samples go above this line.
 ];
 
