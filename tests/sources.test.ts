@@ -6,6 +6,7 @@ const samples: [string, string, [string, string][]][] = [
   [".nvmrc", "v22.11.0\n", [["node","22.11.0"]]],
   [".node-version", "20.10\n", [["node","20.10"]]],
   [".python-version", "3.12.1\n", [["python","3.12.1"]]],
+  [".ruby-version", "ruby-3.3.0\n", [["ruby","3.3.0"]]],
   // New source samples go above this line.
 ];
 

@@ -106,5 +106,6 @@ export const sources: Source[] = [
   { file: ".nvmrc", parse: versionFile("node") },
   { file: ".node-version", parse: versionFile("node") },
   { file: ".python-version", parse: versionFile("python") },
+  { file: ".ruby-version", parse: versionFile("ruby") },
   // New sources go above this line.
 ];
