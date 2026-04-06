@@ -15,6 +15,7 @@ const samples: [string, string, [string, string][]][] = [
   ["go.mod", "module x\n\ngo 1.22\n", [["go",">=1.22"]]],
   ["runtime.txt", "python-3.12.1\n", [["python","3.12.1"]]],
   ["Gemfile", "source 'x'\nruby '3.3.0'\n", [["ruby","3.3.0"]]],
+  ["pyproject.toml", "[project]\nrequires-python = \">=3.10,<3.13\"\n", [["python",">=3.10 <3.13"]]],
   // New source samples go above this line.
 ];
 

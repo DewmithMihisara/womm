@@ -115,5 +115,6 @@ export const sources: Source[] = [
   { file: "go.mod", parse: matching("go", /^go\s+(\d+\.\d+(?:\.\d+)?)\s*$/m, (v) => `>=${v}`) },
   { file: "runtime.txt", parse: matching("python", /^python-(\d[\d.]*)/m) },
   { file: "Gemfile", parse: matching("ruby", /^\s*ruby\s+["']([^"']+)["']/m) },
+  { file: "pyproject.toml", parse: pyproject },
   // New sources go above this line.
 ];
