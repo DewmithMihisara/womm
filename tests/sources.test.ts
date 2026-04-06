@@ -10,6 +10,7 @@ const samples: [string, string, [string, string][]][] = [
   [".java-version", "21\n", [["java","21"]]],
   [".terraform-version", "1.9.8\n", [["terraform","1.9.8"]]],
   [".go-version", "1.22.3\n", [["go","1.22.3"]]],
+  ["rust-toolchain", "1.82.0\n", [["rust","1.82.0"]]],
   // New source samples go above this line.
 ];
 

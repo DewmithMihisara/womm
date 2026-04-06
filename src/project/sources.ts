@@ -110,5 +110,6 @@ export const sources: Source[] = [
   { file: ".java-version", parse: versionFile("java") },
   { file: ".terraform-version", parse: versionFile("terraform") },
   { file: ".go-version", parse: versionFile("go") },
+  { file: "rust-toolchain", parse: versionFile("rust") },
   // New sources go above this line.
 ];
