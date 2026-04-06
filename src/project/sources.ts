@@ -105,5 +105,6 @@ const packageJson: Parser = (text) => {
 export const sources: Source[] = [
   { file: ".nvmrc", parse: versionFile("node") },
   { file: ".node-version", parse: versionFile("node") },
+  { file: ".python-version", parse: versionFile("python") },
   // New sources go above this line.
 ];
