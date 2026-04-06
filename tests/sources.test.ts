@@ -12,6 +12,7 @@ const samples: [string, string, [string, string][]][] = [
   [".go-version", "1.22.3\n", [["go","1.22.3"]]],
   ["rust-toolchain", "1.82.0\n", [["rust","1.82.0"]]],
   ["rust-toolchain.toml", "[toolchain]\nchannel = \"1.82.0\"\n", [["rust","1.82.0"]]],
+  ["go.mod", "module x\n\ngo 1.22\n", [["go",">=1.22"]]],
   // New source samples go above this line.
 ];
 

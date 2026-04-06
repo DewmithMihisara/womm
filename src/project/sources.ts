@@ -112,5 +112,6 @@ export const sources: Source[] = [
   { file: ".go-version", parse: versionFile("go") },
   { file: "rust-toolchain", parse: versionFile("rust") },
   { file: "rust-toolchain.toml", parse: matching("rust", /^\s*channel\s*=\s*"([^"]+)"/m) },
+  { file: "go.mod", parse: matching("go", /^go\s+(\d+\.\d+(?:\.\d+)?)\s*$/m, (v) => `>=${v}`) },
   // New sources go above this line.
 ];
