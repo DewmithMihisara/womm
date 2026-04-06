@@ -2,7 +2,8 @@ import pc from "picocolors";
 import type { Difference } from "../diff.js";
 import type { Finding } from "../types.js";
 
-const MISSING = "not installed";
+/** Covers both missing tools and unset settings. */
+const MISSING = "not found";
 
 const show = (value: string | null): string => value ?? MISSING;
 

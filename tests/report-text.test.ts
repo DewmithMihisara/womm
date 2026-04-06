@@ -8,7 +8,7 @@ describe("renderFindings", () => {
       { id: "b", label: "Node.js", value: null },
     ]);
     expect(text).toContain("Git      2.5");
-    expect(text).toContain("not installed");
+    expect(text).toContain("not found");
   });
 });
 
@@ -22,6 +22,6 @@ describe("renderDifferences", () => {
       { id: "n", label: "Node.js", a: "18.0.0", b: null, kind: "only-a" },
     ]);
     expect(text).toContain("18.0.0");
-    expect(text).toContain("not installed");
+    expect(text).toContain("not found");
   });
 });
