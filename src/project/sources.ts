@@ -111,5 +111,6 @@ export const sources: Source[] = [
   { file: ".terraform-version", parse: versionFile("terraform") },
   { file: ".go-version", parse: versionFile("go") },
   { file: "rust-toolchain", parse: versionFile("rust") },
+  { file: "rust-toolchain.toml", parse: matching("rust", /^\s*channel\s*=\s*"([^"]+)"/m) },
   // New sources go above this line.
 ];
