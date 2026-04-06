@@ -9,6 +9,7 @@ const samples: [string, string, [string, string][]][] = [
   [".ruby-version", "ruby-3.3.0\n", [["ruby","3.3.0"]]],
   [".java-version", "21\n", [["java","21"]]],
   [".terraform-version", "1.9.8\n", [["terraform","1.9.8"]]],
+  [".go-version", "1.22.3\n", [["go","1.22.3"]]],
   // New source samples go above this line.
 ];
 
