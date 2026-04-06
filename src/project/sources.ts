@@ -118,5 +118,6 @@ export const sources: Source[] = [
   { file: "pyproject.toml", parse: pyproject },
   { file: ".sdkmanrc", parse: sdkman },
   { file: ".tool-versions", parse: toolVersions },
+  { file: "pom.xml", parse: matching("java", /<(?:java\.version|maven\.compiler\.release)>(\d+)</, (v) => `>=${v}`) },
   // New sources go above this line.
 ];

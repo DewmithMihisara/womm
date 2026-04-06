@@ -18,6 +18,7 @@ const samples: [string, string, [string, string][]][] = [
   ["pyproject.toml", "[project]\nrequires-python = \">=3.10,<3.13\"\n", [["python",">=3.10 <3.13"]]],
   [".sdkmanrc", "java=21.0.2-tem\nmaven=3.9.9\n", [["java","21.0.2"],["maven","3.9.9"]]],
   [".tool-versions", "nodejs 20.1.0\ngolang 1.22.0\n# note\n", [["node","20.1.0"],["go","1.22.0"]]],
+  ["pom.xml", "<properties><java.version>21</java.version></properties>", [["java",">=21"]]],
   // New source samples go above this line.
 ];
 
