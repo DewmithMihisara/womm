@@ -114,5 +114,6 @@ export const sources: Source[] = [
   { file: "rust-toolchain.toml", parse: matching("rust", /^\s*channel\s*=\s*"([^"]+)"/m) },
   { file: "go.mod", parse: matching("go", /^go\s+(\d+\.\d+(?:\.\d+)?)\s*$/m, (v) => `>=${v}`) },
   { file: "runtime.txt", parse: matching("python", /^python-(\d[\d.]*)/m) },
+  { file: "Gemfile", parse: matching("ruby", /^\s*ruby\s+["']([^"']+)["']/m) },
   // New sources go above this line.
 ];
