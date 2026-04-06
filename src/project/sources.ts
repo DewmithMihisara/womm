@@ -117,5 +117,6 @@ export const sources: Source[] = [
   { file: "Gemfile", parse: matching("ruby", /^\s*ruby\s+["']([^"']+)["']/m) },
   { file: "pyproject.toml", parse: pyproject },
   { file: ".sdkmanrc", parse: sdkman },
+  { file: ".tool-versions", parse: toolVersions },
   // New sources go above this line.
 ];

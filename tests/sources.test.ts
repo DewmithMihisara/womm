@@ -17,6 +17,7 @@ const samples: [string, string, [string, string][]][] = [
   ["Gemfile", "source 'x'\nruby '3.3.0'\n", [["ruby","3.3.0"]]],
   ["pyproject.toml", "[project]\nrequires-python = \">=3.10,<3.13\"\n", [["python",">=3.10 <3.13"]]],
   [".sdkmanrc", "java=21.0.2-tem\nmaven=3.9.9\n", [["java","21.0.2"],["maven","3.9.9"]]],
+  [".tool-versions", "nodejs 20.1.0\ngolang 1.22.0\n# note\n", [["node","20.1.0"],["go","1.22.0"]]],
   // New source samples go above this line.
 ];
 
