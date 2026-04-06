@@ -116,5 +116,6 @@ export const sources: Source[] = [
   { file: "runtime.txt", parse: matching("python", /^python-(\d[\d.]*)/m) },
   { file: "Gemfile", parse: matching("ruby", /^\s*ruby\s+["']([^"']+)["']/m) },
   { file: "pyproject.toml", parse: pyproject },
+  { file: ".sdkmanrc", parse: sdkman },
   // New sources go above this line.
 ];

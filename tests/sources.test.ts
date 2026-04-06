@@ -16,6 +16,7 @@ const samples: [string, string, [string, string][]][] = [
   ["runtime.txt", "python-3.12.1\n", [["python","3.12.1"]]],
   ["Gemfile", "source 'x'\nruby '3.3.0'\n", [["ruby","3.3.0"]]],
   ["pyproject.toml", "[project]\nrequires-python = \">=3.10,<3.13\"\n", [["python",">=3.10 <3.13"]]],
+  [".sdkmanrc", "java=21.0.2-tem\nmaven=3.9.9\n", [["java","21.0.2"],["maven","3.9.9"]]],
   // New source samples go above this line.
 ];
 
