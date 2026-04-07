@@ -119,5 +119,6 @@ export const sources: Source[] = [
   { file: ".sdkmanrc", parse: sdkman },
   { file: ".tool-versions", parse: toolVersions },
   { file: "pom.xml", parse: matching("java", /<(?:java\.version|maven\.compiler\.release)>(\d+)</, (v) => `>=${v}`) },
+  { file: "global.json", parse: globalJson },
   // New sources go above this line.
 ];
