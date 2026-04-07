@@ -20,6 +20,7 @@ const samples: [string, string, [string, string][]][] = [
   [".tool-versions", "nodejs 20.1.0\ngolang 1.22.0\n# note\n", [["node","20.1.0"],["go","1.22.0"]]],
   ["pom.xml", "<properties><java.version>21</java.version></properties>", [["java",">=21"]]],
   ["global.json", "{\"sdk\":{\"version\":\"8.0.100\"}}", [["dotnet","~8.0.100"]]],
+  ["composer.json", "{\"require\":{\"php\":\"^8.2\"}}", [["php","^8.2"]]],
   // New source samples go above this line.
 ];
 
