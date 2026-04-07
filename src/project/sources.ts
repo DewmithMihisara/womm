@@ -121,5 +121,6 @@ export const sources: Source[] = [
   { file: "pom.xml", parse: matching("java", /<(?:java\.version|maven\.compiler\.release)>(\d+)</, (v) => `>=${v}`) },
   { file: "global.json", parse: globalJson },
   { file: "composer.json", parse: composer },
+  { file: "package.json", parse: packageJson },
   // New sources go above this line.
 ];

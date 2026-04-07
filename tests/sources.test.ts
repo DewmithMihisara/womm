@@ -21,6 +21,7 @@ const samples: [string, string, [string, string][]][] = [
   ["pom.xml", "<properties><java.version>21</java.version></properties>", [["java",">=21"]]],
   ["global.json", "{\"sdk\":{\"version\":\"8.0.100\"}}", [["dotnet","~8.0.100"]]],
   ["composer.json", "{\"require\":{\"php\":\"^8.2\"}}", [["php","^8.2"]]],
+  ["package.json", "{\"engines\":{\"node\":\">=20\",\"npm\":\">=10\"},\"packageManager\":\"pnpm@9.1.0+sha256.abc\"}", [["node",">=20"],["npm",">=10"],["pnpm","9.1.0"]]],
   // New source samples go above this line.
 ];
 
