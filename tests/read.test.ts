@@ -1,13 +1,9 @@
 import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
-import { afterEach, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { readRequirements } from "../src/project/read.js";
 
-const dir = mkdtempSync(join(tmpdir(), "womm-project-"));
-afterEach(() => {
-  rmSync(dir, { recursive: true, force: true });
-});
 
 describe("readRequirements", () => {
   it("reads present files and names the source", async () => {
