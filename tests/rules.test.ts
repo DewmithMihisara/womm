@@ -7,6 +7,7 @@ type Facts = Record<string, string>;
 
 /** [rule id, a machine it applies to, a machine it does not, dependencies] */
 const samples: [string, Facts, Facts, Dependencies][] = [
+  ["node-sass-needs-9-on-node-20", {"node":"20.1.0"}, {"node":"16.0.0"}, {"node-sass":"^7.0.0"}],
   // New rule samples go above this line.
 ];
 

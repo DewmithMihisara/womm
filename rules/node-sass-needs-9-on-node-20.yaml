@@ -1,0 +1,10 @@
+id: node-sass-needs-9-on-node-20
+title: node-sass too old for Node.js 20
+why: The node-sass support table lists version 9.0 or newer for Node.js 20.
+fix: Upgrade node-sass to 9 or later, or move to the sass package.
+source: https://github.com/sass/node-sass#node-version-support-policy
+when:
+  - finding: node
+    range: ">=20 <21"
+  - dependency: node-sass
+    range: <9
