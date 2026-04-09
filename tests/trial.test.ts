@@ -40,13 +40,26 @@ describe("holdTrial", () => {
     expect(holdTrial(snap("22.0.0"), snap("22.0.0"), { ...none, requirements })).toEqual([]);
   });
 
-  it("finds a rule guilty when it applies only to you", () => {
+  it("finds a rule suspicious when it only concerns the machine", () => {
     const charges = holdTrial(snap("18.0.0"), snap("22.0.0"), { ...none, rules: [rule] });
     expect(charges[0]).toMatchObject({
-      verdict: "guilty",
+      verdict: "suspicious",
       subject: "Known issue",
       source: "https://example.com",
     });
+  });
+
+  it("finds a rule guilty when the project uses the package", () => {
+    const packageRule: Rule = {
+      ...rule,
+      when: [...rule.when, { dependency: "webpack" }],
+    };
+    const charges = holdTrial(snap("18.0.0"), snap("22.0.0"), {
+      ...none,
+      rules: [packageRule],
+      dependencies: { webpack: "^4.0.0" },
+    });
+    expect(charges[0]?.verdict).toBe("guilty");
   });
 
   it("does not charge a rule that applies to both machines", () => {
@@ -91,7 +104,8 @@ describe("holdTrial", () => {
         { id: "node", label: "Node.js", value: "22.0.0" },
       ],
     };
-    const charges = holdTrial(mine, theirs, { ...none, rules: [rule] });
+    const requirements = [{ tool: "node", range: ">=20", source: ".nvmrc" }];
+    const charges = holdTrial(mine, theirs, { ...none, requirements });
     expect(charges.map((c) => c.verdict)).toEqual(["guilty", "suspicious", "acquitted"]);
   });
 });

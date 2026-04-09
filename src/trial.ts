@@ -38,9 +38,14 @@ function requirementCharge(result: CheckResult): Charge {
   };
 }
 
+/**
+ * A rule naming a package the project uses is direct evidence. A rule about the
+ * machine alone may not affect this project, so it stays suspicious.
+ */
 function ruleCharge(rule: Rule): Charge {
+  const usesPackage = rule.when.some((condition) => "dependency" in condition);
   return {
-    verdict: "guilty",
+    verdict: usesPackage ? "guilty" : "suspicious",
     subject: rule.title,
     evidence: rule.why,
     fix: rule.fix,
