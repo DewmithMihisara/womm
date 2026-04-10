@@ -1,0 +1,10 @@
+id: webpack-4-on-openssl-3
+title: webpack 4 hashing fails on Node.js 17+
+why: Node.js 17 moved to OpenSSL 3, and webpack builds using MD4 hashing can fail with ERR_OSSL_EVP_UNSUPPORTED.
+fix: Upgrade webpack. As a stopgap, set NODE_OPTIONS=--openssl-legacy-provider.
+source: https://github.com/webpack/webpack/issues/14532
+when:
+  - finding: node
+    range: ">=17"
+  - dependency: webpack
+    range: <5
