@@ -1,0 +1,8 @@
+id: node-17-dns-order
+title: localhost may resolve to IPv6 first
+why: Since Node.js 17, DNS results keep the system's order, so localhost can resolve to ::1 and miss a server listening only on IPv4.
+fix: Connect to 127.0.0.1 explicitly, or call dns.setDefaultResultOrder('ipv4first').
+source: https://nodejs.org/api/dns.html#dnssetdefaultresultorderorder
+when:
+  - finding: node
+    range: ">=17"
