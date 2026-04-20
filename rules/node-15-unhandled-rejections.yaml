@@ -1,0 +1,8 @@
+id: node-15-unhandled-rejections
+title: Unhandled rejections crash Node.js 15+
+why: Since Node.js 15, an unhandled promise rejection is raised as an uncaught exception instead of a warning.
+fix: Handle the rejection. To compare behaviour, try --unhandled-rejections=warn.
+source: https://nodejs.org/en/blog/release/v15.0.0
+when:
+  - finding: node
+    range: ">=15"

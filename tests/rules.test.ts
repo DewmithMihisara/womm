@@ -11,6 +11,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["node-sass-needs-8-on-node-18", {"node":"18.1.0"}, {"node":"16.0.0"}, {"node-sass":"^6.0.0"}],
   ["webpack-4-on-openssl-3", {"node":"22.0.0"}, {"node":"16.0.0"}, {"webpack":"^4.0.0"}],
   ["node-17-dns-order", {"node":"22.0.0"}, {"node":"16.0.0"}, {}],
+  ["node-15-unhandled-rejections", {"node":"22.0.0"}, {"node":"14.0.0"}, {}],
   // New rule samples go above this line.
 ];
 
