@@ -12,6 +12,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["webpack-4-on-openssl-3", {"node":"22.0.0"}, {"node":"16.0.0"}, {"webpack":"^4.0.0"}],
   ["node-17-dns-order", {"node":"22.0.0"}, {"node":"16.0.0"}, {}],
   ["node-15-unhandled-rejections", {"node":"22.0.0"}, {"node":"14.0.0"}, {}],
+  ["node-18-global-fetch", {"node":"16.0.0"}, {"node":"22.0.0"}, {}],
   // New rule samples go above this line.
 ];
 
