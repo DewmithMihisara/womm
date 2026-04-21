@@ -15,6 +15,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["node-18-global-fetch", {"node":"16.0.0"}, {"node":"22.0.0"}, {}],
   ["node-21-global-navigator", {"node":"22.0.0"}, {"node":"20.0.0"}, {}],
   ["node-below-16-apple-silicon", {"node":"14.0.0","os.platform":"darwin","os.arch":"arm64"}, {"node":"14.0.0","os.platform":"darwin","os.arch":"x64"}, {}],
+  ["node-gyp-on-python-312", {"python":"3.12.0"}, {"python":"3.11.0"}, {"node-gyp":"^9.0.0"}],
   // New rule samples go above this line.
 ];
 

@@ -1,0 +1,10 @@
+id: node-gyp-on-python-312
+title: node-gyp and Python 3.12's missing distutils
+why: Python 3.12 removed distutils, which older node-gyp versions relied on when building native modules.
+fix: Upgrade node-gyp, or use an older Python for native builds.
+source: https://github.com/nodejs/node-gyp/issues/2869
+when:
+  - finding: python
+    range: ">=3.12"
+  - dependency: node-gyp
+    range: <10
