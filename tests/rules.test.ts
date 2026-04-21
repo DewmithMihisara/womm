@@ -13,6 +13,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["node-17-dns-order", {"node":"22.0.0"}, {"node":"16.0.0"}, {}],
   ["node-15-unhandled-rejections", {"node":"22.0.0"}, {"node":"14.0.0"}, {}],
   ["node-18-global-fetch", {"node":"16.0.0"}, {"node":"22.0.0"}, {}],
+  ["node-21-global-navigator", {"node":"22.0.0"}, {"node":"20.0.0"}, {}],
   // New rule samples go above this line.
 ];
 
