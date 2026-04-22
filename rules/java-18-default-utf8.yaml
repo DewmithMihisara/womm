@@ -1,0 +1,8 @@
+id: java-18-default-utf8
+title: Java 18 made UTF-8 the default charset
+why: JEP 400 made UTF-8 the default, so code relying on the platform charset can behave differently.
+fix: Name the charset explicitly. To compare behaviour, try -Dfile.encoding=COMPAT.
+source: https://openjdk.org/jeps/400
+when:
+  - finding: java
+    range: ">=18"
