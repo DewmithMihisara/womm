@@ -1,0 +1,8 @@
+id: python-312-imp
+title: Python 3.12 removed imp
+why: Code importing the imp module fails on Python 3.12.
+fix: Use importlib instead.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"
