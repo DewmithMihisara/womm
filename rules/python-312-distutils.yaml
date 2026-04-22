@@ -1,0 +1,8 @@
+id: python-312-distutils
+title: Python 3.12 removed distutils
+why: Code or packages importing distutils fail on Python 3.12.
+fix: Install setuptools, or update the package that imports distutils.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"
