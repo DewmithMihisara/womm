@@ -1,0 +1,8 @@
+id: python-37-async-keyword
+title: async and await became reserved in Python 3.7
+why: Old code using async as a variable or argument name is a syntax error from Python 3.7.
+fix: Rename the variable, or upgrade the package using it.
+source: https://docs.python.org/3.7/whatsnew/3.7.html
+when:
+  - finding: python
+    range: ">=3.7"

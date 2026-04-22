@@ -29,6 +29,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-310-collections-abc", {"python":"3.10.0"}, {"python":"3.9.0"}, {}],
   ["python-311-asyncio-coroutine", {"python":"3.11.0"}, {"python":"3.10.0"}, {}],
   ["python-311-getargspec", {"python":"3.11.0"}, {"python":"3.10.0"}, {}],
+  ["python-37-async-keyword", {"python":"3.8.0"}, {"python":"3.6.0"}, {}],
   // New rule samples go above this line.
 ];
 
