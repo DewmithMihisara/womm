@@ -35,6 +35,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["java-11-removed-jaxb", {"java":"17.0.1"}, {"java":"8.0.301"}, {}],
   ["java-18-default-utf8", {"java":"21.0.1"}, {"java":"17.0.1"}, {}],
   ["java-24-security-manager", {"java":"24.0.1"}, {"java":"21.0.1"}, {}],
+  ["gradle-too-old-for-java-17", {"gradle":"7.0.0","java":"17.0.1"}, {"gradle":"7.0.0","java":"11.0.1"}, {}],
   // New rule samples go above this line.
 ];
 

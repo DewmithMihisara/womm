@@ -1,0 +1,10 @@
+id: gradle-too-old-for-java-17
+title: Gradle too old to run on Java 17
+why: Gradle's compatibility table lists 7.3 or later for running on Java 17.
+fix: Upgrade the Gradle wrapper, or run Gradle on an older Java.
+source: https://docs.gradle.org/current/userguide/compatibility.html
+when:
+  - finding: gradle
+    range: <7.3
+  - finding: java
+    range: ">=17 <18"
