@@ -1,0 +1,8 @@
+id: python-310-collections-abc
+title: Python 3.10 removed collections aliases
+why: Names such as collections.Mapping now exist only in collections.abc.
+fix: Import from collections.abc, or upgrade the package using the old name.
+source: https://docs.python.org/3.10/whatsnew/3.10.html
+when:
+  - finding: python
+    range: ">=3.10"
