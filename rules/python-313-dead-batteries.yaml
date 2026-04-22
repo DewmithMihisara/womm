@@ -1,0 +1,8 @@
+id: python-313-dead-batteries
+title: Python 3.13 removed old standard library modules
+why: PEP 594 removed modules such as cgi from the standard library in Python 3.13.
+fix: Replace the module, or install a maintained backport.
+source: https://docs.python.org/3.13/whatsnew/3.13.html
+when:
+  - finding: python
+    range: ">=3.13"
