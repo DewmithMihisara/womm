@@ -1,0 +1,8 @@
+id: java-17-strong-encapsulation
+title: Java 17 strongly encapsulates JDK internals
+why: JEP 403 strongly encapsulates internal JDK elements in Java 17, which breaks old libraries that reach into them.
+fix: Upgrade the library, or add a specific --add-opens.
+source: https://openjdk.org/jeps/403
+when:
+  - finding: java
+    range: ">=17"

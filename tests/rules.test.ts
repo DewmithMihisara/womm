@@ -31,6 +31,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-311-getargspec", {"python":"3.11.0"}, {"python":"3.10.0"}, {}],
   ["python-37-async-keyword", {"python":"3.8.0"}, {"python":"3.6.0"}, {}],
   ["java-16-illegal-access", {"java":"16.0.1"}, {"java":"11.0.1"}, {}],
+  ["java-17-strong-encapsulation", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   // New rule samples go above this line.
 ];
 
