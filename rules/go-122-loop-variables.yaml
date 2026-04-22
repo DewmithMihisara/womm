@@ -1,0 +1,8 @@
+id: go-122-loop-variables
+title: Go 1.22 changed for-loop variables
+why: From Go 1.22, each loop iteration gets new variables, for modules declaring go 1.22 or later.
+fix: Check code capturing loop variables, and the go line in go.mod.
+source: https://go.dev/doc/go1.22
+when:
+  - finding: go
+    range: ">=1.22"
