@@ -19,6 +19,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["npm-7-peer-dependencies", {"npm":"10.0.0"}, {"npm":"6.14.0"}, {}],
   ["git-safe-directory", {"git":"2.52.0"}, {"git":"2.30.0"}, {}],
   ["go-122-loop-variables", {"go":"1.22.0"}, {"go":"1.21.0"}, {}],
+  ["go-116-modules-default", {"go":"1.22.0"}, {"go":"1.15.0"}, {}],
   // New rule samples go above this line.
 ];
 
