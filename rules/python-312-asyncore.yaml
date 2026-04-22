@@ -1,0 +1,8 @@
+id: python-312-asyncore
+title: Python 3.12 removed asyncore, asynchat and smtpd
+why: Code importing these modules fails on Python 3.12.
+fix: Use asyncio, or a maintained replacement package.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"

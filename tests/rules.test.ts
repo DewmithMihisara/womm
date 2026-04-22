@@ -24,6 +24,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["go-121-strict-go-line", {"go":"1.22.0"}, {"go":"1.20.0"}, {}],
   ["python-312-distutils", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-312-imp", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
+  ["python-312-asyncore", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   // New rule samples go above this line.
 ];
 
