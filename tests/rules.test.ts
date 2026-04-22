@@ -20,6 +20,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["git-safe-directory", {"git":"2.52.0"}, {"git":"2.30.0"}, {}],
   ["go-122-loop-variables", {"go":"1.22.0"}, {"go":"1.21.0"}, {}],
   ["go-116-modules-default", {"go":"1.22.0"}, {"go":"1.15.0"}, {}],
+  ["go-118-sha1-certificates", {"go":"1.22.0"}, {"go":"1.17.0"}, {}],
   // New rule samples go above this line.
 ];
 
