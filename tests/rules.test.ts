@@ -34,6 +34,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["java-17-strong-encapsulation", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["java-11-removed-jaxb", {"java":"17.0.1"}, {"java":"8.0.301"}, {}],
   ["java-18-default-utf8", {"java":"21.0.1"}, {"java":"17.0.1"}, {}],
+  ["java-24-security-manager", {"java":"24.0.1"}, {"java":"21.0.1"}, {}],
   // New rule samples go above this line.
 ];
 

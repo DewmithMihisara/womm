@@ -1,0 +1,8 @@
+id: java-24-security-manager
+title: Java 24 permanently disables the Security Manager
+why: JEP 486 means code that enables the Security Manager fails on Java 24.
+fix: Remove the dependency on the Security Manager.
+source: https://openjdk.org/jeps/486
+when:
+  - finding: java
+    range: ">=24"
