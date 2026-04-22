@@ -27,6 +27,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-312-asyncore", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-313-dead-batteries", {"python":"3.13.0"}, {"python":"3.12.0"}, {}],
   ["python-310-collections-abc", {"python":"3.10.0"}, {"python":"3.9.0"}, {}],
+  ["python-311-asyncio-coroutine", {"python":"3.11.0"}, {"python":"3.10.0"}, {}],
   // New rule samples go above this line.
 ];
 

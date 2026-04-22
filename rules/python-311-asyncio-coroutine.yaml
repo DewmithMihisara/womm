@@ -1,0 +1,8 @@
+id: python-311-asyncio-coroutine
+title: Python 3.11 removed asyncio.coroutine
+why: The @asyncio.coroutine decorator no longer exists in Python 3.11.
+fix: Rewrite using async def, or upgrade the package using it.
+source: https://docs.python.org/3.11/whatsnew/3.11.html
+when:
+  - finding: python
+    range: ">=3.11"
