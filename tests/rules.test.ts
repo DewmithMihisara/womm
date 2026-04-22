@@ -38,6 +38,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gradle-too-old-for-java-17", {"gradle":"7.0.0","java":"17.0.1"}, {"gradle":"7.0.0","java":"11.0.1"}, {}],
   ["gradle-too-old-for-java-21", {"gradle":"8.0.0","java":"21.0.1"}, {"gradle":"8.5.0","java":"21.0.1"}, {}],
   ["maven-381-blocks-http", {"maven":"3.9.9"}, {"maven":"3.6.3"}, {}],
+  ["ruby-3-keyword-arguments", {"ruby":"3.3.0"}, {"ruby":"2.7.8"}, {}],
   // New rule samples go above this line.
 ];
 
