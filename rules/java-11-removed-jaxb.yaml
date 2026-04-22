@@ -1,0 +1,8 @@
+id: java-11-removed-jaxb
+title: Java 11 removed Java EE modules such as JAXB
+why: JEP 320 removed modules including java.xml.bind, so they must now be added as dependencies.
+fix: Add JAXB and any other removed modules as explicit dependencies.
+source: https://openjdk.org/jeps/320
+when:
+  - finding: java
+    range: ">=11"
