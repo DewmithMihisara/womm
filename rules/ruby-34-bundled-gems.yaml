@@ -1,0 +1,8 @@
+id: ruby-34-bundled-gems
+title: Ruby 3.4 moved base64 and others to bundled gems
+why: Under Bundler, gems such as base64 must now be listed in the Gemfile.
+fix: Add the gem to your Gemfile.
+source: https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-0-released/
+when:
+  - finding: ruby
+    range: ">=3.4"
