@@ -41,6 +41,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["ruby-3-keyword-arguments", {"ruby":"3.3.0"}, {"ruby":"2.7.8"}, {}],
   ["ruby-32-removed-exists", {"ruby":"3.3.0"}, {"ruby":"3.1.0"}, {}],
   ["ruby-34-bundled-gems", {"ruby":"3.4.0"}, {"ruby":"3.3.0"}, {}],
+  ["php-8-breaking-changes", {"php":"8.3.0"}, {"php":"7.4.0"}, {}],
   // New rule samples go above this line.
 ];
 

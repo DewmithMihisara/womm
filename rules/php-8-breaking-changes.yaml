@@ -1,0 +1,8 @@
+id: php-8-breaking-changes
+title: PHP 8 has backward incompatible changes
+why: PHP 8.0 includes a published list of incompatible changes.
+fix: Review the migration guide for anything your code relies on.
+source: https://www.php.net/manual/en/migration80.incompatible.php
+when:
+  - finding: php
+    range: ">=8"
