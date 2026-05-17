@@ -45,6 +45,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["php-81-null-to-builtins", {"php":"8.3.0"}, {"php":"8.0.0"}, {}],
   ["autocrlf-shell-scripts", {"git.autocrlf":"true"}, {"git.autocrlf":"false"}, {}],
   ["windows-long-paths", {"os.platform":"win32"}, {"os.platform":"linux"}, {}],
+  ["case-sensitive-imports", {"fs.caseSensitive":"yes"}, {"fs.caseSensitive":"no"}, {}],
   // New rule samples go above this line.
 ];
 

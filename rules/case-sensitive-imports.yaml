@@ -1,0 +1,9 @@
+id: case-sensitive-imports
+title: Import casing matters on this filesystem
+why: Your filesystem is case sensitive. An import with the wrong casing can work elsewhere and fail here.
+fix: Match the import to the file's exact name. TypeScript users can enable forceConsistentCasingInFileNames.
+source: https://www.typescriptlang.org/tsconfig/forceConsistentCasingInFileNames.html
+when:
+  - finding: fs.caseSensitive
+    equals:
+      - yes
