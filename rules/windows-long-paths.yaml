@@ -1,0 +1,11 @@
+id: windows-long-paths
+title: Windows path length limit
+why: Windows limits paths to MAX_PATH by default, and Git's core.longpaths is not set here.
+fix: "Run: git config --global core.longpaths true, and enable long paths in Windows if needed."
+source: https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation
+when:
+  - finding: os.platform
+    equals:
+      - win32
+  - finding: git.longpaths
+    missing: true

@@ -44,6 +44,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["php-8-breaking-changes", {"php":"8.3.0"}, {"php":"7.4.0"}, {}],
   ["php-81-null-to-builtins", {"php":"8.3.0"}, {"php":"8.0.0"}, {}],
   ["autocrlf-shell-scripts", {"git.autocrlf":"true"}, {"git.autocrlf":"false"}, {}],
+  ["windows-long-paths", {"os.platform":"win32"}, {"os.platform":"linux"}, {}],
   // New rule samples go above this line.
 ];
 
