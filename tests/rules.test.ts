@@ -43,6 +43,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["ruby-34-bundled-gems", {"ruby":"3.4.0"}, {"ruby":"3.3.0"}, {}],
   ["php-8-breaking-changes", {"php":"8.3.0"}, {"php":"7.4.0"}, {}],
   ["php-81-null-to-builtins", {"php":"8.3.0"}, {"php":"8.0.0"}, {}],
+  ["autocrlf-shell-scripts", {"git.autocrlf":"true"}, {"git.autocrlf":"false"}, {}],
   // New rule samples go above this line.
 ];
 

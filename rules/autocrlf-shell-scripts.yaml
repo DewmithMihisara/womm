@@ -1,0 +1,9 @@
+id: autocrlf-shell-scripts
+title: core.autocrlf can break shell scripts
+why: With core.autocrlf on, files can be checked out with CRLF endings, and Unix tools can fail on them.
+fix: Add `*.sh text eol=lf` to .gitattributes, then check the files out again.
+source: https://git-scm.com/docs/gitattributes
+when:
+  - finding: git.autocrlf
+    equals:
+      - "true"
