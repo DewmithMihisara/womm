@@ -46,6 +46,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["autocrlf-shell-scripts", {"git.autocrlf":"true"}, {"git.autocrlf":"false"}, {}],
   ["windows-long-paths", {"os.platform":"win32"}, {"os.platform":"linux"}, {}],
   ["case-sensitive-imports", {"fs.caseSensitive":"yes"}, {"fs.caseSensitive":"no"}, {}],
+  ["docker-23-buildkit-default", {"docker":"27.0.0","os.platform":"linux"}, {"docker":"20.10.0","os.platform":"linux"}, {}],
   // New rule samples go above this line.
 ];
 
