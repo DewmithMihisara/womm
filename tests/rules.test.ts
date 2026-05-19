@@ -50,6 +50,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["openssl-3-legacy-algorithms", {"openssl":"3.4.0"}, {"openssl":"1.1.1"}, {}],
   ["cargo-lockfile-v4", {"cargo":"1.70.0"}, {"cargo":"1.82.0"}, {}],
   ["cmake-4-removed-old-compat", {"cmake":"4.0.0"}, {"cmake":"3.28.0"}, {}],
+  ["gcc-13-missing-headers", {"gcc":"13.2.0"}, {"gcc":"12.3.0"}, {}],
   // New rule samples go above this line.
 ];
 

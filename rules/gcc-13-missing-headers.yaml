@@ -1,0 +1,8 @@
+id: gcc-13-missing-headers
+title: GCC 13 needs explicit includes such as cstdint
+why: GCC 13 removed some transitive standard library includes, so code relying on them stops compiling.
+fix: Add the missing include, such as <cstdint>.
+source: https://gcc.gnu.org/gcc-13/porting_to.html
+when:
+  - finding: gcc
+    range: ">=13"
