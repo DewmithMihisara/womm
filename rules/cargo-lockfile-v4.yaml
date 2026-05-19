@@ -1,0 +1,8 @@
+id: cargo-lockfile-v4
+title: Old Rust toolchains can't read lockfile v4
+why: Cargo's changelog says Rust toolchains 1.78 and later support lockfile v4.
+fix: Upgrade Rust, or regenerate the lockfile in an older format.
+source: https://doc.rust-lang.org/cargo/CHANGELOG.html
+when:
+  - finding: cargo
+    range: <1.78
