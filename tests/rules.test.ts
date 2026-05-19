@@ -49,6 +49,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["docker-23-buildkit-default", {"docker":"27.0.0","os.platform":"linux"}, {"docker":"20.10.0","os.platform":"linux"}, {}],
   ["openssl-3-legacy-algorithms", {"openssl":"3.4.0"}, {"openssl":"1.1.1"}, {}],
   ["cargo-lockfile-v4", {"cargo":"1.70.0"}, {"cargo":"1.82.0"}, {}],
+  ["cmake-4-removed-old-compat", {"cmake":"4.0.0"}, {"cmake":"3.28.0"}, {}],
   // New rule samples go above this line.
 ];
 
