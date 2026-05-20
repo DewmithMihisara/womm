@@ -52,6 +52,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["cmake-4-removed-old-compat", {"cmake":"4.0.0"}, {"cmake":"3.28.0"}, {}],
   ["gcc-13-missing-headers", {"gcc":"13.2.0"}, {"gcc":"12.3.0"}, {}],
   ["gcc-14-implicit-functions", {"gcc":"14.1.0"}, {"gcc":"13.2.0"}, {}],
+  ["clang-16-implicit-functions", {"clang":"18.1.0"}, {"clang":"15.0.0"}, {}],
   // New rule samples go above this line.
 ];
 

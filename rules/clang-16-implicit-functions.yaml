@@ -1,0 +1,8 @@
+id: clang-16-implicit-functions
+title: Clang 16 rejects implicit function declarations
+why: Clang 16 made implicit function declarations an error by default in C.
+fix: Add the missing declaration or include.
+source: https://releases.llvm.org/16.0.0/tools/clang/docs/ReleaseNotes.html
+when:
+  - finding: clang
+    range: ">=16"
