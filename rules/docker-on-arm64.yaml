@@ -1,0 +1,11 @@
+id: docker-on-arm64
+title: Docker images may not match an ARM machine
+why: Images are built per platform, and an image without arm64 support can fail or run under emulation.
+fix: Check the image's platforms, or build for several with docker buildx.
+source: https://docs.docker.com/build/building/multi-platform/
+when:
+  - finding: os.arch
+    equals:
+      - arm64
+  - finding: docker
+    range: ">=0"
