@@ -54,6 +54,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gcc-14-implicit-functions", {"gcc":"14.1.0"}, {"gcc":"13.2.0"}, {}],
   ["clang-16-implicit-functions", {"clang":"18.1.0"}, {"clang":"15.0.0"}, {}],
   ["docker-on-arm64", {"os.arch":"arm64","docker":"27.0.0"}, {"os.arch":"x64","docker":"27.0.0"}, {}],
+  ["perl-526-dot-in-inc", {"perl":"5.38.2"}, {"perl":"5.24.0"}, {}],
   // New rule samples go above this line.
 ];
 
