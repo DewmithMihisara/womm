@@ -1,6 +1,7 @@
+import { existsSync } from "node:fs";
 import { readdir, readFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { parse } from "yaml";
 import { ruleErrors } from "./schema.js";
 import type { Rule } from "./types.js";
@@ -10,9 +11,18 @@ export interface LoadResult {
   errors: string[];
 }
 
-/** The rules folder that ships with the package, next to dist. */
+/**
+ * The rules folder at the package root. Walks upwards because this file is
+ * bundled into dist when installed, but runs from src/rules during tests.
+ */
 export function defaultRulesDirectory(): string {
-  return fileURLToPath(new URL("../rules/", import.meta.url));
+  let directory = dirname(fileURLToPath(import.meta.url));
+  while (!existsSync(join(directory, "package.json"))) {
+    const parent = dirname(directory);
+    if (parent === directory) break;
+    directory = parent;
+  }
+  return join(directory, "rules");
 }
 
 /** Loads every YAML rule. A bad file is reported and never stops the others. */

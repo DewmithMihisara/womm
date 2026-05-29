@@ -1,0 +1,8 @@
+id: go-121-strict-go-line
+title: Go 1.21 treats the go line as a minimum
+why: Since Go 1.21, the go line in go.mod is a strict minimum, and toolchains may be downloaded to meet it.
+fix: Check the go and toolchain lines in go.mod, and GOTOOLCHAIN.
+source: https://go.dev/doc/go1.21
+when:
+  - finding: go
+    range: ">=1.21"

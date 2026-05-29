@@ -1,0 +1,8 @@
+id: ruby-32-removed-exists
+title: Ruby 3.2 removed File.exists?
+why: File.exists? and Dir.exists? no longer exist in Ruby 3.2.
+fix: Use exist? instead, or upgrade the gem using the old name.
+source: https://www.ruby-lang.org/en/news/2022/12/25/ruby-3-2-0-released/
+when:
+  - finding: ruby
+    range: ">=3.2"

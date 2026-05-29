@@ -1,0 +1,8 @@
+id: node-21-global-navigator
+title: Global navigator exists in Node.js 21+
+why: Node.js 21 added a global navigator object, so code that treats it as proof of a browser can take the wrong path.
+fix: Check for window or document instead when detecting a browser.
+source: https://nodejs.org/en/blog/announcements/v21-release-announce
+when:
+  - finding: node
+    range: ">=21"

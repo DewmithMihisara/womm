@@ -1,0 +1,8 @@
+id: openssl-3-legacy-algorithms
+title: OpenSSL 3 moved old algorithms to a legacy provider
+why: Algorithms such as MD4 are in OpenSSL 3's legacy provider, which isn't loaded by default.
+fix: Use a modern algorithm, or enable the legacy provider where you must.
+source: https://docs.openssl.org/3.0/man7/migration_guide/
+when:
+  - finding: openssl
+    range: ">=3"

@@ -1,0 +1,10 @@
+id: node-sass-needs-8-on-node-18
+title: node-sass too old for Node.js 18
+why: The node-sass support table lists version 8.0 or newer for Node.js 18.
+fix: Upgrade node-sass to 8 or later, or move to the sass package.
+source: https://github.com/sass/node-sass#node-version-support-policy
+when:
+  - finding: node
+    range: ">=18 <20"
+  - dependency: node-sass
+    range: <8

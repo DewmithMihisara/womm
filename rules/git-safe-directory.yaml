@@ -1,0 +1,8 @@
+id: git-safe-directory
+title: Git refuses repositories owned by someone else
+why: Git's safe.directory check, added for a 2022 security fix, blocks repositories owned by another user.
+fix: "If you trust the folder, run: git config --global --add safe.directory <path>"
+source: https://github.blog/open-source/git/git-security-vulnerability-announced/
+when:
+  - finding: git
+    range: ">=2.35.2"

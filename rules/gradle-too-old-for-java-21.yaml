@@ -1,0 +1,10 @@
+id: gradle-too-old-for-java-21
+title: Gradle too old to run on Java 21
+why: Gradle's compatibility table lists 8.5 or later for running on Java 21.
+fix: Upgrade the Gradle wrapper, or run Gradle on an older Java.
+source: https://docs.gradle.org/current/userguide/compatibility.html
+when:
+  - finding: gradle
+    range: <8.5
+  - finding: java
+    range: ">=21 <22"

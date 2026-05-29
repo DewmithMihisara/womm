@@ -1,0 +1,8 @@
+id: python-311-getargspec
+title: Python 3.11 removed inspect.getargspec
+why: Code calling inspect.getargspec fails on Python 3.11.
+fix: Use inspect.signature or inspect.getfullargspec.
+source: https://docs.python.org/3.11/whatsnew/3.11.html
+when:
+  - finding: python
+    range: ">=3.11"

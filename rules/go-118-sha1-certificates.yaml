@@ -1,0 +1,8 @@
+id: go-118-sha1-certificates
+title: Go 1.18 rejects SHA-1 certificates
+why: crypto/x509 rejects certificates signed with SHA-1 by default since Go 1.18.
+fix: Replace the certificate.
+source: https://go.dev/doc/go1.18
+when:
+  - finding: go
+    range: ">=1.18"

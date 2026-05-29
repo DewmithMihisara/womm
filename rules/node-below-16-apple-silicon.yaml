@@ -1,0 +1,14 @@
+id: node-below-16-apple-silicon
+title: No Apple Silicon build before Node.js 16
+why: Node.js 16.0.0 was the first release with prebuilt Apple Silicon binaries.
+fix: Use Node.js 16 or later on Apple Silicon.
+source: https://nodejs.org/en/blog/release/v16.0.0
+when:
+  - finding: node
+    range: <16
+  - finding: os.platform
+    equals:
+      - darwin
+  - finding: os.arch
+    equals:
+      - arm64

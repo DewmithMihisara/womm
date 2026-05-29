@@ -1,0 +1,8 @@
+id: go-116-modules-default
+title: Go 1.16 turned on module mode by default
+why: GO111MODULE defaults to on since Go 1.16, so code built in GOPATH mode can stop building.
+fix: Add a go.mod file. To compare behaviour, try GO111MODULE=auto.
+source: https://go.dev/doc/go1.16
+when:
+  - finding: go
+    range: ">=1.16"

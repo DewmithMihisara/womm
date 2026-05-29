@@ -1,0 +1,8 @@
+id: perl-526-dot-in-inc
+title: Perl 5.26 removed . from @INC
+why: Scripts loading modules from the current folder can fail from Perl 5.26.
+fix: Use FindBin, or an explicit lib path.
+source: https://perldoc.perl.org/perl5260delta
+when:
+  - finding: perl
+    range: ">=5.26"

@@ -1,0 +1,8 @@
+id: java-16-illegal-access
+title: Java 16 denies illegal reflective access
+why: JEP 396 made strong encapsulation of JDK internals the default in Java 16.
+fix: Upgrade the library using JDK internals, or add a specific --add-opens.
+source: https://openjdk.org/jeps/396
+when:
+  - finding: java
+    range: ">=16 <17"

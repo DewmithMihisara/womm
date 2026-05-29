@@ -1,0 +1,8 @@
+id: ruby-3-keyword-arguments
+title: Ruby 3 separated keyword arguments
+why: Keyword arguments are separate from other arguments in Ruby 3.0, so code that only warned on 2.7 can fail.
+fix: Fix the calls flagged by Ruby 2.7 warnings, or upgrade the gem.
+source: https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/
+when:
+  - finding: ruby
+    range: ">=3"

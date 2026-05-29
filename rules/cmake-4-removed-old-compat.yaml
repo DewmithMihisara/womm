@@ -1,0 +1,8 @@
+id: cmake-4-removed-old-compat
+title: CMake 4 removed compatibility with versions below 3.5
+why: Projects whose cmake_minimum_required is below 3.5 can fail to configure on CMake 4.
+fix: Raise cmake_minimum_required. As a stopgap, try -DCMAKE_POLICY_VERSION_MINIMUM=3.5.
+source: https://cmake.org/cmake/help/latest/release/4.0.html
+when:
+  - finding: cmake
+    range: ">=4"

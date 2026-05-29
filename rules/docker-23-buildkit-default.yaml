@@ -1,0 +1,11 @@
+id: docker-23-buildkit-default
+title: Docker 23 made BuildKit the default on Linux
+why: Docker 23.0 set Buildx and BuildKit as the default builder on Linux, which can change build behaviour.
+fix: Check the build output. To compare behaviour, try DOCKER_BUILDKIT=0.
+source: https://docs.docker.com/engine/release-notes/23.0/
+when:
+  - finding: docker
+    range: ">=23"
+  - finding: os.platform
+    equals:
+      - linux

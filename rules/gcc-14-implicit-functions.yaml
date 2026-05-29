@@ -1,0 +1,8 @@
+id: gcc-14-implicit-functions
+title: GCC 14 rejects implicit function declarations
+why: Implicit function declarations in C became errors by default in GCC 14.
+fix: Add the missing declaration or include.
+source: https://gcc.gnu.org/gcc-14/porting_to.html
+when:
+  - finding: gcc
+    range: ">=14"

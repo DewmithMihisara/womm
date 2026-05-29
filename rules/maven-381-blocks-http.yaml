@@ -1,0 +1,8 @@
+id: maven-381-blocks-http
+title: Maven 3.8.1 blocks plain HTTP repositories
+why: Maven 3.8.1 added a default mirror blocking external repositories using http.
+fix: Move the repository to https.
+source: https://maven.apache.org/docs/3.8.1/release-notes.html
+when:
+  - finding: maven
+    range: ">=3.8.1"

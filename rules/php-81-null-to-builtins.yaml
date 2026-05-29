@@ -1,0 +1,8 @@
+id: php-81-null-to-builtins
+title: PHP 8.1 deprecates null for built-in parameters
+why: Passing null to non-nullable parameters of built-in functions is deprecated from PHP 8.1, so new warnings can appear.
+fix: Pass a proper value, or handle null before the call.
+source: https://www.php.net/manual/en/migration81.deprecated.php
+when:
+  - finding: php
+    range: ">=8.1"

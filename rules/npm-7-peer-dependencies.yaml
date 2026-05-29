@@ -1,0 +1,8 @@
+id: npm-7-peer-dependencies
+title: npm 7+ installs peer dependencies
+why: npm 7 began installing peer dependencies by default, which can surface conflicts that older npm versions ignored.
+fix: Resolve the peer conflict. To compare behaviour, try --legacy-peer-deps.
+source: https://github.blog/news-insights/product-news/npm-7-is-now-generally-available/
+when:
+  - finding: npm
+    range: ">=7"
