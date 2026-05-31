@@ -47,7 +47,7 @@ export async function main(argv: string[]): Promise<number> {
   if (command === "diff") {
     const [a, b] = rest;
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
-    return diffCommand(a, b);
+    return diffCommand(a, b, values.json);
   }
   if (command === "rules") {
     const [action, directory] = rest;
