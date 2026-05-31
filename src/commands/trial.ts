@@ -4,15 +4,22 @@ import { missingEnvKeys } from "../project/envkeys.js";
 import { lockfileConflicts } from "../project/lockfiles.js";
 import { readRequirements } from "../project/read.js";
 import { renderTrial } from "../report/court.js";
+import { renderMarkdown } from "../report/markdown.js";
 import { loadRules } from "../rules/load.js";
 import { takeSnapshot } from "../snapshot.js";
-import { holdTrial, type CaseFile } from "../trial.js";
+import { holdTrial, type CaseFile, type Charge } from "../trial.js";
 
 export interface TrialOptions {
   against: string;
   mine?: string;
   project: string;
   json?: boolean;
+  markdown?: boolean;
+}
+
+function render(charges: Charge[], options: TrialOptions): string {
+  if (options.json) return JSON.stringify(charges, null, 2);
+  return options.markdown ? renderMarkdown(charges) : renderTrial(charges);
 }
 
 async function buildCaseFile(project: string): Promise<CaseFile> {
@@ -37,6 +44,6 @@ export async function trialCommand(options: TrialOptions): Promise<number> {
   const theirs = await readSnapshot(options.against);
   const mine = options.mine ? await readSnapshot(options.mine) : await takeSnapshot();
   const charges = holdTrial(mine, theirs, await buildCaseFile(options.project));
-  console.log(options.json ? JSON.stringify(charges, null, 2) : renderTrial(charges));
+  console.log(render(charges, options));
   return charges.some((c) => c.verdict === "guilty") ? 1 : 0;
 }
