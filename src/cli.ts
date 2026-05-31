@@ -20,6 +20,7 @@ Options:
   --mine <file>             Use a saved snapshot instead of this machine
   --project <dir>           Project folder to read (default: current folder)
   --json                    Print results as JSON
+  --markdown                Print results as Markdown
   -h, --help                Show this help
 `;
 
@@ -33,6 +34,7 @@ export async function main(argv: string[]): Promise<number> {
       mine: { type: "string" },
       project: { type: "string", default: "." },
       json: { type: "boolean" },
+      markdown: { type: "boolean" },
       help: { type: "boolean", short: "h" },
     },
   });
@@ -62,6 +64,7 @@ export async function main(argv: string[]): Promise<number> {
       mine: values.mine,
       project: values.project ?? ".",
       json: values.json,
+      markdown: values.markdown,
     });
   }
   throw new UserError(`Unknown command: ${command}. Run womm --help.`);
