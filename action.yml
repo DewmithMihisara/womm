@@ -1,0 +1,39 @@
+name: womm trial
+description: Put the CI machine on trial against a snapshot from a machine where the project works.
+branding:
+  icon: alert-triangle
+  color: yellow
+
+inputs:
+  against:
+    description: Path to a snapshot from a machine where the project works.
+    required: true
+  project:
+    description: Project folder to read requirements from.
+    default: .
+  fail-on-guilty:
+    description: Fail the job when anything is found guilty.
+    default: "true"
+
+runs:
+  using: composite
+  steps:
+    - name: Build womm
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npm ci --silent && npm run --silent build
+    - name: Hold the trial
+      shell: bash
+      # Inputs travel through env, so their text can never become shell code.
+      env:
+        WOMM_AGAINST: ${{ inputs.against }}
+        WOMM_PROJECT: ${{ inputs.project }}
+        WOMM_FAIL: ${{ inputs.fail-on-guilty }}
+        WOMM_CLI: ${{ github.action_path }}/dist/cli.js
+      run: |
+        status=0
+        node "$WOMM_CLI" trial --against "$WOMM_AGAINST" --project "$WOMM_PROJECT" --markdown > womm-report.md || status=$?
+        cat womm-report.md >> "$GITHUB_STEP_SUMMARY"
+        rm -f womm-report.md
+        if [ "$status" -eq 1 ] && [ "$WOMM_FAIL" != "true" ]; then status=0; fi
+        exit "$status"
