@@ -1,4 +1,5 @@
 import { parseArgs } from "node:util";
+import { certifyCommand } from "./commands/certify.js";
 import { diffCommand } from "./commands/diff.js";
 import { rulesCheckCommand, rulesListCommand } from "./commands/rules.js";
 import { snapshotCommand } from "./commands/snapshot.js";
@@ -11,6 +12,7 @@ Usage:
   womm snapshot [-o file]   Record this machine's setup
   womm diff <a> <b>         Compare two snapshot files
   womm trial --against <f>  Put your machine on trial against a working one
+  womm certify              Check project requirements and issue a certificate
   womm rules list           List known causes
   womm rules check [dir]    Validate rule files
 
@@ -48,6 +50,9 @@ export async function main(argv: string[]): Promise<number> {
     const [a, b] = rest;
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
     return diffCommand(a, b, values.json);
+  }
+  if (command === "certify") {
+    return certifyCommand({ project: values.project ?? ".", output: values.output });
   }
   if (command === "rules") {
     const [action, directory] = rest;
