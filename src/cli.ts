@@ -1,7 +1,11 @@
 import { parseArgs } from "node:util";
 import { certifyCommand } from "./commands/certify.js";
 import { diffCommand } from "./commands/diff.js";
-import { rulesCheckCommand, rulesListCommand } from "./commands/rules.js";
+import {
+  rulesCheckCommand,
+  rulesDocsCommand,
+  rulesListCommand,
+} from "./commands/rules.js";
 import { snapshotCommand } from "./commands/snapshot.js";
 import { trialCommand } from "./commands/trial.js";
 import { UserError } from "./io.js";
@@ -15,6 +19,7 @@ Usage:
   womm certify              Check project requirements and issue a certificate
   womm rules list           List known causes
   womm rules check [dir]    Validate rule files
+  womm rules docs           Print the rule catalogue as Markdown
 
 Options:
   -o, --output <file>       Where to save the snapshot
@@ -58,7 +63,8 @@ export async function main(argv: string[]): Promise<number> {
     const [action, directory] = rest;
     if (action === "list") return rulesListCommand();
     if (action === "check") return rulesCheckCommand(directory);
-    throw new UserError("Use womm rules list or womm rules check [dir].");
+    if (action === "docs") return rulesDocsCommand();
+    throw new UserError("Use womm rules list, check [dir] or docs.");
   }
   if (command === "trial") {
     if (!values.against) {
