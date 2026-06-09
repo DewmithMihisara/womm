@@ -67,6 +67,7 @@ const samples: [string, string, string][] = [
   ["pipenv", "pipenv, version 2024.2.0", "2024.2.0"],
   ["volta", "2.0.1", "2.0.1"],
   ["fnm", "fnm 1.37.2", "1.37.2"],
+  ["corepack", "0.29.4", "0.29.4"],
   // New samples go above this line.
 ];
 
