@@ -68,6 +68,7 @@ const samples: [string, string, string][] = [
   ["volta", "2.0.1", "2.0.1"],
   ["fnm", "fnm 1.37.2", "1.37.2"],
   ["corepack", "0.29.4", "0.29.4"],
+  ["tsc", "Version 5.6.3", "5.6.3"],
   // New samples go above this line.
 ];
 
