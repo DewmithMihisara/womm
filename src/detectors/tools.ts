@@ -76,6 +76,7 @@ export const tools: ToolSpec[] = [
   { id: "conda", label: "Conda", command: "conda" },
   { id: "pipenv", label: "Pipenv", command: "pipenv" },
   { id: "volta", label: "Volta", command: "volta" },
+  { id: "fnm", label: "fnm", command: "fnm" },
   // New tools go above this line.
 ];
 
