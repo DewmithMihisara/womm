@@ -65,6 +65,7 @@ const samples: [string, string, string][] = [
   ["pyenv", "pyenv 2.4.17", "2.4.17"],
   ["conda", "conda 24.9.2", "24.9.2"],
   ["pipenv", "pipenv, version 2024.2.0", "2024.2.0"],
+  ["volta", "2.0.1", "2.0.1"],
   // New samples go above this line.
 ];
 
