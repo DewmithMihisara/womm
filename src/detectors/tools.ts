@@ -73,6 +73,7 @@ export const tools: ToolSpec[] = [
   { id: "bundler", label: "Bundler", command: "bundle" },
   { id: "rbenv", label: "rbenv", command: "rbenv" },
   { id: "pyenv", label: "pyenv", command: "pyenv" },
+  { id: "conda", label: "Conda", command: "conda" },
   // New tools go above this line.
 ];
 
