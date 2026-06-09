@@ -62,6 +62,7 @@ const samples: [string, string, string][] = [
   ["gem", "3.5.22", "3.5.22"],
   ["bundler", "Bundler version 2.5.22", "2.5.22"],
   ["rbenv", "rbenv 1.3.0", "1.3.0"],
+  ["pyenv", "pyenv 2.4.17", "2.4.17"],
   // New samples go above this line.
 ];
 

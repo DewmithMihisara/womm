@@ -72,6 +72,7 @@ export const tools: ToolSpec[] = [
   { id: "gem", label: "RubyGems", command: "gem" },
   { id: "bundler", label: "Bundler", command: "bundle" },
   { id: "rbenv", label: "rbenv", command: "rbenv" },
+  { id: "pyenv", label: "pyenv", command: "pyenv" },
   // New tools go above this line.
 ];
 
