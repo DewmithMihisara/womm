@@ -68,6 +68,7 @@ export const tools: ToolSpec[] = [
   { id: "nim", label: "Nim", command: "nim" },
   { id: "ghc", label: "GHC", command: "ghc" },
   { id: "cabal", label: "Cabal", command: "cabal" },
+  { id: "ocaml", label: "OCaml", command: "ocaml", args: ["-version"] },
   // New tools go above this line.
 ];
 
