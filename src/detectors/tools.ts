@@ -62,6 +62,7 @@ export const tools: ToolSpec[] = [
   { id: "scala", label: "Scala", command: "scalac", args: ["-version"] },
   { id: "dart", label: "Dart", command: "dart" },
   { id: "flutter", label: "Flutter", command: "flutter" },
+  { id: "r", label: "R", command: "R" },
   // New tools go above this line.
 ];
 
