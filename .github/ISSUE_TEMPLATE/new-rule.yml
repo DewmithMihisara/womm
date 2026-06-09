@@ -1,0 +1,18 @@
+name: Suggest a known cause
+description: Something that works on one machine and not another
+labels: ["rule", "good first issue"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What breaks?
+      description: The error, and which versions or settings cause it.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link supporting this, ideally official release notes.
+    validations:
+      required: true

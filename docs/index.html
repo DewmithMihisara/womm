@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>womm: a courtroom for "works on my machine" bugs</title>
+<style>
+  :root { color-scheme: light dark; --gold: #9a7420; }
+  body { font-family: Georgia, serif; max-width: 46rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.6; }
+  h1 { font-size: 2.5rem; margin-bottom: 0; }
+  .tag { font-style: italic; margin-top: .25rem; color: var(--gold); }
+  pre { background: #1c1b19; color: #eee; padding: 1rem; border-radius: 6px; overflow-x: auto; font-size: .9rem; line-height: 1.45; }
+  .g { color: #ff7b72; } .s { color: #e3b341; } .a { color: #7ee787; } .d { color: #9a9a9a; }
+  code { font-size: .95em; }
+</style>
+</head>
+<body>
+<h1>womm</h1>
+<p class="tag">A courtroom for "works on my machine" bugs.</p>
+<p>It works on your teammate's laptop and not on yours. <code>womm</code> compares the two machines, checks what your project says it needs, and puts the likely causes on trial.</p>
+<pre>$ womm trial --against works.womm.json
+
+THE PEOPLE v. YOUR MACHINE
+
+<span class="g">GUILTY    </span> node 16.20.0
+           <span class="d">.nvmrc requires node 22.11.0</span>
+           Fix: Install a node version matching 22.11.0.
+
+<span class="s">SUSPICIOUS</span> Python 3.12 removed distutils
+           <span class="d">Code or packages importing distutils fail on Python 3.12.</span>
+           Fix: Install setuptools, or update the package that imports distutils.
+
+<span class="a">ACQUITTED </span> Git 2.47.0
+           <span class="d">Theirs: 2.52.0</span>
+
+The court recommends dealing with the guilty parties first.</pre>
+<h2>How it works</h2>
+<ol>
+  <li>Run <code>womm snapshot -o works.womm.json</code> on the machine where it works.</li>
+  <li>Review the file and share it.</li>
+  <li>Run <code>womm trial --against works.womm.json</code> on the machine where it fails.</li>
+</ol>
+<p>Verdicts are informed guesses with the evidence shown, not proof. Snapshots leave out hostnames, secrets and your name.</p>
+<p><a href="rules.md">See all known causes</a>, or add your own. Each is one small file.</p>
+</body>
+</html>
