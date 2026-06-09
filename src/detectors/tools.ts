@@ -58,6 +58,7 @@ export const tools: ToolSpec[] = [
   { id: "redis", label: "Redis client", command: "redis-cli" },
   { id: "aws", label: "AWS CLI", command: "aws" },
   { id: "ffmpeg", label: "FFmpeg", command: "ffmpeg", args: ["-version"] },
+  { id: "kotlin", label: "Kotlin", command: "kotlin", args: ["-version"] },
   // New tools go above this line.
 ];
 
