@@ -69,6 +69,7 @@ export const tools: ToolSpec[] = [
   { id: "ghc", label: "GHC", command: "ghc" },
   { id: "cabal", label: "Cabal", command: "cabal" },
   { id: "ocaml", label: "OCaml", command: "ocaml", args: ["-version"] },
+  { id: "gem", label: "RubyGems", command: "gem" },
   // New tools go above this line.
 ];
 

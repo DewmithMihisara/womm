@@ -59,6 +59,7 @@ const samples: [string, string, string][] = [
   ["ghc", "The Glorious Glasgow Haskell Compilation System, version 9.4.8", "9.4.8"],
   ["cabal", "cabal-install version 3.10.3.0", "3.10.3.0"],
   ["ocaml", "The OCaml toplevel, version 5.2.0", "5.2.0"],
+  ["gem", "3.5.22", "3.5.22"],
   // New samples go above this line.
 ];
 
