@@ -61,6 +61,7 @@ const samples: [string, string, string][] = [
   ["ocaml", "The OCaml toplevel, version 5.2.0", "5.2.0"],
   ["gem", "3.5.22", "3.5.22"],
   ["bundler", "Bundler version 2.5.22", "2.5.22"],
+  ["rbenv", "rbenv 1.3.0", "1.3.0"],
   // New samples go above this line.
 ];
 

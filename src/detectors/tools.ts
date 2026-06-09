@@ -71,6 +71,7 @@ export const tools: ToolSpec[] = [
   { id: "ocaml", label: "OCaml", command: "ocaml", args: ["-version"] },
   { id: "gem", label: "RubyGems", command: "gem" },
   { id: "bundler", label: "Bundler", command: "bundle" },
+  { id: "rbenv", label: "rbenv", command: "rbenv" },
   // New tools go above this line.
 ];
 
