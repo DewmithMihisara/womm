@@ -63,6 +63,7 @@ export const tools: ToolSpec[] = [
   { id: "dart", label: "Dart", command: "dart" },
   { id: "flutter", label: "Flutter", command: "flutter" },
   { id: "r", label: "R", command: "R" },
+  { id: "julia", label: "Julia", command: "julia" },
   // New tools go above this line.
 ];
 

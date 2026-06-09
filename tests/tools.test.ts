@@ -53,6 +53,7 @@ const samples: [string, string, string][] = [
   ["dart", "Dart SDK version: 3.5.4 (stable) on \"linux_x64\"", "3.5.4"],
   ["flutter", "Flutter 3.24.4 • channel stable • https://github.com/flutter/flutter.git", "3.24.4"],
   ["r", "R version 4.4.2 (2024-10-31) -- \"Pile of Leaves\"", "4.4.2"],
+  ["julia", "julia version 1.11.1", "1.11.1"],
   // New samples go above this line.
 ];
 
