@@ -50,6 +50,7 @@ const samples: [string, string, string][] = [
   ["ffmpeg", "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers", "7.1"],
   ["kotlin", "Kotlin version 2.0.21-release-482 (JRE 21.0.2+13)", "2.0.21-release-482"],
   ["scala", "Scala compiler version 3.5.2 -- Copyright 2002-2024, LAMP/EPFL", "3.5.2"],
+  ["dart", "Dart SDK version: 3.5.4 (stable) on \"linux_x64\"", "3.5.4"],
   // New samples go above this line.
 ];
 
