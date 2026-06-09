@@ -59,6 +59,7 @@ export const tools: ToolSpec[] = [
   { id: "aws", label: "AWS CLI", command: "aws" },
   { id: "ffmpeg", label: "FFmpeg", command: "ffmpeg", args: ["-version"] },
   { id: "kotlin", label: "Kotlin", command: "kotlin", args: ["-version"] },
+  { id: "scala", label: "Scala", command: "scalac", args: ["-version"] },
   // New tools go above this line.
 ];
 

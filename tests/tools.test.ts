@@ -49,6 +49,7 @@ const samples: [string, string, string][] = [
   ["aws", "aws-cli/2.18.0 Python/3.12.6 Linux/6.8.0 exe/x86_64", "2.18.0"],
   ["ffmpeg", "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers", "7.1"],
   ["kotlin", "Kotlin version 2.0.21-release-482 (JRE 21.0.2+13)", "2.0.21-release-482"],
+  ["scala", "Scala compiler version 3.5.2 -- Copyright 2002-2024, LAMP/EPFL", "3.5.2"],
   // New samples go above this line.
 ];
 
