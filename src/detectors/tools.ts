@@ -74,6 +74,7 @@ export const tools: ToolSpec[] = [
   { id: "rbenv", label: "rbenv", command: "rbenv" },
   { id: "pyenv", label: "pyenv", command: "pyenv" },
   { id: "conda", label: "Conda", command: "conda" },
+  { id: "pipenv", label: "Pipenv", command: "pipenv" },
   // New tools go above this line.
 ];
 
