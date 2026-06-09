@@ -1,4 +1,11 @@
+import { renderRulesDoc } from "../report/rulesdoc.js";
 import { loadRules } from "../rules/load.js";
+
+export async function rulesDocsCommand(): Promise<number> {
+  const { rules } = await loadRules();
+  process.stdout.write(renderRulesDoc(rules));
+  return 0;
+}
 
 export async function rulesListCommand(): Promise<number> {
   const { rules } = await loadRules();
