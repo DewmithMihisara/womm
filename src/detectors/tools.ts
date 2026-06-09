@@ -79,6 +79,7 @@ export const tools: ToolSpec[] = [
   { id: "fnm", label: "fnm", command: "fnm" },
   { id: "corepack", label: "Corepack", command: "corepack" },
   { id: "tsc", label: "TypeScript compiler", command: "tsc" },
+  { id: "ninja", label: "Ninja", command: "ninja" },
   // New tools go above this line.
 ];
 
