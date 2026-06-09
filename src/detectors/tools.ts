@@ -64,6 +64,7 @@ export const tools: ToolSpec[] = [
   { id: "flutter", label: "Flutter", command: "flutter" },
   { id: "r", label: "R", command: "R" },
   { id: "julia", label: "Julia", command: "julia" },
+  { id: "zig", label: "Zig", command: "zig", args: ["version"] },
   // New tools go above this line.
 ];
 

@@ -54,6 +54,7 @@ const samples: [string, string, string][] = [
   ["flutter", "Flutter 3.24.4 • channel stable • https://github.com/flutter/flutter.git", "3.24.4"],
   ["r", "R version 4.4.2 (2024-10-31) -- \"Pile of Leaves\"", "4.4.2"],
   ["julia", "julia version 1.11.1", "1.11.1"],
+  ["zig", "0.13.0", "0.13.0"],
   // New samples go above this line.
 ];
 
