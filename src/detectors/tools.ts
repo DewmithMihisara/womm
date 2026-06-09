@@ -66,6 +66,7 @@ export const tools: ToolSpec[] = [
   { id: "julia", label: "Julia", command: "julia" },
   { id: "zig", label: "Zig", command: "zig", args: ["version"] },
   { id: "nim", label: "Nim", command: "nim" },
+  { id: "ghc", label: "GHC", command: "ghc" },
   // New tools go above this line.
 ];
 

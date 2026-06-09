@@ -56,6 +56,7 @@ const samples: [string, string, string][] = [
   ["julia", "julia version 1.11.1", "1.11.1"],
   ["zig", "0.13.0", "0.13.0"],
   ["nim", "Nim Compiler Version 2.2.0 [Linux: amd64]", "2.2.0"],
+  ["ghc", "The Glorious Glasgow Haskell Compilation System, version 9.4.8", "9.4.8"],
   // New samples go above this line.
 ];
 
