@@ -81,6 +81,7 @@ export const tools: ToolSpec[] = [
   { id: "tsc", label: "TypeScript compiler", command: "tsc" },
   { id: "ninja", label: "Ninja", command: "ninja" },
   { id: "meson", label: "Meson", command: "meson" },
+  { id: "bazel", label: "Bazel", command: "bazel" },
   // New tools go above this line.
 ];
 

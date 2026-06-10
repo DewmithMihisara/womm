@@ -71,6 +71,7 @@ const samples: [string, string, string][] = [
   ["tsc", "Version 5.6.3", "5.6.3"],
   ["ninja", "1.11.1", "1.11.1"],
   ["meson", "1.6.0", "1.6.0"],
+  ["bazel", "bazel 7.4.0", "7.4.0"],
   // New samples go above this line.
 ];
 
