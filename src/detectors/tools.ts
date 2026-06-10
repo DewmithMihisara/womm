@@ -84,6 +84,7 @@ export const tools: ToolSpec[] = [
   { id: "bazel", label: "Bazel", command: "bazel" },
   { id: "ant", label: "Apache Ant", command: "ant", args: ["-version"] },
   { id: "pkg-config", label: "pkg-config", command: "pkg-config" },
+  { id: "autoconf", label: "Autoconf", command: "autoconf" },
   // New tools go above this line.
 ];
 
