@@ -83,6 +83,7 @@ export const tools: ToolSpec[] = [
   { id: "meson", label: "Meson", command: "meson" },
   { id: "bazel", label: "Bazel", command: "bazel" },
   { id: "ant", label: "Apache Ant", command: "ant", args: ["-version"] },
+  { id: "pkg-config", label: "pkg-config", command: "pkg-config" },
   // New tools go above this line.
 ];
 
