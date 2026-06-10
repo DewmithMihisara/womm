@@ -85,6 +85,7 @@ export const tools: ToolSpec[] = [
   { id: "ant", label: "Apache Ant", command: "ant", args: ["-version"] },
   { id: "pkg-config", label: "pkg-config", command: "pkg-config" },
   { id: "autoconf", label: "Autoconf", command: "autoconf" },
+  { id: "automake", label: "Automake", command: "automake" },
   // New tools go above this line.
 ];
 

@@ -75,6 +75,7 @@ const samples: [string, string, string][] = [
   ["ant", "Apache Ant(TM) version 1.10.14 compiled on August 16 2023", "1.10.14"],
   ["pkg-config", "2.1.1", "2.1.1"],
   ["autoconf", "autoconf (GNU Autoconf) 2.71", "2.71"],
+  ["automake", "automake (GNU automake) 1.16.5", "1.16.5"],
   // New samples go above this line.
 ];
 
