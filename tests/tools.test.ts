@@ -70,6 +70,7 @@ const samples: [string, string, string][] = [
   ["corepack", "0.29.4", "0.29.4"],
   ["tsc", "Version 5.6.3", "5.6.3"],
   ["ninja", "1.11.1", "1.11.1"],
+  ["meson", "1.6.0", "1.6.0"],
   // New samples go above this line.
 ];
 

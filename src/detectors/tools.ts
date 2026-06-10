@@ -80,6 +80,7 @@ export const tools: ToolSpec[] = [
   { id: "corepack", label: "Corepack", command: "corepack" },
   { id: "tsc", label: "TypeScript compiler", command: "tsc" },
   { id: "ninja", label: "Ninja", command: "ninja" },
+  { id: "meson", label: "Meson", command: "meson" },
   // New tools go above this line.
 ];
 
