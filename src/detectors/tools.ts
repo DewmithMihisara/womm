@@ -82,6 +82,7 @@ export const tools: ToolSpec[] = [
   { id: "ninja", label: "Ninja", command: "ninja" },
   { id: "meson", label: "Meson", command: "meson" },
   { id: "bazel", label: "Bazel", command: "bazel" },
+  { id: "ant", label: "Apache Ant", command: "ant", args: ["-version"] },
   // New tools go above this line.
 ];
 

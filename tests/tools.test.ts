@@ -72,6 +72,7 @@ const samples: [string, string, string][] = [
   ["ninja", "1.11.1", "1.11.1"],
   ["meson", "1.6.0", "1.6.0"],
   ["bazel", "bazel 7.4.0", "7.4.0"],
+  ["ant", "Apache Ant(TM) version 1.10.14 compiled on August 16 2023", "1.10.14"],
   // New samples go above this line.
 ];
 
