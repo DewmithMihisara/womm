@@ -78,6 +78,7 @@ const samples: [string, string, string][] = [
   ["automake", "automake (GNU automake) 1.16.5", "1.16.5"],
   ["nasm", "NASM version 2.16.03 compiled on Apr 17 2024", "2.16.03"],
   ["wget", "GNU Wget 1.24.5 built on linux-gnu.", "1.24.5"],
+  ["jq", "jq-1.7.1", "1.7.1"],
   // New samples go above this line.
 ];
 
