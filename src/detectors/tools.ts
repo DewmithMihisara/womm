@@ -90,6 +90,7 @@ export const tools: ToolSpec[] = [
   { id: "wget", label: "Wget", command: "wget" },
   { id: "jq", label: "jq", command: "jq" },
   { id: "gh", label: "GitHub CLI", command: "gh" },
+  { id: "hg", label: "Mercurial", command: "hg" },
   // New tools go above this line.
 ];
 
