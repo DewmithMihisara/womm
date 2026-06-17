@@ -89,6 +89,7 @@ export const tools: ToolSpec[] = [
   { id: "nasm", label: "NASM", command: "nasm", args: ["-v"] },
   { id: "wget", label: "Wget", command: "wget" },
   { id: "jq", label: "jq", command: "jq" },
+  { id: "gh", label: "GitHub CLI", command: "gh" },
   // New tools go above this line.
 ];
 

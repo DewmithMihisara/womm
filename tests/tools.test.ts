@@ -79,6 +79,7 @@ const samples: [string, string, string][] = [
   ["nasm", "NASM version 2.16.03 compiled on Apr 17 2024", "2.16.03"],
   ["wget", "GNU Wget 1.24.5 built on linux-gnu.", "1.24.5"],
   ["jq", "jq-1.7.1", "1.7.1"],
+  ["gh", "gh version 2.60.1 (2024-11-01)", "2.60.1"],
   // New samples go above this line.
 ];
 
