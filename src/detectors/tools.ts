@@ -87,6 +87,7 @@ export const tools: ToolSpec[] = [
   { id: "autoconf", label: "Autoconf", command: "autoconf" },
   { id: "automake", label: "Automake", command: "automake" },
   { id: "nasm", label: "NASM", command: "nasm", args: ["-v"] },
+  { id: "wget", label: "Wget", command: "wget" },
   // New tools go above this line.
 ];
 
