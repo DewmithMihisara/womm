@@ -94,6 +94,7 @@ export const tools: ToolSpec[] = [
   { id: "svn", label: "Subversion", command: "svn", args: ["--version","--quiet"] },
   { id: "git-lfs", label: "Git LFS", command: "git-lfs" },
   { id: "podman", label: "Podman", command: "podman" },
+  { id: "minikube", label: "minikube", command: "minikube", args: ["version"] },
   // New tools go above this line.
 ];
 
