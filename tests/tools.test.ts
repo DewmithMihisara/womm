@@ -83,6 +83,7 @@ const samples: [string, string, string][] = [
   ["hg", "Mercurial Distributed SCM (version 6.8.2)", "6.8.2"],
   ["svn", "1.14.3", "1.14.3"],
   ["git-lfs", "git-lfs/3.5.1 (GitHub; linux amd64; go 1.22.2)", "3.5.1"],
+  ["podman", "podman version 5.2.5", "5.2.5"],
   // New samples go above this line.
 ];
 

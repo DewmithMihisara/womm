@@ -93,6 +93,7 @@ export const tools: ToolSpec[] = [
   { id: "hg", label: "Mercurial", command: "hg" },
   { id: "svn", label: "Subversion", command: "svn", args: ["--version","--quiet"] },
   { id: "git-lfs", label: "Git LFS", command: "git-lfs" },
+  { id: "podman", label: "Podman", command: "podman" },
   // New tools go above this line.
 ];
 
