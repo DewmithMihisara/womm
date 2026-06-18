@@ -87,6 +87,7 @@ const samples: [string, string, string][] = [
   ["minikube", "minikube version: v1.34.0", "1.34.0"],
   ["kind", "kind v0.24.0 go1.22.6 linux/amd64", "0.24.0"],
   ["ansible", "ansible [core 2.17.5]", "2.17.5"],
+  ["vagrant", "Vagrant 2.4.2", "2.4.2"],
   // New samples go above this line.
 ];
 

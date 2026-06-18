@@ -97,6 +97,7 @@ export const tools: ToolSpec[] = [
   { id: "minikube", label: "minikube", command: "minikube", args: ["version"] },
   { id: "kind", label: "kind", command: "kind", args: ["version"] },
   { id: "ansible", label: "Ansible", command: "ansible" },
+  { id: "vagrant", label: "Vagrant", command: "vagrant" },
   // New tools go above this line.
 ];
 
