@@ -96,6 +96,7 @@ export const tools: ToolSpec[] = [
   { id: "podman", label: "Podman", command: "podman" },
   { id: "minikube", label: "minikube", command: "minikube", args: ["version"] },
   { id: "kind", label: "kind", command: "kind", args: ["version"] },
+  { id: "ansible", label: "Ansible", command: "ansible" },
   // New tools go above this line.
 ];
 
