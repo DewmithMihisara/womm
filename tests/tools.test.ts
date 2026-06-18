@@ -82,6 +82,7 @@ const samples: [string, string, string][] = [
   ["gh", "gh version 2.60.1 (2024-11-01)", "2.60.1"],
   ["hg", "Mercurial Distributed SCM (version 6.8.2)", "6.8.2"],
   ["svn", "1.14.3", "1.14.3"],
+  ["git-lfs", "git-lfs/3.5.1 (GitHub; linux amd64; go 1.22.2)", "3.5.1"],
   // New samples go above this line.
 ];
 
