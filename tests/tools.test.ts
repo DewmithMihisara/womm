@@ -88,6 +88,7 @@ const samples: [string, string, string][] = [
   ["kind", "kind v0.24.0 go1.22.6 linux/amd64", "0.24.0"],
   ["ansible", "ansible [core 2.17.5]", "2.17.5"],
   ["vagrant", "Vagrant 2.4.2", "2.4.2"],
+  ["packer", "Packer v1.11.2", "1.11.2"],
   // New samples go above this line.
 ];
 
