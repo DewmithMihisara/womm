@@ -91,6 +91,7 @@ export const tools: ToolSpec[] = [
   { id: "jq", label: "jq", command: "jq" },
   { id: "gh", label: "GitHub CLI", command: "gh" },
   { id: "hg", label: "Mercurial", command: "hg" },
+  { id: "svn", label: "Subversion", command: "svn", args: ["--version","--quiet"] },
   // New tools go above this line.
 ];
 
