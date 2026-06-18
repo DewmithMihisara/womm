@@ -85,6 +85,7 @@ const samples: [string, string, string][] = [
   ["git-lfs", "git-lfs/3.5.1 (GitHub; linux amd64; go 1.22.2)", "3.5.1"],
   ["podman", "podman version 5.2.5", "5.2.5"],
   ["minikube", "minikube version: v1.34.0", "1.34.0"],
+  ["kind", "kind v0.24.0 go1.22.6 linux/amd64", "0.24.0"],
   // New samples go above this line.
 ];
 
