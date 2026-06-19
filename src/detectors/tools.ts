@@ -101,6 +101,7 @@ export const tools: ToolSpec[] = [
   { id: "packer", label: "Packer", command: "packer", args: ["version"] },
   { id: "vault", label: "Vault", command: "vault" },
   { id: "gcloud", label: "Google Cloud CLI", command: "gcloud" },
+  { id: "mysql", label: "MySQL client", command: "mysql" },
   // New tools go above this line.
 ];
 
