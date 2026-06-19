@@ -93,6 +93,7 @@ const samples: [string, string, string][] = [
   ["gcloud", "Google Cloud SDK 499.0.0", "499.0.0"],
   ["mysql", "mysql  Ver 8.0.40 for Linux on x86_64", "8.0.40"],
   ["mongosh", "2.3.3", "2.3.3"],
+  ["nginx", "nginx version: nginx/1.26.2", "1.26.2"],
   // New samples go above this line.
 ];
 
