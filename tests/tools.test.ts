@@ -94,6 +94,7 @@ const samples: [string, string, string][] = [
   ["mysql", "mysql  Ver 8.0.40 for Linux on x86_64", "8.0.40"],
   ["mongosh", "2.3.3", "2.3.3"],
   ["nginx", "nginx version: nginx/1.26.2", "1.26.2"],
+  ["ssh", "OpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024", "9.6"],
   // New samples go above this line.
 ];
 

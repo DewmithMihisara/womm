@@ -104,6 +104,7 @@ export const tools: ToolSpec[] = [
   { id: "mysql", label: "MySQL client", command: "mysql" },
   { id: "mongosh", label: "MongoDB shell", command: "mongosh" },
   { id: "nginx", label: "nginx", command: "nginx", args: ["-v"] },
+  { id: "ssh", label: "OpenSSH", command: "ssh", args: ["-V"] },
   // New tools go above this line.
 ];
 
