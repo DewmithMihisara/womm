@@ -102,6 +102,7 @@ export const tools: ToolSpec[] = [
   { id: "vault", label: "Vault", command: "vault" },
   { id: "gcloud", label: "Google Cloud CLI", command: "gcloud" },
   { id: "mysql", label: "MySQL client", command: "mysql" },
+  { id: "mongosh", label: "MongoDB shell", command: "mongosh" },
   // New tools go above this line.
 ];
 

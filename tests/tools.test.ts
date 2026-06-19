@@ -92,6 +92,7 @@ const samples: [string, string, string][] = [
   ["vault", "Vault v1.18.1 (f479e5c85462477c9334564bc8f69531cdb03b65)", "1.18.1"],
   ["gcloud", "Google Cloud SDK 499.0.0", "499.0.0"],
   ["mysql", "mysql  Ver 8.0.40 for Linux on x86_64", "8.0.40"],
+  ["mongosh", "2.3.3", "2.3.3"],
   // New samples go above this line.
 ];
 
