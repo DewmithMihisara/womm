@@ -90,6 +90,7 @@ const samples: [string, string, string][] = [
   ["vagrant", "Vagrant 2.4.2", "2.4.2"],
   ["packer", "Packer v1.11.2", "1.11.2"],
   ["vault", "Vault v1.18.1 (f479e5c85462477c9334564bc8f69531cdb03b65)", "1.18.1"],
+  ["gcloud", "Google Cloud SDK 499.0.0", "499.0.0"],
   // New samples go above this line.
 ];
 

@@ -100,6 +100,7 @@ export const tools: ToolSpec[] = [
   { id: "vagrant", label: "Vagrant", command: "vagrant" },
   { id: "packer", label: "Packer", command: "packer", args: ["version"] },
   { id: "vault", label: "Vault", command: "vault" },
+  { id: "gcloud", label: "Google Cloud CLI", command: "gcloud" },
   // New tools go above this line.
 ];
 
