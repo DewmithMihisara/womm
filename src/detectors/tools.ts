@@ -99,6 +99,7 @@ export const tools: ToolSpec[] = [
   { id: "ansible", label: "Ansible", command: "ansible" },
   { id: "vagrant", label: "Vagrant", command: "vagrant" },
   { id: "packer", label: "Packer", command: "packer", args: ["version"] },
+  { id: "vault", label: "Vault", command: "vault" },
   // New tools go above this line.
 ];
 
