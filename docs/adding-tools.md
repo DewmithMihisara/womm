@@ -24,6 +24,8 @@ Rules refer to the `id`, so don't rename one after release.
 
 Detectors run fixed commands without a shell. Arguments must be plain words, and a test checks this for every tool.
 
+On Windows, commands run from the temp folder, because Windows otherwise looks in the current folder first and a repository could supply its own `git.exe`. A side effect is that version managers that choose a version per folder may report their global version on Windows.
+
 ## Other detectors
 
 For facts that aren't a tool version, see `src/detectors/system.ts`. Please read [Privacy](privacy.md) first.
