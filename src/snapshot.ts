@@ -1,8 +1,11 @@
 import { detectors as builtIn } from "./detectors/index.js";
+import { limitRunner } from "./detectors/limit.js";
 import { runCommand } from "./detectors/run.js";
 import type { Detector, DetectorContext } from "./detectors/types.js";
 import { currentIdentity, redactFindings, type Identity } from "./redact.js";
 import { SNAPSHOT_VERSION, type Snapshot } from "./types.js";
+
+const MAX_CONCURRENT_COMMANDS = 16;
 
 export interface SnapshotOptions {
   detectors?: Detector[];
@@ -15,7 +18,9 @@ export interface SnapshotOptions {
 export async function takeSnapshot(
   options: SnapshotOptions = {},
 ): Promise<Snapshot> {
-  const context = options.context ?? { run: runCommand };
+  const context = options.context ?? {
+    run: limitRunner(runCommand, MAX_CONCURRENT_COMMANDS),
+  };
   const results = await Promise.allSettled(
     (options.detectors ?? builtIn).map((detect) => detect(context)),
   );
