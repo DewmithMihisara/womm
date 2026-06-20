@@ -95,6 +95,7 @@ const samples: [string, string, string][] = [
   ["mongosh", "2.3.3", "2.3.3"],
   ["nginx", "nginx version: nginx/1.26.2", "1.26.2"],
   ["ssh", "OpenSSH_9.6p1 Ubuntu-3ubuntu13.5, OpenSSL 3.0.13 30 Jan 2024", "9.6"],
+  ["gpg", "gpg (GnuPG) 2.4.5", "2.4.5"],
   // New samples go above this line.
 ];
 
