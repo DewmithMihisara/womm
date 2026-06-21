@@ -10,6 +10,7 @@ const TOOLS = [
   "grep",
   "awk",
   "tar",
+  "date",
   // New GNU tools go above this line.
 ];
 
