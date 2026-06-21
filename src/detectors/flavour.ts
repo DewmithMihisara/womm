@@ -9,6 +9,7 @@ const TOOLS = [
   "sed",
   "grep",
   "awk",
+  "tar",
   // New GNU tools go above this line.
 ];
 
