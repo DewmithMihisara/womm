@@ -25,6 +25,7 @@ const samples: [string, string, [string, string][]][] = [
   [".php-version", "8.3.6\n", [["php","8.3.6"]]],
   [".swift-version", "5.10\n", [["swift","5.10"]]],
   [".bazelversion", "7.4.0\n", [["bazel","7.4.0"]]],
+  [".bun-version", "1.1.34\n", [["bun","1.1.34"]]],
   // New source samples go above this line.
 ];
 
