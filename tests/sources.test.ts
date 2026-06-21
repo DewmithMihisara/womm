@@ -24,6 +24,7 @@ const samples: [string, string, [string, string][]][] = [
   ["package.json", "{\"engines\":{\"node\":\">=20\",\"npm\":\">=10\"},\"packageManager\":\"pnpm@9.1.0+sha256.abc\"}", [["node",">=20"],["npm",">=10"],["pnpm","9.1.0"]]],
   [".php-version", "8.3.6\n", [["php","8.3.6"]]],
   [".swift-version", "5.10\n", [["swift","5.10"]]],
+  [".bazelversion", "7.4.0\n", [["bazel","7.4.0"]]],
   // New source samples go above this line.
 ];
 

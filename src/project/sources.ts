@@ -124,5 +124,6 @@ export const sources: Source[] = [
   { file: "package.json", parse: packageJson },
   { file: ".php-version", parse: versionFile("php") },
   { file: ".swift-version", parse: versionFile("swift") },
+  { file: ".bazelversion", parse: versionFile("bazel") },
   // New sources go above this line.
 ];
