@@ -11,6 +11,7 @@ const TOOLS = [
   "awk",
   "tar",
   "date",
+  "find",
   // New GNU tools go above this line.
 ];
 
