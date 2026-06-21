@@ -23,7 +23,7 @@ const SENSITIVE = new Set([
 
 /** True when a difference could plausibly change behaviour. */
 export function isSuspicious(difference: Difference): boolean {
-  if (SENSITIVE.has(difference.id)) return true;
+  if (SENSITIVE.has(difference.id) || difference.id.startsWith("gnu.")) return true;
   // Theirs works with a tool yours lacks. The reverse is much less telling.
   if (difference.kind === "only-b") return true;
   if (difference.kind === "only-a") return false;
