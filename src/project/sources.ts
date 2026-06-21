@@ -122,5 +122,6 @@ export const sources: Source[] = [
   { file: "global.json", parse: globalJson },
   { file: "composer.json", parse: composer },
   { file: "package.json", parse: packageJson },
+  { file: ".php-version", parse: versionFile("php") },
   // New sources go above this line.
 ];

@@ -22,6 +22,7 @@ const samples: [string, string, [string, string][]][] = [
   ["global.json", "{\"sdk\":{\"version\":\"8.0.100\"}}", [["dotnet","~8.0.100"]]],
   ["composer.json", "{\"require\":{\"php\":\"^8.2\"}}", [["php","^8.2"]]],
   ["package.json", "{\"engines\":{\"node\":\">=20\",\"npm\":\">=10\"},\"packageManager\":\"pnpm@9.1.0+sha256.abc\"}", [["node",">=20"],["npm",">=10"],["pnpm","9.1.0"]]],
+  [".php-version", "8.3.6\n", [["php","8.3.6"]]],
   // New source samples go above this line.
 ];
 
