@@ -13,6 +13,7 @@ Snapshots are meant to be shared, so `womm` is built to record as little as it c
 - `NODE_ENV`, if it's one of `development`, `production` or `test`. Any other value shows as `other`
 - Whether a proxy is configured, but never its address
 - Whether it's running in CI or WSL
+- Whether tools such as `sed` and `grep` are the GNU versions
 
 ## What it doesn't record
 

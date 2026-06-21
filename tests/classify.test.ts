@@ -32,6 +32,11 @@ describe("isSuspicious", () => {
     expect(isSuspicious(diff("timezone", "UTC", "Asia/Colombo", "changed"))).toBe(true);
   });
 
+  it("flags GNU and BSD differences", () => {
+    expect(isSuspicious(diff("gnu.sed", null, "yes", "only-b"))).toBe(true);
+    expect(isSuspicious(diff("gnu.sed", "yes", null, "only-a"))).toBe(true);
+  });
+
   it("flags a sensitive setting present on only one side", () => {
     expect(isSuspicious(diff("proxy", "configured", null, "only-a"))).toBe(true);
   });
