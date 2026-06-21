@@ -12,6 +12,7 @@ const TOOLS = [
   "tar",
   "date",
   "find",
+  "xargs",
   // New GNU tools go above this line.
 ];
 
