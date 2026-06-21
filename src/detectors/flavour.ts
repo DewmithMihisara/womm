@@ -7,6 +7,7 @@ import type { Detector } from "./types.js";
  */
 const TOOLS = [
   "sed",
+  "grep",
   // New GNU tools go above this line.
 ];
 
