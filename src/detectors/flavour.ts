@@ -13,6 +13,7 @@ const TOOLS = [
   "date",
   "find",
   "xargs",
+  "readlink",
   // New GNU tools go above this line.
 ];
 
