@@ -130,5 +130,6 @@ export const sources: Source[] = [
   { file: "Cargo.toml", parse: matching("rust", /^\s*rust-version\s*=\s*"([^"]+)"/m, (v) => `>=${v}`) },
   { file: "setup.py", parse: matching("python", /python_requires\s*=\s*["']([^"']+)["']/, pep440ToRange) },
   { file: "Pipfile", parse: matching("python", /^\s*python_version\s*=\s*"([^"]+)"/m) },
+  { file: "environment.yml", parse: matching("python", /^\s*-\s*python\s*=+\s*([\d.]+)/m) },
   // New sources go above this line.
 ];

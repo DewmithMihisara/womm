@@ -30,6 +30,7 @@ const samples: [string, string, [string, string][]][] = [
   ["Cargo.toml", "[package]\nrust-version = \"1.75\"\n", [["rust",">=1.75"]]],
   ["setup.py", "setup(python_requires=\">=3.9\",)", [["python",">=3.9"]]],
   ["Pipfile", "[requires]\npython_version = \"3.11\"\n", [["python","3.11"]]],
+  ["environment.yml", "dependencies:\n  - python=3.11\n", [["python","3.11"]]],
   // New source samples go above this line.
 ];
 
