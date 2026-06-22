@@ -28,6 +28,7 @@ const samples: [string, string, [string, string][]][] = [
   [".bun-version", "1.1.34\n", [["bun","1.1.34"]]],
   [".zig-version", "0.13.0\n", [["zig","0.13.0"]]],
   ["Cargo.toml", "[package]\nrust-version = \"1.75\"\n", [["rust",">=1.75"]]],
+  ["setup.py", "setup(python_requires=\">=3.9\",)", [["python",">=3.9"]]],
   // New source samples go above this line.
 ];
 

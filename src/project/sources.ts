@@ -128,5 +128,6 @@ export const sources: Source[] = [
   { file: ".bun-version", parse: versionFile("bun") },
   { file: ".zig-version", parse: versionFile("zig") },
   { file: "Cargo.toml", parse: matching("rust", /^\s*rust-version\s*=\s*"([^"]+)"/m, (v) => `>=${v}`) },
+  { file: "setup.py", parse: matching("python", /python_requires\s*=\s*["']([^"']+)["']/, pep440ToRange) },
   // New sources go above this line.
 ];
