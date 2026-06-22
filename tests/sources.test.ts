@@ -32,6 +32,7 @@ const samples: [string, string, [string, string][]][] = [
   ["Pipfile", "[requires]\npython_version = \"3.11\"\n", [["python","3.11"]]],
   ["environment.yml", "dependencies:\n  - python=3.11\n", [["python","3.11"]]],
   ["gradle/wrapper/gradle-wrapper.properties", "distributionUrl=https\\://services.gradle.org/distributions/gradle-8.10.2-bin.zip\n", [["gradle","8.10.2"]]],
+  [".mvn/wrapper/maven-wrapper.properties", "distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip\n", [["maven","3.9.9"]]],
   // New source samples go above this line.
 ];
 

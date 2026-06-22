@@ -132,5 +132,6 @@ export const sources: Source[] = [
   { file: "Pipfile", parse: matching("python", /^\s*python_version\s*=\s*"([^"]+)"/m) },
   { file: "environment.yml", parse: matching("python", /^\s*-\s*python\s*=+\s*([\d.]+)/m) },
   { file: "gradle/wrapper/gradle-wrapper.properties", parse: matching("gradle", /gradle-(\d[\d.]*)-(?:bin|all)\.zip/) },
+  { file: ".mvn/wrapper/maven-wrapper.properties", parse: matching("maven", /apache-maven-(\d[\d.]*)-bin/) },
   // New sources go above this line.
 ];
