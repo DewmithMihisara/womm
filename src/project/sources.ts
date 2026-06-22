@@ -126,5 +126,6 @@ export const sources: Source[] = [
   { file: ".swift-version", parse: versionFile("swift") },
   { file: ".bazelversion", parse: versionFile("bazel") },
   { file: ".bun-version", parse: versionFile("bun") },
+  { file: ".zig-version", parse: versionFile("zig") },
   // New sources go above this line.
 ];

@@ -26,6 +26,7 @@ const samples: [string, string, [string, string][]][] = [
   [".swift-version", "5.10\n", [["swift","5.10"]]],
   [".bazelversion", "7.4.0\n", [["bazel","7.4.0"]]],
   [".bun-version", "1.1.34\n", [["bun","1.1.34"]]],
+  [".zig-version", "0.13.0\n", [["zig","0.13.0"]]],
   // New source samples go above this line.
 ];
 
