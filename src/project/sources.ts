@@ -131,5 +131,6 @@ export const sources: Source[] = [
   { file: "setup.py", parse: matching("python", /python_requires\s*=\s*["']([^"']+)["']/, pep440ToRange) },
   { file: "Pipfile", parse: matching("python", /^\s*python_version\s*=\s*"([^"]+)"/m) },
   { file: "environment.yml", parse: matching("python", /^\s*-\s*python\s*=+\s*([\d.]+)/m) },
+  { file: "gradle/wrapper/gradle-wrapper.properties", parse: matching("gradle", /gradle-(\d[\d.]*)-(?:bin|all)\.zip/) },
   // New sources go above this line.
 ];

@@ -31,6 +31,7 @@ const samples: [string, string, [string, string][]][] = [
   ["setup.py", "setup(python_requires=\">=3.9\",)", [["python",">=3.9"]]],
   ["Pipfile", "[requires]\npython_version = \"3.11\"\n", [["python","3.11"]]],
   ["environment.yml", "dependencies:\n  - python=3.11\n", [["python","3.11"]]],
+  ["gradle/wrapper/gradle-wrapper.properties", "distributionUrl=https\\://services.gradle.org/distributions/gradle-8.10.2-bin.zip\n", [["gradle","8.10.2"]]],
   // New source samples go above this line.
 ];
 
