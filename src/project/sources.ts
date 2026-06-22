@@ -133,5 +133,6 @@ export const sources: Source[] = [
   { file: "environment.yml", parse: matching("python", /^\s*-\s*python\s*=+\s*([\d.]+)/m) },
   { file: "gradle/wrapper/gradle-wrapper.properties", parse: matching("gradle", /gradle-(\d[\d.]*)-(?:bin|all)\.zip/) },
   { file: ".mvn/wrapper/maven-wrapper.properties", parse: matching("maven", /apache-maven-(\d[\d.]*)-bin/) },
+  { file: ".yarnrc.yml", parse: matching("yarn", /yarnPath:.*yarn-(\d+\.\d+\.\d+)\.c?js/) },
   // New sources go above this line.
 ];

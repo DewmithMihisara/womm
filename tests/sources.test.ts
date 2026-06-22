@@ -33,6 +33,7 @@ const samples: [string, string, [string, string][]][] = [
   ["environment.yml", "dependencies:\n  - python=3.11\n", [["python","3.11"]]],
   ["gradle/wrapper/gradle-wrapper.properties", "distributionUrl=https\\://services.gradle.org/distributions/gradle-8.10.2-bin.zip\n", [["gradle","8.10.2"]]],
   [".mvn/wrapper/maven-wrapper.properties", "distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip\n", [["maven","3.9.9"]]],
+  [".yarnrc.yml", "yarnPath: .yarn/releases/yarn-4.5.1.cjs\n", [["yarn","4.5.1"]]],
   // New source samples go above this line.
 ];
 
