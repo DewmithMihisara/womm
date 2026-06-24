@@ -35,6 +35,7 @@ const samples: [string, string, [string, string][]][] = [
   [".mvn/wrapper/maven-wrapper.properties", "distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip\n", [["maven","3.9.9"]]],
   [".yarnrc.yml", "yarnPath: .yarn/releases/yarn-4.5.1.cjs\n", [["yarn","4.5.1"]]],
   ["pubspec.yaml", "environment:\n  sdk: \">=3.0.0 <4.0.0\"\n", [["dart",">=3.0.0 <4.0.0"]]],
+  ["versions.tf", "terraform {\n  required_version = \">= 1.5\"\n}\n", [["terraform",">= 1.5"]]],
   // New source samples go above this line.
 ];
 

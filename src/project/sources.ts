@@ -135,5 +135,6 @@ export const sources: Source[] = [
   { file: ".mvn/wrapper/maven-wrapper.properties", parse: matching("maven", /apache-maven-(\d[\d.]*)-bin/) },
   { file: ".yarnrc.yml", parse: matching("yarn", /yarnPath:.*yarn-(\d+\.\d+\.\d+)\.c?js/) },
   { file: "pubspec.yaml", parse: matching("dart", /^\s*sdk:\s*["']?([^"'\n]+)["']?\s*$/m) },
+  { file: "versions.tf", parse: matching("terraform", /required_version\s*=\s*"([^"]+)"/) },
   // New sources go above this line.
 ];
