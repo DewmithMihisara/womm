@@ -22,6 +22,20 @@ const samples: [string, string, [string, string][]][] = [
   ["global.json", "{\"sdk\":{\"version\":\"8.0.100\"}}", [["dotnet","~8.0.100"]]],
   ["composer.json", "{\"require\":{\"php\":\"^8.2\"}}", [["php","^8.2"]]],
   ["package.json", "{\"engines\":{\"node\":\">=20\",\"npm\":\">=10\"},\"packageManager\":\"pnpm@9.1.0+sha256.abc\"}", [["node",">=20"],["npm",">=10"],["pnpm","9.1.0"]]],
+  [".php-version", "8.3.6\n", [["php","8.3.6"]]],
+  [".swift-version", "5.10\n", [["swift","5.10"]]],
+  [".bazelversion", "7.4.0\n", [["bazel","7.4.0"]]],
+  [".bun-version", "1.1.34\n", [["bun","1.1.34"]]],
+  [".zig-version", "0.13.0\n", [["zig","0.13.0"]]],
+  ["Cargo.toml", "[package]\nrust-version = \"1.75\"\n", [["rust",">=1.75"]]],
+  ["setup.py", "setup(python_requires=\">=3.9\",)", [["python",">=3.9"]]],
+  ["Pipfile", "[requires]\npython_version = \"3.11\"\n", [["python","3.11"]]],
+  ["environment.yml", "dependencies:\n  - python=3.11\n", [["python","3.11"]]],
+  ["gradle/wrapper/gradle-wrapper.properties", "distributionUrl=https\\://services.gradle.org/distributions/gradle-8.10.2-bin.zip\n", [["gradle","8.10.2"]]],
+  [".mvn/wrapper/maven-wrapper.properties", "distributionUrl=https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.9/apache-maven-3.9.9-bin.zip\n", [["maven","3.9.9"]]],
+  [".yarnrc.yml", "yarnPath: .yarn/releases/yarn-4.5.1.cjs\n", [["yarn","4.5.1"]]],
+  ["pubspec.yaml", "environment:\n  sdk: \">=3.0.0 <4.0.0\"\n", [["dart",">=3.0.0 <4.0.0"]]],
+  ["versions.tf", "terraform {\n  required_version = \">= 1.5\"\n}\n", [["terraform",">= 1.5"]]],
   // New source samples go above this line.
 ];
 
