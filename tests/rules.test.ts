@@ -57,6 +57,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["perl-526-dot-in-inc", {"perl":"5.38.2"}, {"perl":"5.24.0"}, {}],
   ["bsd-sed-in-place", {"os.platform":"darwin"}, {"os.platform":"linux"}, {}],
   ["python-39-base64-encodestring", {"python":"3.9.0"}, {"python":"3.8.0"}, {}],
+  ["python-38-time-clock", {"python":"3.8.0"}, {"python":"3.7.0"}, {}],
   // New rule samples go above this line.
 ];
 
