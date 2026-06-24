@@ -56,6 +56,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["docker-on-arm64", {"os.arch":"arm64","docker":"27.0.0"}, {"os.arch":"x64","docker":"27.0.0"}, {}],
   ["perl-526-dot-in-inc", {"perl":"5.38.2"}, {"perl":"5.24.0"}, {}],
   ["bsd-sed-in-place", {"os.platform":"darwin"}, {"os.platform":"linux"}, {}],
+  ["python-39-base64-encodestring", {"python":"3.9.0"}, {"python":"3.8.0"}, {}],
   // New rule samples go above this line.
 ];
 

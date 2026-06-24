@@ -1,0 +1,8 @@
+id: python-39-base64-encodestring
+title: Python 3.9 removed base64.encodestring
+why: base64.encodestring and decodestring no longer exist in Python 3.9.
+fix: Use base64.encodebytes and decodebytes.
+source: https://docs.python.org/3.9/whatsnew/3.9.html
+when:
+  - finding: python
+    range: ">=3.9"
