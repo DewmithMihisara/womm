@@ -1,0 +1,11 @@
+id: bsd-sed-in-place
+title: sed -i differs without GNU sed
+why: BSD sed's -i takes an extension argument, so commands written for GNU sed can fail here.
+fix: Use `sed -i ''` on macOS, or install GNU sed.
+source: https://man.freebsd.org/cgi/man.cgi?query=sed
+when:
+  - finding: os.platform
+    equals:
+      - darwin
+  - finding: gnu.sed
+    missing: true
