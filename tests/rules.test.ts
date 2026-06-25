@@ -69,6 +69,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["java-17-removed-rmi-activation", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["java-14-removed-pack200", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["ruby-31-psych-4", {"ruby":"3.3.0"}, {"ruby":"3.0.0"}, {}],
+  ["php-82-dynamic-properties", {"php":"8.3.0"}, {"php":"8.1.0"}, {}],
   // New rule samples go above this line.
 ];
 
