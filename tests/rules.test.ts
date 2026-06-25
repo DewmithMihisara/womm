@@ -72,6 +72,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["php-82-dynamic-properties", {"php":"8.3.0"}, {"php":"8.1.0"}, {}],
   ["php-84-implicit-nullable", {"php":"8.4.0"}, {"php":"8.3.0"}, {}],
   ["php-7-removed-mysql", {"php":"8.3.0"}, {"php":"5.6.0"}, {}],
+  ["gcc-15-c23-default", {"gcc":"15.1.0"}, {"gcc":"14.1.0"}, {}],
   // New rule samples go above this line.
 ];
 
