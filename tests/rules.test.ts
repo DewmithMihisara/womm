@@ -67,6 +67,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["go-120-random-seed", {"go":"1.22.0"}, {"go":"1.19.0"}, {}],
   ["java-15-removed-nashorn", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["java-17-removed-rmi-activation", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
+  ["java-14-removed-pack200", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   // New rule samples go above this line.
 ];
 
