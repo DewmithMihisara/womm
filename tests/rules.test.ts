@@ -71,6 +71,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["ruby-31-psych-4", {"ruby":"3.3.0"}, {"ruby":"3.0.0"}, {}],
   ["php-82-dynamic-properties", {"php":"8.3.0"}, {"php":"8.1.0"}, {}],
   ["php-84-implicit-nullable", {"php":"8.4.0"}, {"php":"8.3.0"}, {}],
+  ["php-7-removed-mysql", {"php":"8.3.0"}, {"php":"5.6.0"}, {}],
   // New rule samples go above this line.
 ];
 
