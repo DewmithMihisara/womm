@@ -1,0 +1,8 @@
+id: java-15-removed-nashorn
+title: Java 15 removed the Nashorn JavaScript engine
+why: JEP 372 removed Nashorn in Java 15.
+fix: Use another JavaScript engine, such as GraalJS.
+source: https://openjdk.org/jeps/372
+when:
+  - finding: java
+    range: ">=15"

@@ -65,6 +65,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["compose-version-obsolete", {"docker.compose":"2.29.0"}, {"docker.compose":"1.29.0"}, {}],
   ["rust-below-185-edition-2024", {"rust":"1.80.0"}, {"rust":"1.85.0"}, {}],
   ["go-120-random-seed", {"go":"1.22.0"}, {"go":"1.19.0"}, {}],
+  ["java-15-removed-nashorn", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   // New rule samples go above this line.
 ];
 
