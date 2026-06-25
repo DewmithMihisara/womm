@@ -1,0 +1,8 @@
+id: php-84-implicit-nullable
+title: PHP 8.4 deprecates implicitly nullable parameters
+why: A parameter made nullable by a null default is deprecated from PHP 8.4.
+fix: Write the type explicitly, such as ?string.
+source: https://www.php.net/manual/en/migration84.deprecated.php
+when:
+  - finding: php
+    range: ">=8.4"
