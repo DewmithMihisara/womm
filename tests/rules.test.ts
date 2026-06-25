@@ -61,6 +61,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-314-deferred-annotations", {"python":"3.14.0"}, {"python":"3.13.0"}, {}],
   ["python-312-venv-no-setuptools", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-313-lib2to3", {"python":"3.13.0"}, {"python":"3.12.0"}, {}],
+  ["node-below-14-optional-chaining", {"node":"12.0.0"}, {"node":"14.0.0"}, {}],
   // New rule samples go above this line.
 ];
 
