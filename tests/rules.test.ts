@@ -64,6 +64,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["node-below-14-optional-chaining", {"node":"12.0.0"}, {"node":"14.0.0"}, {}],
   ["compose-version-obsolete", {"docker.compose":"2.29.0"}, {"docker.compose":"1.29.0"}, {}],
   ["rust-below-185-edition-2024", {"rust":"1.80.0"}, {"rust":"1.85.0"}, {}],
+  ["go-120-random-seed", {"go":"1.22.0"}, {"go":"1.19.0"}, {}],
   // New rule samples go above this line.
 ];
 

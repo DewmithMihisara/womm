@@ -1,0 +1,8 @@
+id: go-120-random-seed
+title: Go 1.20 randomly seeds math/rand
+why: Top-level math/rand functions are randomly seeded from Go 1.20, so code relying on a repeatable sequence changes.
+fix: Create your own seeded generator with rand.New.
+source: https://go.dev/doc/go1.20
+when:
+  - finding: go
+    range: ">=1.20"
