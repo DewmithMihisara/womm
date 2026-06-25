@@ -59,6 +59,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-39-base64-encodestring", {"python":"3.9.0"}, {"python":"3.8.0"}, {}],
   ["python-38-time-clock", {"python":"3.8.0"}, {"python":"3.7.0"}, {}],
   ["python-314-deferred-annotations", {"python":"3.14.0"}, {"python":"3.13.0"}, {}],
+  ["python-312-venv-no-setuptools", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   // New rule samples go above this line.
 ];
 
