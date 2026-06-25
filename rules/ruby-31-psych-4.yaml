@@ -1,0 +1,8 @@
+id: ruby-31-psych-4
+title: Ruby 3.1 includes Psych 4
+why: Ruby 3.1 ships Psych 4, where YAML.load behaves like safe_load, so some YAML files stop loading.
+fix: Use YAML.unsafe_load for trusted files, or list the allowed classes.
+source: https://www.ruby-lang.org/en/news/2021/12/25/ruby-3-1-0-released/
+when:
+  - finding: ruby
+    range: ">=3.1"
