@@ -1,0 +1,8 @@
+id: poetry-2-breaking-changes
+title: Poetry 2 has breaking changes
+why: Poetry 2.0 published a list of breaking changes and removals.
+fix: Review the announcement, or pin Poetry to the team's version.
+source: https://python-poetry.org/blog/announcing-poetry-2.0.0/
+when:
+  - finding: poetry
+    range: ">=2"

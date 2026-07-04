@@ -75,6 +75,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gcc-15-c23-default", {"gcc":"15.1.0"}, {"gcc":"14.1.0"}, {}],
   ["gcc-11-cpp17-default", {"gcc":"13.2.0"}, {"gcc":"10.3.0"}, {}],
   ["gcc-10-no-common", {"gcc":"13.2.0"}, {"gcc":"9.4.0"}, {}],
+  ["poetry-2-breaking-changes", {"poetry":"2.1.0"}, {"poetry":"1.8.0"}, {}],
   // New rule samples go above this line.
 ];
 
