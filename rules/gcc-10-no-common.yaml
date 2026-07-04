@@ -1,0 +1,8 @@
+id: gcc-10-no-common
+title: GCC 10 defaults to -fno-common
+why: Global variables declared without extern in a header can now cause duplicate symbol errors at link time.
+fix: Add extern to the declaration, or try -fcommon.
+source: https://gcc.gnu.org/gcc-10/porting_to.html
+when:
+  - finding: gcc
+    range: ">=10"
