@@ -1,0 +1,8 @@
+id: rust-below-185-edition-2024
+title: The 2024 edition needs Rust 1.85
+why: Rust 1.85 stabilised the 2024 edition, so older toolchains can't build crates using it.
+fix: Upgrade Rust.
+source: https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/
+when:
+  - finding: rust
+    range: <1.85

@@ -1,0 +1,8 @@
+id: compose-version-obsolete
+title: Compose treats the version property as obsolete
+why: The top-level version property in Compose files is obsolete, so newer versions can warn about it.
+fix: Remove the version line from the Compose file.
+source: https://docs.docker.com/reference/compose-file/version-and-name/
+when:
+  - finding: docker.compose
+    range: ">=2"

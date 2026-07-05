@@ -1,0 +1,8 @@
+id: java-17-removed-rmi-activation
+title: Java 17 removed RMI Activation
+why: JEP 407 removed the RMI Activation mechanism in Java 17.
+fix: Move away from RMI Activation.
+source: https://openjdk.org/jeps/407
+when:
+  - finding: java
+    range: ">=17"

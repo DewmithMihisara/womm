@@ -1,0 +1,8 @@
+id: php-7-removed-mysql
+title: PHP 7 removed the mysql extension
+why: The mysql extension was removed in PHP 7.0.
+fix: Use mysqli or PDO.
+source: https://www.php.net/manual/en/migration70.removed-exts-sapis.php
+when:
+  - finding: php
+    range: ">=7"

@@ -1,0 +1,8 @@
+id: gcc-15-c23-default
+title: GCC 15 compiles C as C23 by default
+why: GCC 15 changed the default C version to gnu23, which can break older C code.
+fix: Fix the code, or try -std=gnu17.
+source: https://gcc.gnu.org/gcc-15/porting_to.html
+when:
+  - finding: gcc
+    range: ">=15"

@@ -1,0 +1,8 @@
+id: java-14-removed-pack200
+title: Java 14 removed Pack200
+why: JEP 367 removed the Pack200 tools and API in Java 14.
+fix: Stop using Pack200.
+source: https://openjdk.org/jeps/367
+when:
+  - finding: java
+    range: ">=14"

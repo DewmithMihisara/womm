@@ -1,0 +1,8 @@
+id: python-314-deferred-annotations
+title: Python 3.14 defers evaluation of annotations
+why: PEP 649 changed when annotations are evaluated, which can affect code that reads them at runtime.
+fix: Check code reading __annotations__, and any library doing so.
+source: https://docs.python.org/3.14/whatsnew/3.14.html
+when:
+  - finding: python
+    range: ">=3.14"

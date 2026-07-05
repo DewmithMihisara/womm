@@ -1,0 +1,8 @@
+id: gcc-11-cpp17-default
+title: GCC 11 compiles C++ as C++17 by default
+why: GCC 11 changed the default C++ version from gnu++14 to gnu++17.
+fix: Fix the code, or try -std=gnu++14.
+source: https://gcc.gnu.org/gcc-11/porting_to.html
+when:
+  - finding: gcc
+    range: ">=11"

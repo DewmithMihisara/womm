@@ -1,0 +1,9 @@
+id: git-symlinks-disabled
+title: Git is checking out symlinks as plain files
+why: With core.symlinks off, symbolic links become small text files, and anything following them breaks.
+fix: On Windows, enable Developer Mode and set core.symlinks to true, then check out again.
+source: https://git-scm.com/docs/git-config
+when:
+  - finding: git.symlinks
+    equals:
+      - "false"

@@ -1,0 +1,8 @@
+id: pip-241-legacy-versions
+title: pip 24.1 removed support for legacy versions
+why: Packages with non-standard version numbers or dependency specifiers can fail to install from pip 24.1.
+fix: Upgrade the package, or use an older pip as a stopgap.
+source: https://pip.pypa.io/en/stable/news/
+when:
+  - finding: pip
+    range: ">=24.1"

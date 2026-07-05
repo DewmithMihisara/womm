@@ -1,0 +1,8 @@
+id: python-38-time-clock
+title: Python 3.8 removed time.clock
+why: Code calling time.clock fails on Python 3.8.
+fix: Use time.perf_counter or time.process_time.
+source: https://docs.python.org/3.8/whatsnew/3.8.html
+when:
+  - finding: python
+    range: ">=3.8"

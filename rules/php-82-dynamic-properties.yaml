@@ -1,0 +1,8 @@
+id: php-82-dynamic-properties
+title: PHP 8.2 deprecates dynamic properties
+why: Creating dynamic properties is deprecated from PHP 8.2, so new warnings can appear.
+fix: Declare the property, or use the AllowDynamicProperties attribute.
+source: https://www.php.net/manual/en/migration82.deprecated.php
+when:
+  - finding: php
+    range: ">=8.2"

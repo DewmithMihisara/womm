@@ -1,0 +1,8 @@
+id: python-313-lib2to3
+title: Python 3.13 removed lib2to3
+why: The 2to3 tool and lib2to3 module no longer exist in Python 3.13.
+fix: Update the package that uses lib2to3.
+source: https://docs.python.org/3.13/whatsnew/3.13.html
+when:
+  - finding: python
+    range: ">=3.13"

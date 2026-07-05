@@ -1,0 +1,8 @@
+id: python-312-venv-no-setuptools
+title: Python 3.12 venvs don't include setuptools
+why: venv stopped pre-installing setuptools in Python 3.12, so code assuming it's present can fail.
+fix: Install setuptools in the environment, or declare it as a dependency.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"
