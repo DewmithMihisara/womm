@@ -1,0 +1,9 @@
+id: git-filemode-disabled
+title: Git is ignoring executable bits
+why: With core.fileMode off, Git doesn't track the executable bit, so scripts can end up with the wrong permissions elsewhere.
+fix: "Set the bit explicitly: git update-index --chmod=+x <file>"
+source: https://git-scm.com/docs/git-config
+when:
+  - finding: git.filemode
+    equals:
+      - "false"
