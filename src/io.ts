@@ -14,6 +14,23 @@ function isFinding(value: unknown): value is Finding {
   );
 }
 
+/**
+ * Removes control characters. Otherwise a hostile snapshot could use terminal
+ * escape codes to rewrite a report, such as hiding a line or faking a verdict.
+ */
+export function stripControlCharacters(text: string): string {
+  // eslint-disable-next-line no-control-regex
+  return text.replace(/[\u0000-\u001f\u007f-\u009f]/g, "");
+}
+
+function cleanFinding(finding: Finding): Finding {
+  return {
+    id: stripControlCharacters(finding.id),
+    label: stripControlCharacters(finding.label),
+    value: finding.value === null ? null : stripControlCharacters(finding.value),
+  };
+}
+
 /** Checks untrusted JSON, since snapshots arrive from other machines. */
 export function parseSnapshot(text: string, source: string): Snapshot {
   let data: unknown;
@@ -38,7 +55,11 @@ export function parseSnapshot(text: string, source: string): Snapshot {
   ) {
     throw new UserError(`${source} is a damaged womm snapshot.`);
   }
-  return snapshot as Snapshot;
+  return {
+    womm: snapshot.womm,
+    createdAt: stripControlCharacters(snapshot.createdAt),
+    findings: snapshot.findings.map(cleanFinding),
+  };
 }
 
 export async function readSnapshot(path: string): Promise<Snapshot> {
