@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, stat, writeFile } from "node:fs/promises";
 import { SNAPSHOT_VERSION, type Finding, type Snapshot } from "./types.js";
 
 /** A problem the user can fix, shown without a stack trace. */
@@ -62,11 +62,18 @@ export function parseSnapshot(text: string, source: string): Snapshot {
   };
 }
 
+/** A real snapshot is a few kilobytes, so this leaves plenty of room. */
+const MAX_SNAPSHOT_BYTES = 5 * 1024 * 1024;
+
 export async function readSnapshot(path: string): Promise<Snapshot> {
   let text: string;
   try {
+    if ((await stat(path)).size > MAX_SNAPSHOT_BYTES) {
+      throw new UserError(`${path} is too large to be a womm snapshot.`);
+    }
     text = await readFile(path, "utf8");
-  } catch {
+  } catch (error) {
+    if (error instanceof UserError) throw error;
     throw new UserError(`Could not read ${path}.`);
   }
   return parseSnapshot(text, path);
