@@ -77,6 +77,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gcc-10-no-common", {"gcc":"13.2.0"}, {"gcc":"9.4.0"}, {}],
   ["poetry-2-breaking-changes", {"poetry":"2.1.0"}, {"poetry":"1.8.0"}, {}],
   ["pip-241-legacy-versions", {"pip":"25.0"}, {"pip":"23.3"}, {}],
+  ["git-symlinks-disabled", {"git.symlinks":"false"}, {"git.symlinks":"true"}, {}],
   // New rule samples go above this line.
 ];
 
