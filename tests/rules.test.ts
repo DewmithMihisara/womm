@@ -76,6 +76,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gcc-11-cpp17-default", {"gcc":"13.2.0"}, {"gcc":"10.3.0"}, {}],
   ["gcc-10-no-common", {"gcc":"13.2.0"}, {"gcc":"9.4.0"}, {}],
   ["poetry-2-breaking-changes", {"poetry":"2.1.0"}, {"poetry":"1.8.0"}, {}],
+  ["pip-241-legacy-versions", {"pip":"25.0"}, {"pip":"23.3"}, {}],
   // New rule samples go above this line.
 ];
 
