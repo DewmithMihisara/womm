@@ -1,0 +1,9 @@
+id: git-ignorecase-enabled
+title: Git is ignoring filename case
+why: With core.ignoreCase on, renames that only change case can be missed.
+fix: Rename with git mv, and check the exact file names.
+source: https://git-scm.com/docs/git-config
+when:
+  - finding: git.ignorecase
+    equals:
+      - "true"

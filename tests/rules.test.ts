@@ -79,6 +79,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["pip-241-legacy-versions", {"pip":"25.0"}, {"pip":"23.3"}, {}],
   ["git-symlinks-disabled", {"git.symlinks":"false"}, {"git.symlinks":"true"}, {}],
   ["git-filemode-disabled", {"git.filemode":"false"}, {"git.filemode":"true"}, {}],
+  ["git-ignorecase-enabled", {"git.ignorecase":"true"}, {"git.ignorecase":"false"}, {}],
   // New rule samples go above this line.
 ];
 
