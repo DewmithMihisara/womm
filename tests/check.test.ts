@@ -32,6 +32,10 @@ describe("checkRequirements", () => {
     expect(check(">=1", "1.0.0", "cobol")).toBe("unknown");
   });
 
+  it("reports unknown for an invalid range", () => {
+    expect(check("whenever", "1.0.0")).toBe("unknown");
+  });
+
   it("reports unknown for an unparseable version", () => {
     expect(check(">=1", "banana")).toBe("unknown");
   });
