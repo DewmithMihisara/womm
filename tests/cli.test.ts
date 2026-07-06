@@ -29,6 +29,12 @@ describe("womm CLI", () => {
     expect(result.stdout).toContain("Usage:");
   });
 
+  it("shows the version from package.json", () => {
+    const result = womm("--version");
+    expect(result.status).toBe(0);
+    expect(result.stdout.trim()).toMatch(/^\d+\.\d+\.\d+/);
+  });
+
   it("exits 2 with no command", () => {
     expect(womm().status).toBe(2);
   });
