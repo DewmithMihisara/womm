@@ -28,6 +28,7 @@ Usage:
 Options:
   -o, --output <file>       Where to save the snapshot
   -q, --quiet               Don't print what the snapshot recorded
+  --all                     In diff, include values that match
   --against <file>          Snapshot from the machine where it works
   --mine <file>             Use a saved snapshot instead of this machine
   --project <dir>           Project folder to read (default: current folder)
@@ -47,6 +48,7 @@ export async function main(argv: string[]): Promise<number> {
       mine: { type: "string" },
       project: { type: "string", default: "." },
       quiet: { type: "boolean", short: "q" },
+      all: { type: "boolean" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
       help: { type: "boolean", short: "h" },
@@ -66,7 +68,7 @@ export async function main(argv: string[]): Promise<number> {
   if (command === "diff") {
     const [a, b] = rest;
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
-    return diffCommand(a, b, values.json);
+    return diffCommand(a, b, values.json, values.all);
   }
   if (command === "certify") {
     return certifyCommand({ project: values.project ?? ".", output: values.output });
