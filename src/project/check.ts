@@ -21,6 +21,9 @@ export function checkRequirements(
     if (actual === null) return { ...requirement, actual, status: "missing" };
     const version = semver.coerce(actual);
     if (!version) return { ...requirement, actual, status: "unknown" };
+    if (!semver.validRange(requirement.range)) {
+      return { ...requirement, actual, status: "unknown" };
+    }
     const met = semver.satisfies(version, requirement.range);
     return { ...requirement, actual, status: met ? "met" : "unmet" };
   });

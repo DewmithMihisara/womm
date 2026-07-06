@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { readFile, stat, writeFile } from "node:fs/promises";
 import { SNAPSHOT_VERSION, type Finding, type Snapshot } from "./types.js";
 
 /** A problem the user can fix, shown without a stack trace. */
@@ -12,6 +12,23 @@ function isFinding(value: unknown): value is Finding {
     typeof item.label === "string" &&
     (typeof item.value === "string" || item.value === null)
   );
+}
+
+/**
+ * Removes control characters. Otherwise a hostile snapshot could use terminal
+ * escape codes to rewrite a report, such as hiding a line or faking a verdict.
+ */
+export function stripControlCharacters(text: string): string {
+  // eslint-disable-next-line no-control-regex
+  return text.replace(/[\u0000-\u001f\u007f-\u009f]/g, "");
+}
+
+function cleanFinding(finding: Finding): Finding {
+  return {
+    id: stripControlCharacters(finding.id),
+    label: stripControlCharacters(finding.label),
+    value: finding.value === null ? null : stripControlCharacters(finding.value),
+  };
 }
 
 /** Checks untrusted JSON, since snapshots arrive from other machines. */
@@ -38,14 +55,25 @@ export function parseSnapshot(text: string, source: string): Snapshot {
   ) {
     throw new UserError(`${source} is a damaged womm snapshot.`);
   }
-  return snapshot as Snapshot;
+  return {
+    womm: snapshot.womm,
+    createdAt: stripControlCharacters(snapshot.createdAt),
+    findings: snapshot.findings.map(cleanFinding),
+  };
 }
+
+/** A real snapshot is a few kilobytes, so this leaves plenty of room. */
+const MAX_SNAPSHOT_BYTES = 5 * 1024 * 1024;
 
 export async function readSnapshot(path: string): Promise<Snapshot> {
   let text: string;
   try {
+    if ((await stat(path)).size > MAX_SNAPSHOT_BYTES) {
+      throw new UserError(`${path} is too large to be a womm snapshot.`);
+    }
     text = await readFile(path, "utf8");
-  } catch {
+  } catch (error) {
+    if (error instanceof UserError) throw error;
     throw new UserError(`Could not read ${path}.`);
   }
   return parseSnapshot(text, path);

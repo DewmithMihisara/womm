@@ -12,7 +12,8 @@ export async function readDependencies(directory: string): Promise<Dependencies>
   } catch {
     return {};
   }
-  const result: Dependencies = {};
+  // No prototype, so a package named __proto__ is just another key.
+  const result: Dependencies = Object.create(null);
   for (const field of FIELDS) {
     const entries = data?.[field];
     if (typeof entries !== "object" || entries === null) continue;
