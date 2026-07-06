@@ -57,6 +57,12 @@ describe("womm CLI", () => {
     expect(JSON.parse(result.stdout).womm).toBe(1);
   });
 
+  it("prints no review with --quiet", () => {
+    const result = womm("snapshot", "--quiet");
+    expect(result.stderr).toBe("");
+    expect(JSON.parse(result.stdout).womm).toBe(1);
+  });
+
   it("compares two snapshot files", () => {
     const result = womm("diff", "a.json", "b.json");
     expect(result.status).toBe(0);
