@@ -44,6 +44,11 @@ describe("ruleApplies", () => {
     expect(ruleApplies(r, node("22.0.0"), {})).toBe(false);
   });
 
+  it("is not fooled by names inherited from Object", () => {
+    const r = rule({ finding: "node", range: ">=17" }, { dependency: "constructor" });
+    expect(ruleApplies(r, node("22.0.0"), {})).toBe(false);
+  });
+
   it("checks that dependency ranges overlap", () => {
     const r = rule(
       { finding: "node", range: ">=17" },

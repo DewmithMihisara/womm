@@ -21,6 +21,14 @@ describe("readDependencies", () => {
     expect(await withPackage(json)).toEqual({ a: "^1.0.0", b: "^2.0.0" });
   });
 
+  it("treats __proto__ as an ordinary package name", async () => {
+    const result = await withPackage(
+      '{"dependencies":{"__proto__":"^1.0.0","constructor":"^2.0.0"}}',
+    );
+    expect(result.constructor).toBe("^2.0.0");
+    expect(({} as Record<string, unknown>).polluted).toBeUndefined();
+  });
+
   it("survives broken JSON", async () => {
     expect(await withPackage("{")).toEqual({});
   });
