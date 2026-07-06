@@ -17,8 +17,8 @@ function conditionHolds(
   dependencies: Dependencies,
 ): boolean {
   if ("dependency" in condition) {
-    const wanted = dependencies[condition.dependency];
-    return wanted !== undefined && rangesOverlap(wanted, condition.range);
+    const known = Object.hasOwn(dependencies, condition.dependency);
+    return known && rangesOverlap(dependencies[condition.dependency]!, condition.range);
   }
   const value = findings.find((f) => f.id === condition.finding)?.value ?? null;
   if (condition.missing) return value === null;
