@@ -9,6 +9,7 @@ import {
 import { snapshotCommand } from "./commands/snapshot.js";
 import { trialCommand } from "./commands/trial.js";
 import { UserError } from "./io.js";
+import { packageVersion } from "./version.js";
 
 const USAGE = `womm: a courtroom for "works on my machine" bugs
 
@@ -29,6 +30,7 @@ Options:
   --json                    Print results as JSON
   --markdown                Print results as Markdown
   -h, --help                Show this help
+  -v, --version             Show the version
 `;
 
 export async function main(argv: string[]): Promise<number> {
@@ -43,8 +45,13 @@ export async function main(argv: string[]): Promise<number> {
       json: { type: "boolean" },
       markdown: { type: "boolean" },
       help: { type: "boolean", short: "h" },
+      version: { type: "boolean", short: "v" },
     },
   });
+  if (values.version) {
+    console.log(packageVersion());
+    return 0;
+  }
   const [command, ...rest] = positionals;
   if (values.help || !command) {
     console.log(USAGE);
