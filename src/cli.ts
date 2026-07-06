@@ -27,6 +27,7 @@ Usage:
 
 Options:
   -o, --output <file>       Where to save the snapshot
+  -q, --quiet               Don't print what the snapshot recorded
   --against <file>          Snapshot from the machine where it works
   --mine <file>             Use a saved snapshot instead of this machine
   --project <dir>           Project folder to read (default: current folder)
@@ -45,6 +46,7 @@ export async function main(argv: string[]): Promise<number> {
       against: { type: "string" },
       mine: { type: "string" },
       project: { type: "string", default: "." },
+      quiet: { type: "boolean", short: "q" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
       help: { type: "boolean", short: "h" },
@@ -60,7 +62,7 @@ export async function main(argv: string[]): Promise<number> {
     console.log(USAGE);
     return values.help ? 0 : 2;
   }
-  if (command === "snapshot") return snapshotCommand(values.output);
+  if (command === "snapshot") return snapshotCommand(values.output, values.quiet);
   if (command === "diff") {
     const [a, b] = rest;
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
