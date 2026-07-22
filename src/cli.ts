@@ -9,6 +9,10 @@ import {
 import { snapshotCommand } from "./commands/snapshot.js";
 import { trialCommand } from "./commands/trial.js";
 import { UserError } from "./io.js";
+import { suggest } from "./suggest.js";
+import { packageVersion } from "./version.js";
+
+const COMMANDS = ["snapshot", "diff", "trial", "certify", "rules"];
 
 const USAGE = `womm: a courtroom for "works on my machine" bugs
 
@@ -23,12 +27,16 @@ Usage:
 
 Options:
   -o, --output <file>       Where to save the snapshot
+  -q, --quiet               Don't print what the snapshot recorded
+  --all                     In diff, include values that match
+  --exit-code               In diff, exit 1 if anything differs
   --against <file>          Snapshot from the machine where it works
   --mine <file>             Use a saved snapshot instead of this machine
   --project <dir>           Project folder to read (default: current folder)
   --json                    Print results as JSON
   --markdown                Print results as Markdown
   -h, --help                Show this help
+  -v, --version             Show the version
 `;
 
 export async function main(argv: string[]): Promise<number> {
@@ -40,21 +48,29 @@ export async function main(argv: string[]): Promise<number> {
       against: { type: "string" },
       mine: { type: "string" },
       project: { type: "string", default: "." },
+      quiet: { type: "boolean", short: "q" },
+      all: { type: "boolean" },
+      "exit-code": { type: "boolean" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
       help: { type: "boolean", short: "h" },
+      version: { type: "boolean", short: "v" },
     },
   });
+  if (values.version) {
+    console.log(packageVersion());
+    return 0;
+  }
   const [command, ...rest] = positionals;
   if (values.help || !command) {
     console.log(USAGE);
     return values.help ? 0 : 2;
   }
-  if (command === "snapshot") return snapshotCommand(values.output);
+  if (command === "snapshot") return snapshotCommand(values.output, values.quiet);
   if (command === "diff") {
     const [a, b] = rest;
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
-    return diffCommand(a, b, values.json);
+    return diffCommand(a, b, values.json, values.all, values["exit-code"]);
   }
   if (command === "certify") {
     return certifyCommand({ project: values.project ?? ".", output: values.output });
@@ -78,7 +94,9 @@ export async function main(argv: string[]): Promise<number> {
       markdown: values.markdown,
     });
   }
-  throw new UserError(`Unknown command: ${command}. Run womm --help.`);
+  const close = suggest(command, COMMANDS);
+  const hint = close ? `Did you mean ${close}?` : "Run womm --help.";
+  throw new UserError(`Unknown command: ${command}. ${hint}`);
 }
 
 try {

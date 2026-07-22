@@ -7,6 +7,7 @@ import { renderTrial } from "../report/court.js";
 import { renderMarkdown } from "../report/markdown.js";
 import { loadRules } from "../rules/load.js";
 import { takeSnapshot } from "../snapshot.js";
+import { staleWarning } from "../stale.js";
 import { holdTrial, type CaseFile, type Charge } from "../trial.js";
 
 export interface TrialOptions {
@@ -43,6 +44,8 @@ async function buildCaseFile(project: string): Promise<CaseFile> {
 export async function trialCommand(options: TrialOptions): Promise<number> {
   const theirs = await readSnapshot(options.against);
   const mine = options.mine ? await readSnapshot(options.mine) : await takeSnapshot();
+  const warning = staleWarning(theirs.createdAt);
+  if (warning) console.error(warning);
   const charges = holdTrial(mine, theirs, await buildCaseFile(options.project));
   console.log(render(charges, options));
   return charges.some((c) => c.verdict === "guilty") ? 1 : 0;

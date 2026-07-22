@@ -29,6 +29,12 @@ describe("womm CLI", () => {
     expect(result.stdout).toContain("Usage:");
   });
 
+  it("shows the version from package.json", () => {
+    const result = womm("--version");
+    expect(result.status).toBe(0);
+    expect(result.stdout.trim()).toMatch(/^\d+\.\d+\.\d+/);
+  });
+
   it("exits 2 with no command", () => {
     expect(womm().status).toBe(2);
   });
@@ -48,6 +54,12 @@ describe("womm CLI", () => {
   it("prints valid JSON to stdout from snapshot", () => {
     const result = womm("snapshot");
     expect(result.status).toBe(0);
+    expect(JSON.parse(result.stdout).womm).toBe(1);
+  });
+
+  it("prints no review with --quiet", () => {
+    const result = womm("snapshot", "--quiet");
+    expect(result.stderr).toBe("");
     expect(JSON.parse(result.stdout).womm).toBe(1);
   });
 
