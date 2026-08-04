@@ -3,6 +3,7 @@ import { closingStatement, renderTrial } from "../src/report/court.js";
 import type { Charge } from "../src/trial.js";
 
 const charge = (verdict: Charge["verdict"]): Charge => ({
+  id: "node",
   verdict,
   subject: "Node.js 18",
   evidence: "Theirs: 22",
