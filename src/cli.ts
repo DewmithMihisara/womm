@@ -35,6 +35,8 @@ Options:
   --project <dir>           Project folder to read (default: current folder)
   --json                    Print results as JSON
   --markdown                Print results as Markdown
+  --ignore <ids>            Comma-separated charges to leave out of a trial
+  --brief                   Hide acquitted charges
   -h, --help                Show this help
   -v, --version             Show the version
 `;
@@ -53,6 +55,8 @@ export async function main(argv: string[]): Promise<number> {
       "exit-code": { type: "boolean" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
+      ignore: { type: "string" },
+      brief: { type: "boolean" },
       help: { type: "boolean", short: "h" },
       version: { type: "boolean", short: "v" },
     },
@@ -92,6 +96,8 @@ export async function main(argv: string[]): Promise<number> {
       project: values.project ?? ".",
       json: values.json,
       markdown: values.markdown,
+      ignore: values.ignore?.split(","),
+      brief: values.brief,
     });
   }
   const close = suggest(command, COMMANDS);

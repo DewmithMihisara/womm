@@ -1,3 +1,4 @@
+import { filterCharges } from "../filter.js";
 import { readSnapshot } from "../io.js";
 import { readDependencies } from "../project/dependencies.js";
 import { missingEnvKeys } from "../project/envkeys.js";
@@ -16,6 +17,8 @@ export interface TrialOptions {
   project: string;
   json?: boolean;
   markdown?: boolean;
+  ignore?: string[];
+  brief?: boolean;
 }
 
 function render(charges: Charge[], options: TrialOptions): string {
@@ -46,7 +49,10 @@ export async function trialCommand(options: TrialOptions): Promise<number> {
   const mine = options.mine ? await readSnapshot(options.mine) : await takeSnapshot();
   const warning = staleWarning(theirs.createdAt);
   if (warning) console.error(warning);
-  const charges = holdTrial(mine, theirs, await buildCaseFile(options.project));
+  const charges = filterCharges(
+    holdTrial(mine, theirs, await buildCaseFile(options.project)),
+    options,
+  );
   console.log(render(charges, options));
   return charges.some((c) => c.verdict === "guilty") ? 1 : 0;
 }
