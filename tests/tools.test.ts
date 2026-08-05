@@ -98,6 +98,7 @@ const samples: [string, string, string][] = [
   ["gpg", "gpg (GnuPG) 2.4.5", "2.4.5"],
   ["rsync", "rsync  version 3.3.0  protocol version 31", "3.3.0"],
   ["ripgrep", "ripgrep 14.1.1", "14.1.1"],
+  ["fd", "fd 10.2.0", "10.2.0"],
   // New samples go above this line.
 ];
 

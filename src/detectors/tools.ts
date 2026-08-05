@@ -108,6 +108,7 @@ export const tools: ToolSpec[] = [
   { id: "gpg", label: "GnuPG", command: "gpg" },
   { id: "rsync", label: "rsync", command: "rsync" },
   { id: "ripgrep", label: "ripgrep", command: "rg" },
+  { id: "fd", label: "fd", command: "fd" },
   // New tools go above this line.
 ];
 
