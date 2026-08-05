@@ -9,6 +9,8 @@ import type { Snapshot } from "./types.js";
 export type Verdict = "guilty" | "suspicious" | "acquitted";
 
 export interface Charge {
+  /** Stable id, usable with --ignore and in configuration. */
+  id: string;
   verdict: Verdict;
   subject: string;
   evidence: string;
@@ -31,6 +33,7 @@ const show = (value: string | null) => value ?? "not found";
 function requirementCharge(result: CheckResult): Charge {
   const subject = `${result.tool} ${show(result.actual)}`;
   return {
+    id: result.tool,
     verdict: "guilty",
     subject,
     evidence: `${result.source} requires ${result.tool} ${result.range}`,
@@ -45,6 +48,7 @@ function requirementCharge(result: CheckResult): Charge {
 function ruleCharge(rule: Rule): Charge {
   const usesPackage = rule.when.some((condition) => "dependency" in condition);
   return {
+    id: rule.id,
     verdict: usesPackage ? "guilty" : "suspicious",
     subject: rule.title,
     evidence: rule.why,
@@ -55,6 +59,7 @@ function ruleCharge(rule: Rule): Charge {
 
 function differenceCharge(difference: Difference): Charge {
   return {
+    id: difference.id,
     verdict: isSuspicious(difference) ? "suspicious" : "acquitted",
     subject: `${difference.label} ${show(difference.a)}`,
     evidence: `Theirs: ${show(difference.b)}`,
@@ -76,6 +81,7 @@ export function holdTrial(mine: Snapshot, theirs: Snapshot, file: CaseFile): Cha
   );
   const envCharges = file.missingEnvKeys.map(
     (key): Charge => ({
+      id: `env.${key}`,
       verdict: "suspicious",
       subject: `Missing environment variable ${key}`,
       evidence: "Listed in .env.example but not set on this machine",
@@ -83,6 +89,7 @@ export function holdTrial(mine: Snapshot, theirs: Snapshot, file: CaseFile): Cha
   );
   const lockCharges = file.lockfileConflicts.map(
     (group): Charge => ({
+      id: "lockfiles",
       verdict: "suspicious",
       subject: "More than one lockfile",
       evidence: group.join(", "),

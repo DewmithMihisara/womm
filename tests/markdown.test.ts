@@ -5,6 +5,7 @@ describe("renderMarkdown", () => {
   it("renders a table row with fix and source", () => {
     const text = renderMarkdown([
       {
+        id: "node",
         verdict: "guilty",
         subject: "Node.js 18",
         evidence: "Theirs: 22",
@@ -19,7 +20,7 @@ describe("renderMarkdown", () => {
 
   it("escapes pipes and line breaks", () => {
     const text = renderMarkdown([
-      { verdict: "suspicious", subject: "a|b", evidence: "x\ny" },
+      { id: "x", verdict: "suspicious", subject: "a|b", evidence: "x\ny" },
     ]);
     expect(text).toContain("a\\|b");
     expect(text).toContain("x y");

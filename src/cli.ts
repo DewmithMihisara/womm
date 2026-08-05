@@ -8,6 +8,7 @@ import {
 } from "./commands/rules.js";
 import { snapshotCommand } from "./commands/snapshot.js";
 import { trialCommand } from "./commands/trial.js";
+import { isFailOn } from "./failon.js";
 import { UserError } from "./io.js";
 import { suggest } from "./suggest.js";
 import { packageVersion } from "./version.js";
@@ -35,6 +36,9 @@ Options:
   --project <dir>           Project folder to read (default: current folder)
   --json                    Print results as JSON
   --markdown                Print results as Markdown
+  --ignore <ids>            Comma-separated charges to leave out of a trial
+  --brief                   Hide acquitted charges
+  --fail-on <level>         Exit 1 on guilty (default), suspicious or never
   -h, --help                Show this help
   -v, --version             Show the version
 `;
@@ -53,6 +57,9 @@ export async function main(argv: string[]): Promise<number> {
       "exit-code": { type: "boolean" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
+      ignore: { type: "string" },
+      brief: { type: "boolean" },
+      "fail-on": { type: "string" },
       help: { type: "boolean", short: "h" },
       version: { type: "boolean", short: "v" },
     },
@@ -86,12 +93,19 @@ export async function main(argv: string[]): Promise<number> {
     if (!values.against) {
       throw new UserError("womm trial needs --against <snapshot file>.");
     }
+    const failOn = values["fail-on"] ?? "guilty";
+    if (!isFailOn(failOn)) {
+      throw new UserError("--fail-on must be guilty, suspicious or never.");
+    }
     return trialCommand({
+      failOn,
       against: values.against,
       mine: values.mine,
       project: values.project ?? ".",
       json: values.json,
       markdown: values.markdown,
+      ignore: values.ignore?.split(","),
+      brief: values.brief,
     });
   }
   const close = suggest(command, COMMANDS);

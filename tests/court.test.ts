@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { closingStatement, renderTrial } from "../src/report/court.js";
+import { closingStatement, renderTrial, tally } from "../src/report/court.js";
 import type { Charge } from "../src/trial.js";
 
 const charge = (verdict: Charge["verdict"]): Charge => ({
+  id: "node",
   verdict,
   subject: "Node.js 18",
   evidence: "Theirs: 22",
@@ -23,6 +24,14 @@ describe("closingStatement", () => {
       .map(closingStatement)
       .join(" ");
     expect(text).not.toMatch(/definitely|certainly|is the problem/i);
+  });
+});
+
+describe("tally", () => {
+  it("counts each verdict", () => {
+    expect(tally([charge("guilty"), charge("guilty"), charge("acquitted")])).toBe(
+      "2 guilty, 0 suspicious, 1 acquitted.",
+    );
   });
 });
 

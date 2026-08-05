@@ -1,3 +1,5 @@
+import { shouldFail, type FailOn } from "../failon.js";
+import { filterCharges } from "../filter.js";
 import { readSnapshot } from "../io.js";
 import { readDependencies } from "../project/dependencies.js";
 import { missingEnvKeys } from "../project/envkeys.js";
@@ -16,6 +18,9 @@ export interface TrialOptions {
   project: string;
   json?: boolean;
   markdown?: boolean;
+  ignore?: string[];
+  brief?: boolean;
+  failOn?: FailOn;
 }
 
 function render(charges: Charge[], options: TrialOptions): string {
@@ -40,13 +45,16 @@ async function buildCaseFile(project: string): Promise<CaseFile> {
   };
 }
 
-/** Exits 1 when something is found guilty, so scripts and CI can react. */
+/** Exits 1 according to --fail-on, so scripts and CI can react. */
 export async function trialCommand(options: TrialOptions): Promise<number> {
   const theirs = await readSnapshot(options.against);
   const mine = options.mine ? await readSnapshot(options.mine) : await takeSnapshot();
   const warning = staleWarning(theirs.createdAt);
   if (warning) console.error(warning);
-  const charges = holdTrial(mine, theirs, await buildCaseFile(options.project));
+  const charges = filterCharges(
+    holdTrial(mine, theirs, await buildCaseFile(options.project)),
+    options,
+  );
   console.log(render(charges, options));
-  return charges.some((c) => c.verdict === "guilty") ? 1 : 0;
+  return shouldFail(charges, options.failOn) ? 1 : 0;
 }

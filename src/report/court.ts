@@ -16,6 +16,12 @@ function renderCharge(charge: Charge): string {
   return lines.join("\n");
 }
 
+export function tally(charges: Charge[]): string {
+  const count = (verdict: Verdict) =>
+    charges.filter((charge) => charge.verdict === verdict).length;
+  return `${count("guilty")} guilty, ${count("suspicious")} suspicious, ${count("acquitted")} acquitted.`;
+}
+
 /** Sums up the case without claiming more than the evidence supports. */
 export function closingStatement(charges: Charge[]): string {
   if (charges.length === 0) {
@@ -33,5 +39,8 @@ export function closingStatement(charges: Charge[]): string {
 export function renderTrial(charges: Charge[]): string {
   const body = charges.map(renderCharge).join("\n\n");
   const heading = pc.bold("THE PEOPLE v. YOUR MACHINE");
-  return [heading, body, closingStatement(charges)].filter(Boolean).join("\n\n");
+  const ending = charges.length > 0 ? `${tally(charges)} ` : "";
+  return [heading, body, `${ending}${closingStatement(charges)}`]
+    .filter(Boolean)
+    .join("\n\n");
 }
