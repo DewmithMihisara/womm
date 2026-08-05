@@ -107,6 +107,7 @@ export const tools: ToolSpec[] = [
   { id: "ssh", label: "OpenSSH", command: "ssh", args: ["-V"] },
   { id: "gpg", label: "GnuPG", command: "gpg" },
   { id: "rsync", label: "rsync", command: "rsync" },
+  { id: "ripgrep", label: "ripgrep", command: "rg" },
   // New tools go above this line.
 ];
 
