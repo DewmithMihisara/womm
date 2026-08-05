@@ -110,6 +110,7 @@ export const tools: ToolSpec[] = [
   { id: "ripgrep", label: "ripgrep", command: "rg" },
   { id: "fd", label: "fd", command: "fd" },
   { id: "bat", label: "bat", command: "bat" },
+  { id: "tmux", label: "tmux", command: "tmux", args: ["-V"] },
   // New tools go above this line.
 ];
 

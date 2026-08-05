@@ -100,6 +100,7 @@ const samples: [string, string, string][] = [
   ["ripgrep", "ripgrep 14.1.1", "14.1.1"],
   ["fd", "fd 10.2.0", "10.2.0"],
   ["bat", "bat 0.24.0 (fc95468)", "0.24.0"],
+  ["tmux", "tmux 3.4", "3.4"],
   // New samples go above this line.
 ];
 
