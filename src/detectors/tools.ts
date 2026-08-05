@@ -109,6 +109,7 @@ export const tools: ToolSpec[] = [
   { id: "rsync", label: "rsync", command: "rsync" },
   { id: "ripgrep", label: "ripgrep", command: "rg" },
   { id: "fd", label: "fd", command: "fd" },
+  { id: "bat", label: "bat", command: "bat" },
   // New tools go above this line.
 ];
 

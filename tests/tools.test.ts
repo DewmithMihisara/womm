@@ -99,6 +99,7 @@ const samples: [string, string, string][] = [
   ["rsync", "rsync  version 3.3.0  protocol version 31", "3.3.0"],
   ["ripgrep", "ripgrep 14.1.1", "14.1.1"],
   ["fd", "fd 10.2.0", "10.2.0"],
+  ["bat", "bat 0.24.0 (fc95468)", "0.24.0"],
   // New samples go above this line.
 ];
 
