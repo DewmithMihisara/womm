@@ -111,6 +111,7 @@ export const tools: ToolSpec[] = [
   { id: "fd", label: "fd", command: "fd" },
   { id: "bat", label: "bat", command: "bat" },
   { id: "tmux", label: "tmux", command: "tmux", args: ["-V"] },
+  { id: "vim", label: "Vim", command: "vim" },
   // New tools go above this line.
 ];
 
