@@ -104,6 +104,7 @@ const samples: [string, string, string][] = [
   ["vim", "VIM - Vi IMproved 9.1 (2024 Jan 02, compiled Oct 01 2024)", "9.1"],
   ["nano", "GNU nano, version 7.2", "7.2"],
   ["ruff", "ruff 0.7.3", "0.7.3"],
+  ["black", "black, 24.10.0 (compiled: yes)", "24.10.0"],
   // New samples go above this line.
 ];
 
