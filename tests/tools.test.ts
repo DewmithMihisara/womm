@@ -103,6 +103,7 @@ const samples: [string, string, string][] = [
   ["tmux", "tmux 3.4", "3.4"],
   ["vim", "VIM - Vi IMproved 9.1 (2024 Jan 02, compiled Oct 01 2024)", "9.1"],
   ["nano", "GNU nano, version 7.2", "7.2"],
+  ["ruff", "ruff 0.7.3", "0.7.3"],
   // New samples go above this line.
 ];
 
