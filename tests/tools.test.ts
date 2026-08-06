@@ -107,6 +107,7 @@ const samples: [string, string, string][] = [
   ["black", "black, 24.10.0 (compiled: yes)", "24.10.0"],
   ["mypy", "mypy 1.13.0 (compiled: yes)", "1.13.0"],
   ["pytest", "pytest 8.3.3", "8.3.3"],
+  ["eslint", "v9.14.0", "9.14.0"],
   // New samples go above this line.
 ];
 
