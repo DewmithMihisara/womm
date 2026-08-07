@@ -120,6 +120,7 @@ export const tools: ToolSpec[] = [
   { id: "eslint", label: "ESLint", command: "eslint" },
   { id: "prettier", label: "Prettier", command: "prettier" },
   { id: "turbo", label: "Turborepo", command: "turbo" },
+  { id: "rustup", label: "rustup", command: "rustup" },
   // New tools go above this line.
 ];
 

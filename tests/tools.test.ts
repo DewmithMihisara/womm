@@ -110,6 +110,7 @@ const samples: [string, string, string][] = [
   ["eslint", "v9.14.0", "9.14.0"],
   ["prettier", "3.3.3", "3.3.3"],
   ["turbo", "2.2.3", "2.2.3"],
+  ["rustup", "rustup 1.27.1 (54dd3d00f 2024-04-24)", "1.27.1"],
   // New samples go above this line.
 ];
 
