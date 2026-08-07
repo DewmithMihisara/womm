@@ -119,6 +119,7 @@ export const tools: ToolSpec[] = [
   { id: "pytest", label: "pytest", command: "pytest" },
   { id: "eslint", label: "ESLint", command: "eslint" },
   { id: "prettier", label: "Prettier", command: "prettier" },
+  { id: "turbo", label: "Turborepo", command: "turbo" },
   // New tools go above this line.
 ];
 
