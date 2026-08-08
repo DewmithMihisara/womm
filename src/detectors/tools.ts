@@ -122,6 +122,7 @@ export const tools: ToolSpec[] = [
   { id: "turbo", label: "Turborepo", command: "turbo" },
   { id: "rustup", label: "rustup", command: "rustup" },
   { id: "pre-commit", label: "pre-commit", command: "pre-commit" },
+  { id: "direnv", label: "direnv", command: "direnv", args: ["version"] },
   // New tools go above this line.
 ];
 

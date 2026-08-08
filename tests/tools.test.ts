@@ -112,6 +112,7 @@ const samples: [string, string, string][] = [
   ["turbo", "2.2.3", "2.2.3"],
   ["rustup", "rustup 1.27.1 (54dd3d00f 2024-04-24)", "1.27.1"],
   ["pre-commit", "pre-commit 4.0.1", "4.0.1"],
+  ["direnv", "2.35.0", "2.35.0"],
   // New samples go above this line.
 ];
 
