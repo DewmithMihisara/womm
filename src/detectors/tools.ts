@@ -121,6 +121,7 @@ export const tools: ToolSpec[] = [
   { id: "prettier", label: "Prettier", command: "prettier" },
   { id: "turbo", label: "Turborepo", command: "turbo" },
   { id: "rustup", label: "rustup", command: "rustup" },
+  { id: "pre-commit", label: "pre-commit", command: "pre-commit" },
   // New tools go above this line.
 ];
 
