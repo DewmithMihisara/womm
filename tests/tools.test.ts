@@ -113,6 +113,7 @@ const samples: [string, string, string][] = [
   ["rustup", "rustup 1.27.1 (54dd3d00f 2024-04-24)", "1.27.1"],
   ["pre-commit", "pre-commit 4.0.1", "4.0.1"],
   ["direnv", "2.35.0", "2.35.0"],
+  ["ccache", "ccache version 4.10.2", "4.10.2"],
   // New samples go above this line.
 ];
 

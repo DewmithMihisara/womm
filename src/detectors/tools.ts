@@ -123,6 +123,7 @@ export const tools: ToolSpec[] = [
   { id: "rustup", label: "rustup", command: "rustup" },
   { id: "pre-commit", label: "pre-commit", command: "pre-commit" },
   { id: "direnv", label: "direnv", command: "direnv", args: ["version"] },
+  { id: "ccache", label: "ccache", command: "ccache" },
   // New tools go above this line.
 ];
 
