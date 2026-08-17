@@ -2,6 +2,7 @@ import type { Detector } from "./types.js";
 
 /** Their values can hold paths or secrets, so only presence is recorded. */
 const FLAGS: [variable: string, why: string][] = [
+  ["NODE_OPTIONS", "changes how every Node.js process starts"],
   // New environment variables go above this line.
 ];
 
