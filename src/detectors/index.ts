@@ -1,4 +1,5 @@
 import { osDetector } from "./os.js";
+import { envFlagDetector } from "./envflags.js";
 import { filesystemDetector } from "./filesystem.js";
 import { flavourDetector } from "./flavour.js";
 import { gitConfigDetector } from "./gitconfig.js";
@@ -13,6 +14,7 @@ export const detectors: Detector[] = [
   runtimeDetector(),
   gitConfigDetector,
   filesystemDetector(),
+  envFlagDetector(),
   flavourDetector,
   ...systemDetectors(),
   ...tools.map(toolDetector),
