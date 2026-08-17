@@ -4,6 +4,7 @@ import type { Detector } from "./types.js";
 const FLAGS: [variable: string, why: string][] = [
   ["NODE_OPTIONS", "changes how every Node.js process starts"],
   ["NODE_EXTRA_CA_CERTS", "adds trusted certificates for Node.js"],
+  ["JAVA_HOME", "chooses which Java build tools use"],
   // New environment variables go above this line.
 ];
 
