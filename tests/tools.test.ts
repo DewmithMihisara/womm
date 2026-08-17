@@ -115,6 +115,7 @@ const samples: [string, string, string][] = [
   ["direnv", "2.35.0", "2.35.0"],
   ["ccache", "ccache version 4.10.2", "4.10.2"],
   ["python2", "Python 2.7.18", "2.7.18"],
+  ["shellcheck", "ShellCheck - shell script analysis tool\nversion: 0.10.0", "0.10.0"],
   // New samples go above this line.
 ];
 
