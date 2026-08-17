@@ -124,6 +124,7 @@ export const tools: ToolSpec[] = [
   { id: "pre-commit", label: "pre-commit", command: "pre-commit" },
   { id: "direnv", label: "direnv", command: "direnv", args: ["version"] },
   { id: "ccache", label: "ccache", command: "ccache" },
+  { id: "python2", label: "Python 2", command: "python2" },
   // New tools go above this line.
 ];
 

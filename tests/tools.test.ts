@@ -114,6 +114,7 @@ const samples: [string, string, string][] = [
   ["pre-commit", "pre-commit 4.0.1", "4.0.1"],
   ["direnv", "2.35.0", "2.35.0"],
   ["ccache", "ccache version 4.10.2", "4.10.2"],
+  ["python2", "Python 2.7.18", "2.7.18"],
   // New samples go above this line.
 ];
 
