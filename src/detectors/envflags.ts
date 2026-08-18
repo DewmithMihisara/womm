@@ -7,6 +7,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["JAVA_HOME", "chooses which Java build tools use"],
   ["PYTHONPATH", "adds folders to Python's import path"],
   ["VIRTUAL_ENV", "shows a Python virtual environment is active"],
+  ["CONDA_PREFIX", "shows a Conda environment is active"],
   // New environment variables go above this line.
 ];
 
