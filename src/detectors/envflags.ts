@@ -6,6 +6,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["NODE_EXTRA_CA_CERTS", "adds trusted certificates for Node.js"],
   ["JAVA_HOME", "chooses which Java build tools use"],
   ["PYTHONPATH", "adds folders to Python's import path"],
+  ["VIRTUAL_ENV", "shows a Python virtual environment is active"],
   // New environment variables go above this line.
 ];
 
