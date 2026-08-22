@@ -12,6 +12,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["GOFLAGS", "changes the default flags for Go commands"],
   ["RUSTFLAGS", "changes how Rust code is compiled"],
   ["DOCKER_HOST", "points Docker at another daemon"],
+  ["KUBECONFIG", "chooses which clusters kubectl talks to"],
   // New environment variables go above this line.
 ];
 
