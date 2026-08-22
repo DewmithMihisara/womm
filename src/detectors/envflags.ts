@@ -14,6 +14,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["DOCKER_HOST", "points Docker at another daemon"],
   ["KUBECONFIG", "chooses which clusters kubectl talks to"],
   ["SSL_CERT_FILE", "changes which certificates are trusted"],
+  ["REQUESTS_CA_BUNDLE", "changes which certificates Python requests trusts"],
   // New environment variables go above this line.
 ];
 
