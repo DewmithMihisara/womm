@@ -10,6 +10,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["CONDA_PREFIX", "shows a Conda environment is active"],
   ["GOPATH", "changes where Go looks for code"],
   ["GOFLAGS", "changes the default flags for Go commands"],
+  ["RUSTFLAGS", "changes how Rust code is compiled"],
   // New environment variables go above this line.
 ];
 
