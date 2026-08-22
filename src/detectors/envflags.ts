@@ -13,6 +13,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["RUSTFLAGS", "changes how Rust code is compiled"],
   ["DOCKER_HOST", "points Docker at another daemon"],
   ["KUBECONFIG", "chooses which clusters kubectl talks to"],
+  ["SSL_CERT_FILE", "changes which certificates are trusted"],
   // New environment variables go above this line.
 ];
 
