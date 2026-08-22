@@ -9,6 +9,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["VIRTUAL_ENV", "shows a Python virtual environment is active"],
   ["CONDA_PREFIX", "shows a Conda environment is active"],
   ["GOPATH", "changes where Go looks for code"],
+  ["GOFLAGS", "changes the default flags for Go commands"],
   // New environment variables go above this line.
 ];
 
