@@ -8,6 +8,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["PYTHONPATH", "adds folders to Python's import path"],
   ["VIRTUAL_ENV", "shows a Python virtual environment is active"],
   ["CONDA_PREFIX", "shows a Conda environment is active"],
+  ["GOPATH", "changes where Go looks for code"],
   // New environment variables go above this line.
 ];
 
