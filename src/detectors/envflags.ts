@@ -15,6 +15,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["KUBECONFIG", "chooses which clusters kubectl talks to"],
   ["SSL_CERT_FILE", "changes which certificates are trusted"],
   ["REQUESTS_CA_BUNDLE", "changes which certificates Python requests trusts"],
+  ["LD_LIBRARY_PATH", "changes which shared libraries load on Linux"],
   // New environment variables go above this line.
 ];
 
