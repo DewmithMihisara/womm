@@ -11,6 +11,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["GOPATH", "changes where Go looks for code"],
   ["GOFLAGS", "changes the default flags for Go commands"],
   ["RUSTFLAGS", "changes how Rust code is compiled"],
+  ["DOCKER_HOST", "points Docker at another daemon"],
   // New environment variables go above this line.
 ];
 
