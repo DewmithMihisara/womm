@@ -14,6 +14,7 @@ Snapshots are meant to be shared, so `womm` is built to record as little as it c
 - Whether a proxy is configured, but never its address
 - Whether it's running in CI or WSL
 - Whether tools such as `sed` and `grep` are the GNU versions
+- Whether a short list of variables that change tool behaviour, such as `NODE_OPTIONS`, are set, but never their values
 
 ## What it doesn't record
 
