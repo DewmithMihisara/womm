@@ -16,6 +16,7 @@ const FLAGS: [variable: string, why: string][] = [
   ["SSL_CERT_FILE", "changes which certificates are trusted"],
   ["REQUESTS_CA_BUNDLE", "changes which certificates Python requests trusts"],
   ["LD_LIBRARY_PATH", "changes which shared libraries load on Linux"],
+  ["DYLD_LIBRARY_PATH", "changes which shared libraries load on macOS"],
   // New environment variables go above this line.
 ];
 
