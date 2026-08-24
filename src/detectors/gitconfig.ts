@@ -10,6 +10,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.longpaths", "Git core.longpaths", "core.longpaths"],
   ["git.precomposeunicode", "Git core.precomposeunicode", "core.precomposeunicode"],
   ["git.pullRebase", "Git pull.rebase", "pull.rebase"],
+  ["git.defaultBranch", "Git init.defaultBranch", "init.defaultBranch"],
   // New Git settings go above this line.
 ];
 
