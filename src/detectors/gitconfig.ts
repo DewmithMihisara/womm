@@ -9,6 +9,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.symlinks", "Git core.symlinks", "core.symlinks"],
   ["git.longpaths", "Git core.longpaths", "core.longpaths"],
   ["git.precomposeunicode", "Git core.precomposeunicode", "core.precomposeunicode"],
+  ["git.pullRebase", "Git pull.rebase", "pull.rebase"],
   // New Git settings go above this line.
 ];
 
