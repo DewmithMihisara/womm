@@ -8,6 +8,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.ignorecase", "Git core.ignorecase", "core.ignorecase"],
   ["git.symlinks", "Git core.symlinks", "core.symlinks"],
   ["git.longpaths", "Git core.longpaths", "core.longpaths"],
+  ["git.precomposeunicode", "Git core.precomposeunicode", "core.precomposeunicode"],
   // New Git settings go above this line.
 ];
 
