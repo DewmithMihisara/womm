@@ -7,7 +7,7 @@ Snapshots are meant to be shared, so `womm` is built to record as little as it c
 - OS name, release and CPU architecture
 - Versions of known tools
 - Timezone and locale
-- A short list of Git settings related to line endings, file modes and paths
+- A short list of Git settings related to line endings, file modes, paths and merging
 - Whether the filesystem is case sensitive
 - The default line ending and the name of your shell
 - `NODE_ENV`, if it's one of `development`, `production` or `test`. Any other value shows as `other`
