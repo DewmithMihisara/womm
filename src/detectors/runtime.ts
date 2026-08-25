@@ -17,6 +17,7 @@ export function runtimeDetector(
       value: versions.modules ?? null,
     },
     { id: "node.v8", label: "Node.js V8", value: versions.v8 ?? null },
+    { id: "node.uv", label: "Node.js libuv", value: versions.uv ?? null },
     // Date and number formatting depend on ICU data.
     { id: "node.icu", label: "Node.js ICU", value: versions.icu ?? null },
   ];
