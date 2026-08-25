@@ -11,6 +11,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.precomposeunicode", "Git core.precomposeunicode", "core.precomposeunicode"],
   ["git.pullRebase", "Git pull.rebase", "pull.rebase"],
   ["git.defaultBranch", "Git init.defaultBranch", "init.defaultBranch"],
+  ["git.mergeFf", "Git merge.ff", "merge.ff"],
   // New Git settings go above this line.
 ];
 
