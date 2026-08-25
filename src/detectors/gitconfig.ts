@@ -12,6 +12,7 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.pullRebase", "Git pull.rebase", "pull.rebase"],
   ["git.defaultBranch", "Git init.defaultBranch", "init.defaultBranch"],
   ["git.mergeFf", "Git merge.ff", "merge.ff"],
+  ["git.submoduleRecurse", "Git submodule.recurse", "submodule.recurse"],
   // New Git settings go above this line.
 ];
 
