@@ -16,6 +16,7 @@ export function runtimeDetector(
       label: "Node.js native module ABI",
       value: versions.modules ?? null,
     },
+    { id: "node.napi", label: "Node-API", value: versions.napi ?? null },
     { id: "node.v8", label: "Node.js V8", value: versions.v8 ?? null },
     { id: "node.uv", label: "Node.js libuv", value: versions.uv ?? null },
     // Date and number formatting depend on ICU data.
