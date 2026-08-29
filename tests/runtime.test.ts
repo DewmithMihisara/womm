@@ -27,5 +27,14 @@ describe("runtimeDetector", () => {
   it("reports ICU", async () => {
     expect((await findings()).get("node.icu")).toBe("75.1");
   });
+  it("reports libuv and Node-API", async () => {
+    const list = await runtimeDetector({
+      ...versions,
+      uv: "1.48.0",
+      napi: "9",
+    } as NodeJS.ProcessVersions)(context);
+    expect(list.find((f) => f.id === "node.uv")?.value).toBe("1.48.0");
+    expect(list.find((f) => f.id === "node.napi")?.value).toBe("9");
+  });
   // New runtime tests go above this line.
 });

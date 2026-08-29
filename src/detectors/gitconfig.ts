@@ -8,6 +8,12 @@ const SETTINGS: [id: string, label: string, key: string][] = [
   ["git.ignorecase", "Git core.ignorecase", "core.ignorecase"],
   ["git.symlinks", "Git core.symlinks", "core.symlinks"],
   ["git.longpaths", "Git core.longpaths", "core.longpaths"],
+  ["git.precomposeunicode", "Git core.precomposeunicode", "core.precomposeunicode"],
+  ["git.pullRebase", "Git pull.rebase", "pull.rebase"],
+  ["git.defaultBranch", "Git init.defaultBranch", "init.defaultBranch"],
+  ["git.mergeFf", "Git merge.ff", "merge.ff"],
+  ["git.submoduleRecurse", "Git submodule.recurse", "submodule.recurse"],
+  ["git.fsmonitor", "Git core.fsmonitor", "core.fsmonitor"],
   // New Git settings go above this line.
 ];
 
