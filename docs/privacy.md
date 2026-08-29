@@ -9,6 +9,7 @@ Snapshots are meant to be shared, so `womm` is built to record as little as it c
 - Timezone and locale
 - A short list of Git settings related to line endings, file modes, paths and merging
 - Whether the filesystem is case sensitive
+- CPU core count, and memory rounded to whole gigabytes
 - The default line ending and the name of your shell
 - `NODE_ENV`, if it's one of `development`, `production` or `test`. Any other value shows as `other`
 - Whether a proxy is configured, but never its address
