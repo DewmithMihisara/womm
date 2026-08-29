@@ -10,6 +10,7 @@ export function hardwareDetector(
 ): Detector {
   return async () => [
     { id: "hw.cores", label: "CPU cores", value: String(cores) },
+    { id: "hw.memory", label: "Memory (GB)", value: String(Math.round(memoryBytes / GIB)) },
     // New hardware facts go above this line.
   ];
 }

@@ -8,5 +8,9 @@ describe("hardwareDetector", () => {
     const findings = await hardwareDetector(8, 0)(context);
     expect(findings.find((f) => f.id === "hw.cores")?.value).toBe("8");
   });
+  it("rounds memory to whole gigabytes", async () => {
+    const findings = await hardwareDetector(8, 16.4 * 1024 ** 3)(context);
+    expect(findings.find((f) => f.id === "hw.memory")?.value).toBe("16");
+  });
   // New hardware tests go above this line.
 });
