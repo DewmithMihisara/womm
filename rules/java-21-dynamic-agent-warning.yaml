@@ -1,0 +1,8 @@
+id: java-21-dynamic-agent-warning
+title: Java 21 warns when agents load dynamically
+why: JEP 451 issues warnings when agents are loaded into a running JVM, which can surprise tools or tests checking output.
+fix: Load the agent at startup with -javaagent.
+source: https://openjdk.org/jeps/451
+when:
+  - finding: java
+    range: ">=21"
