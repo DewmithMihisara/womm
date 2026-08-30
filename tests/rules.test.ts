@@ -83,6 +83,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["java-14-removed-cms", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["java-21-dynamic-agent-warning", {"java":"21.0.1"}, {"java":"17.0.1"}, {}],
   ["java-24-unsafe-warning", {"java":"24.0.1"}, {"java":"21.0.1"}, {}],
+  ["python-312-unittest-aliases", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   // New rule samples go above this line.
 ];
 
