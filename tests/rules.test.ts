@@ -82,6 +82,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["git-ignorecase-enabled", {"git.ignorecase":"true"}, {"git.ignorecase":"false"}, {}],
   ["java-14-removed-cms", {"java":"21.0.1"}, {"java":"11.0.1"}, {}],
   ["java-21-dynamic-agent-warning", {"java":"21.0.1"}, {"java":"17.0.1"}, {}],
+  ["java-24-unsafe-warning", {"java":"24.0.1"}, {"java":"21.0.1"}, {}],
   // New rule samples go above this line.
 ];
 
