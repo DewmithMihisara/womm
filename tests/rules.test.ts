@@ -85,6 +85,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["java-24-unsafe-warning", {"java":"24.0.1"}, {"java":"21.0.1"}, {}],
   ["python-312-unittest-aliases", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-312-safeconfigparser", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
+  ["python-312-ssl-wrap-socket", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   // New rule samples go above this line.
 ];
 
