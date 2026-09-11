@@ -86,6 +86,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-312-unittest-aliases", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-312-safeconfigparser", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
   ["python-312-ssl-wrap-socket", {"python":"3.12.0"}, {"python":"3.11.0"}, {}],
+  ["python-311-binhex", {"python":"3.11.0"}, {"python":"3.10.0"}, {}],
   // New rule samples go above this line.
 ];
 
