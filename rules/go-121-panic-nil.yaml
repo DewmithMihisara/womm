@@ -1,0 +1,8 @@
+id: go-121-panic-nil
+title: Go 1.21 changed panic(nil)
+why: Calling panic with a nil value now causes a run-time panic of a specific type, so recover no longer returns nil.
+fix: Don't panic with nil. To compare behaviour, try GODEBUG=panicnil=1.
+source: https://go.dev/doc/go1.21
+when:
+  - finding: go
+    range: ">=1.21"
