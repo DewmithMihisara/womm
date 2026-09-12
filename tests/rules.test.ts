@@ -95,6 +95,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["ruby-34-frozen-string-warning", {"ruby":"3.4.0"}, {"ruby":"3.3.0"}, {}],
   ["php-82-utf8-encode", {"php":"8.3.0"}, {"php":"8.1.0"}, {}],
   ["go-119-no-relative-path-lookup", {"go":"1.22.0"}, {"go":"1.18.0"}, {}],
+  ["go-122-servemux-patterns", {"go":"1.22.0"}, {"go":"1.21.0"}, {}],
   // New rule samples go above this line.
 ];
 
