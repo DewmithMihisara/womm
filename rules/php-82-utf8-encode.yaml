@@ -1,0 +1,8 @@
+id: php-82-utf8-encode
+title: PHP 8.2 deprecates utf8_encode
+why: utf8_encode and utf8_decode are deprecated from PHP 8.2, so new warnings can appear.
+fix: Use mb_convert_encoding.
+source: https://www.php.net/manual/en/migration82.deprecated.php
+when:
+  - finding: php
+    range: ">=8.2"

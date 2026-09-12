@@ -93,6 +93,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["node-23-no-windows-32-bit", {"node":"24.0.0","os.platform":"win32","os.arch":"ia32"}, {"node":"24.0.0","os.platform":"win32","os.arch":"x64"}, {}],
   ["ruby-3-removed-webrick", {"ruby":"3.3.0"}, {"ruby":"2.7.8"}, {}],
   ["ruby-34-frozen-string-warning", {"ruby":"3.4.0"}, {"ruby":"3.3.0"}, {}],
+  ["php-82-utf8-encode", {"php":"8.3.0"}, {"php":"8.1.0"}, {}],
   // New rule samples go above this line.
 ];
 
