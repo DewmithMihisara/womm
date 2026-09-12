@@ -1,0 +1,8 @@
+id: python-310-formatter
+title: Python 3.10 removed formatter
+why: Code importing the formatter module fails on Python 3.10.
+fix: Replace the module, or upgrade the package using it.
+source: https://docs.python.org/3.10/whatsnew/3.10.html
+when:
+  - finding: python
+    range: ">=3.10"
