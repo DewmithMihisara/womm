@@ -91,6 +91,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["python-310-asyncio-loop-parameter", {"python":"3.10.0"}, {"python":"3.9.0"}, {}],
   ["python-310-formatter", {"python":"3.10.0"}, {"python":"3.9.0"}, {}],
   ["node-23-no-windows-32-bit", {"node":"24.0.0","os.platform":"win32","os.arch":"ia32"}, {"node":"24.0.0","os.platform":"win32","os.arch":"x64"}, {}],
+  ["ruby-3-removed-webrick", {"ruby":"3.3.0"}, {"ruby":"2.7.8"}, {}],
   // New rule samples go above this line.
 ];
 
