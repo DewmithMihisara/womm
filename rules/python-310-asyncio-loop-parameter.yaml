@@ -1,0 +1,8 @@
+id: python-310-asyncio-loop-parameter
+title: Python 3.10 removed asyncio's loop parameter
+why: The loop parameter was removed from most of asyncio's high-level API.
+fix: Remove the loop argument, or upgrade the package passing it.
+source: https://docs.python.org/3.10/whatsnew/3.10.html
+when:
+  - finding: python
+    range: ">=3.10"
