@@ -97,6 +97,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["go-119-no-relative-path-lookup", {"go":"1.22.0"}, {"go":"1.18.0"}, {}],
   ["go-122-servemux-patterns", {"go":"1.22.0"}, {"go":"1.21.0"}, {}],
   ["go-121-panic-nil", {"go":"1.22.0"}, {"go":"1.20.0"}, {}],
+  ["gcc-12-missing-headers", {"gcc":"13.2.0"}, {"gcc":"11.4.0"}, {}],
   // New rule samples go above this line.
 ];
 
