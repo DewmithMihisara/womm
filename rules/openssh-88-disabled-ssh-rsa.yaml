@@ -1,0 +1,8 @@
+id: openssh-88-disabled-ssh-rsa
+title: OpenSSH 8.8 disabled ssh-rsa signatures
+why: OpenSSH 8.8 disables RSA signatures using SHA-1, so connections to old servers can fail.
+fix: Upgrade the server. For a trusted old server, enable it for that host only.
+source: https://www.openssh.com/txt/release-8.8
+when:
+  - finding: ssh
+    range: ">=8.8"
