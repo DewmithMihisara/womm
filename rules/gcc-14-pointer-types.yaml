@@ -1,0 +1,8 @@
+id: gcc-14-pointer-types
+title: GCC 14 rejects incompatible pointer types
+why: GCC 14 no longer allows implicitly casting all pointer types to all other pointer types.
+fix: Fix the types, or add an explicit cast.
+source: https://gcc.gnu.org/gcc-14/porting_to.html
+when:
+  - finding: gcc
+    range: ">=14"
