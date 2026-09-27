@@ -1,0 +1,8 @@
+id: go-122-servemux-patterns
+title: Go 1.22 changed ServeMux patterns
+why: net/http's ServeMux patterns now accept methods and wildcards, so existing patterns containing them can behave differently.
+fix: Check your route patterns. To compare behaviour, try GODEBUG=httpmuxgo121=1.
+source: https://go.dev/doc/go1.22
+when:
+  - finding: go
+    range: ">=1.22"

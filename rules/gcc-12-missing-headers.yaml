@@ -1,0 +1,8 @@
+id: gcc-12-missing-headers
+title: GCC 12 needs explicit includes such as memory
+why: GCC 12 includes some standard headers less widely, so code relying on them stops compiling.
+fix: Add the missing include, such as <memory>.
+source: https://gcc.gnu.org/gcc-12/porting_to.html
+when:
+  - finding: gcc
+    range: ">=12"

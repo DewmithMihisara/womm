@@ -1,0 +1,8 @@
+id: java-24-unsafe-warning
+title: Java 24 warns about sun.misc.Unsafe memory access
+why: JEP 498 issues warnings when memory-access methods in sun.misc.Unsafe are used.
+fix: Upgrade the library using them.
+source: https://openjdk.org/jeps/498
+when:
+  - finding: java
+    range: ">=24"

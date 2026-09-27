@@ -1,0 +1,8 @@
+id: ruby-34-frozen-string-warning
+title: Ruby 3.4 warns about mutated string literals
+why: Mutating a string literal in a file without a frozen_string_literal comment now emits a deprecation warning.
+fix: Duplicate the string before changing it, or add the magic comment.
+source: https://www.ruby-lang.org/en/news/2024/12/25/ruby-3-4-0-released/
+when:
+  - finding: ruby
+    range: ">=3.4"

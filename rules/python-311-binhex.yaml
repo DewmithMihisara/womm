@@ -1,0 +1,8 @@
+id: python-311-binhex
+title: Python 3.11 removed binhex
+why: Code importing the binhex module fails on Python 3.11.
+fix: Use another encoding, or find a package providing it.
+source: https://docs.python.org/3.11/whatsnew/3.11.html
+when:
+  - finding: python
+    range: ">=3.11"

@@ -1,0 +1,8 @@
+id: java-14-removed-cms
+title: Java 14 removed the CMS garbage collector
+why: JEP 363 removed Concurrent Mark Sweep, so options selecting it no longer work.
+fix: Remove -XX:+UseConcMarkSweepGC, and choose another collector such as G1.
+source: https://openjdk.org/jeps/363
+when:
+  - finding: java
+    range: ">=14"

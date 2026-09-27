@@ -1,0 +1,8 @@
+id: python-312-ssl-wrap-socket
+title: Python 3.12 removed ssl.wrap_socket
+why: Code calling ssl.wrap_socket fails on Python 3.12.
+fix: Use SSLContext.wrap_socket.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"

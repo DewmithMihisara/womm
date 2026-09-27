@@ -1,0 +1,8 @@
+id: ruby-3-removed-webrick
+title: Ruby 3 no longer includes webrick
+why: webrick, sdbm, net-telnet and xmlrpc must be installed as gems from Ruby 3.0.
+fix: Add the gem to your Gemfile.
+source: https://www.ruby-lang.org/en/news/2020/12/25/ruby-3-0-0-released/
+when:
+  - finding: ruby
+    range: ">=3"

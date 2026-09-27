@@ -1,0 +1,8 @@
+id: go-119-no-relative-path-lookup
+title: Go 1.19 won't run commands found through a relative PATH
+why: exec.Command and LookPath no longer return results found relative to the current directory.
+fix: Use an explicit path, such as ./tool.
+source: https://go.dev/doc/go1.19
+when:
+  - finding: go
+    range: ">=1.19"

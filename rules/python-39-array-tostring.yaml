@@ -1,0 +1,8 @@
+id: python-39-array-tostring
+title: Python 3.9 removed array.tostring
+why: array's tostring and fromstring methods no longer exist on Python 3.9.
+fix: Use tobytes and frombytes.
+source: https://docs.python.org/3.9/whatsnew/3.9.html
+when:
+  - finding: python
+    range: ">=3.9"

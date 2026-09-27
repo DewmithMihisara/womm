@@ -1,0 +1,8 @@
+id: python-312-safeconfigparser
+title: Python 3.12 removed SafeConfigParser
+why: configparser no longer has a SafeConfigParser class.
+fix: Use ConfigParser.
+source: https://docs.python.org/3.12/whatsnew/3.12.html
+when:
+  - finding: python
+    range: ">=3.12"

@@ -1,0 +1,14 @@
+id: node-23-no-windows-32-bit
+title: Node.js 23 dropped 32-bit Windows
+why: Node.js 23 removed support for 32-bit Windows.
+fix: Use a 64-bit Node.js on 64-bit Windows, or an older release.
+source: https://nodejs.org/en/blog/release/v23.0.0
+when:
+  - finding: node
+    range: ">=23"
+  - finding: os.platform
+    equals:
+      - win32
+  - finding: os.arch
+    equals:
+      - ia32
