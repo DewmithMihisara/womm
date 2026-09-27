@@ -100,6 +100,7 @@ const samples: [string, Facts, Facts, Dependencies][] = [
   ["gcc-12-missing-headers", {"gcc":"13.2.0"}, {"gcc":"11.4.0"}, {}],
   ["gcc-14-pointer-types", {"gcc":"14.1.0"}, {"gcc":"13.2.0"}, {}],
   ["openssh-88-disabled-ssh-rsa", {"ssh":"9.6"}, {"ssh":"8.4"}, {}],
+  ["openssh-9-scp-uses-sftp", {"ssh":"9.6"}, {"ssh":"8.4"}, {}],
   // New rule samples go above this line.
 ];
 

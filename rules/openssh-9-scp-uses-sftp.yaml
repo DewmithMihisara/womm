@@ -1,0 +1,8 @@
+id: openssh-9-scp-uses-sftp
+title: OpenSSH 9 scp uses SFTP by default
+why: scp switched from the legacy protocol to SFTP in OpenSSH 9.0, which can change how remote paths are handled.
+fix: To compare behaviour, try scp -O.
+source: https://www.openssh.com/txt/release-9.0
+when:
+  - finding: ssh
+    range: ">=9"
