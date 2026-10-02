@@ -39,6 +39,7 @@ Options:
   --ignore <ids>            Comma-separated charges to leave out of a trial
   --brief                   Hide acquitted charges
   --fail-on <level>         Exit 1 on guilty (default), suspicious or never
+  --rules <dir>             Also use rules from this folder
   -h, --help                Show this help
   -v, --version             Show the version
 `;
@@ -60,6 +61,7 @@ export async function main(argv: string[]): Promise<number> {
       ignore: { type: "string" },
       brief: { type: "boolean" },
       "fail-on": { type: "string" },
+      rules: { type: "string" },
       help: { type: "boolean", short: "h" },
       version: { type: "boolean", short: "v" },
     },
@@ -99,6 +101,7 @@ export async function main(argv: string[]): Promise<number> {
     }
     return trialCommand({
       failOn,
+      rules: values.rules,
       against: values.against,
       mine: values.mine,
       project: values.project ?? ".",
