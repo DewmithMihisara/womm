@@ -1,6 +1,7 @@
 import { isSuspicious } from "./classify.js";
 import { diffSnapshots, onlyDifferences, type Difference } from "./diff.js";
 import { checkRequirements, type CheckResult } from "./project/check.js";
+import { findConflicts } from "./project/conflicts.js";
 import type { Requirement } from "./project/sources.js";
 import { ruleApplies, type Dependencies } from "./rules/engine.js";
 import type { Rule } from "./rules/types.js";
@@ -96,8 +97,18 @@ export function holdTrial(mine: Snapshot, theirs: Snapshot, file: CaseFile): Cha
       fix: "Keep the lockfile for the package manager your team uses.",
     }),
   );
+  const conflictCharges = findConflicts(file.requirements).map(
+    (conflict): Charge => ({
+      id: `conflict.${conflict.tool}`,
+      verdict: "suspicious",
+      subject: `The project's ${conflict.tool} requirements contradict each other`,
+      evidence: `${conflict.a.source} asks for ${conflict.a.range}, but ${conflict.b.source} asks for ${conflict.b.range}`,
+      fix: "Make these files agree, because no version can satisfy both.",
+    }),
+  );
   const charges = [
     ...unmet.map(requirementCharge),
+    ...conflictCharges,
     ...matched.map(ruleCharge),
     ...envCharges,
     ...lockCharges,
