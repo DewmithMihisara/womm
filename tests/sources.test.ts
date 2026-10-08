@@ -63,6 +63,24 @@ describe("requirement sources", () => {
   });
 });
 
+describe("package.json", () => {
+  const parse = sources.find((s) => s.file === "package.json")!.parse;
+
+  it("reads volta pins and skips the extends path", () => {
+    const text = JSON.stringify({
+      volta: { node: "20.1.0", yarn: "1.22.0", extends: "../package.json" },
+    });
+    expect(parse(text)).toEqual([
+      { tool: "node", range: "20.1.0" },
+      { tool: "yarn", range: "1.22.0" },
+    ]);
+  });
+
+  it("ignores a broken file", () => {
+    expect(parse("{")).toEqual([]);
+  });
+});
+
 describe("pep440ToRange", () => {
   it.each([
     [">=3.10", ">=3.10"],
