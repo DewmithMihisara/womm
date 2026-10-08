@@ -34,6 +34,11 @@ describe("womm rules", () => {
     expect(result.stdout).toContain("python-312-distutils");
   });
 
+  it("lists rules as JSON", () => {
+    const rules = JSON.parse(womm("rules", "list", "--json").stdout);
+    expect(rules[0]).toHaveProperty("source");
+  });
+
   it("validates shipped rules", () => {
     expect(womm("rules", "check").status).toBe(0);
   });

@@ -23,8 +23,12 @@ export async function rulesDocsCommand(): Promise<number> {
   return 0;
 }
 
-export async function rulesListCommand(): Promise<number> {
+export async function rulesListCommand(json = false): Promise<number> {
   const { rules } = await loadRules();
+  if (json) {
+    console.log(JSON.stringify(rules, null, 2));
+    return 0;
+  }
   for (const rule of rules) console.log(`${rule.id}  ${rule.title}`);
   console.log(`\n${rules.length} rules.`);
   return 0;

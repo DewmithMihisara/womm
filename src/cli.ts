@@ -93,7 +93,7 @@ export async function main(argv: string[]): Promise<number> {
   }
   if (command === "rules") {
     const [action, directory] = rest;
-    if (action === "list") return rulesListCommand();
+    if (action === "list") return rulesListCommand(values.json);
     if (action === "check") return rulesCheckCommand(directory);
     if (action === "docs") return rulesDocsCommand();
     throw new UserError("Use womm rules list, check [dir] or docs.");
