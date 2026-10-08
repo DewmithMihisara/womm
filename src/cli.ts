@@ -2,6 +2,7 @@ import { parseArgs } from "node:util";
 import { certifyCommand } from "./commands/certify.js";
 import { diffCommand } from "./commands/diff.js";
 import {
+  explainCommand,
   rulesCheckCommand,
   rulesDocsCommand,
   rulesListCommand,
@@ -13,7 +14,7 @@ import { UserError } from "./io.js";
 import { suggest } from "./suggest.js";
 import { packageVersion } from "./version.js";
 
-const COMMANDS = ["snapshot", "diff", "trial", "certify", "rules"];
+const COMMANDS = ["snapshot", "diff", "trial", "certify", "rules", "explain"];
 
 const USAGE = `womm: a courtroom for "works on my machine" bugs
 
@@ -22,6 +23,7 @@ Usage:
   womm diff <a> <b>         Compare two snapshot files
   womm trial --against <f>  Put your machine on trial against a working one
   womm certify              Check project requirements and issue a certificate
+  womm explain <rule>       Explain one known cause
   womm rules list           List known causes
   womm rules check [dir]    Validate rule files
   womm rules docs           Print the rule catalogue as Markdown
@@ -81,12 +83,17 @@ export async function main(argv: string[]): Promise<number> {
     if (!a || !b) throw new UserError("womm diff needs two snapshot files.");
     return diffCommand(a, b, values.json, values.all, values["exit-code"]);
   }
+  if (command === "explain") {
+    const [id] = rest;
+    if (!id) throw new UserError("womm explain needs a rule id.");
+    return explainCommand(id);
+  }
   if (command === "certify") {
     return certifyCommand({ project: values.project ?? ".", output: values.output });
   }
   if (command === "rules") {
     const [action, directory] = rest;
-    if (action === "list") return rulesListCommand();
+    if (action === "list") return rulesListCommand(values.json);
     if (action === "check") return rulesCheckCommand(directory);
     if (action === "docs") return rulesDocsCommand();
     throw new UserError("Use womm rules list, check [dir] or docs.");

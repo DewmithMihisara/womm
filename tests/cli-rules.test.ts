@@ -8,11 +8,35 @@ const cli = resolve("dist/cli.js");
 const womm = (...args: string[]) =>
   spawnSync(process.execPath, [cli, ...args], { encoding: "utf8" });
 
+describe("womm explain", () => {
+  it("explains a rule", () => {
+    const result = womm("explain", "python-312-distutils");
+    expect(result.status).toBe(0);
+    expect(result.stdout).toContain("Python 3.12 removed distutils");
+    expect(result.stdout).toContain("Source: https://");
+  });
+
+  it("suggests a close rule name", () => {
+    const result = womm("explain", "python-312-distutil");
+    expect(result.status).toBe(2);
+    expect(result.stderr).toContain("Did you mean python-312-distutils");
+  });
+
+  it("requires an id", () => {
+    expect(womm("explain").status).toBe(2);
+  });
+});
+
 describe("womm rules", () => {
   it("lists shipped rules", () => {
     const result = womm("rules", "list");
     expect(result.status).toBe(0);
     expect(result.stdout).toContain("python-312-distutils");
+  });
+
+  it("lists rules as JSON", () => {
+    const rules = JSON.parse(womm("rules", "list", "--json").stdout);
+    expect(rules[0]).toHaveProperty("source");
   });
 
   it("validates shipped rules", () => {
