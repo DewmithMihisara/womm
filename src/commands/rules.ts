@@ -1,5 +1,21 @@
+import { UserError } from "../io.js";
 import { renderRulesDoc } from "../report/rulesdoc.js";
 import { loadRules } from "../rules/load.js";
+import { suggest } from "../suggest.js";
+
+export async function explainCommand(id: string): Promise<number> {
+  const { rules } = await loadRules();
+  const rule = rules.find((candidate) => candidate.id === id);
+  if (!rule) {
+    const close = suggest(id, rules.map((candidate) => candidate.id));
+    const hint = close ? ` Did you mean ${close}?` : " Run womm rules list.";
+    throw new UserError(`No rule named ${id}.${hint}`);
+  }
+  console.log(
+    `${rule.title}\n\nWhy: ${rule.why}\nFix: ${rule.fix}\nSource: ${rule.source}`,
+  );
+  return 0;
+}
 
 export async function rulesDocsCommand(): Promise<number> {
   const { rules } = await loadRules();
