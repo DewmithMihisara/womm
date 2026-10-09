@@ -97,8 +97,16 @@ const packageJson: Parser = (text) => {
   const fromEngines = Object.entries(engines).flatMap(([tool, range]) =>
     typeof range === "string" ? wanted(tool, range) : [],
   );
+  const volta = (data.volta ?? {}) as Record<string, unknown>;
+  const fromVolta = Object.entries(volta).flatMap(([tool, version]) =>
+    tool !== "extends" && typeof version === "string" ? wanted(tool, version) : [],
+  );
   const manager = /^([a-z]+)@(\d[^+]*)/.exec(String(data.packageManager ?? ""));
-  return manager ? [...fromEngines, ...wanted(manager[1]!, manager[2])] : fromEngines;
+  return [
+    ...fromEngines,
+    ...fromVolta,
+    ...(manager ? wanted(manager[1]!, manager[2]) : []),
+  ];
 };
 
 /** Every file womm reads requirements from. */

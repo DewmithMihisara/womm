@@ -72,6 +72,16 @@ describe("holdTrial", () => {
     expect(charges.some((c) => c.verdict === "guilty")).toBe(false);
   });
 
+  it("reports contradicting requirements", () => {
+    const requirements = [
+      { tool: "ruby", range: "2.7.0", source: ".ruby-version" },
+      { tool: "ruby", range: ">=3", source: "Gemfile" },
+    ];
+    const charges = holdTrial(snap("1.0.0"), snap("1.0.0"), { ...none, requirements });
+    expect(charges[0]?.id).toBe("conflict.ruby");
+    expect(charges[0]?.evidence).toContain(".ruby-version asks for 2.7.0");
+  });
+
   it("lists missing env keys as suspicious", () => {
     const charges = holdTrial(snap("1.0.0"), snap("1.0.0"), {
       ...none,
