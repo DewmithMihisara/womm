@@ -8,6 +8,7 @@ import { missingEnvKeys } from "../project/envkeys.js";
 import { lockfileConflicts } from "../project/lockfiles.js";
 import { readRequirements } from "../project/read.js";
 import { renderTrial } from "../report/court.js";
+import { renderHtml } from "../report/html.js";
 import { renderMarkdown } from "../report/markdown.js";
 import { loadRules } from "../rules/load.js";
 import type { Rule } from "../rules/types.js";
@@ -21,6 +22,7 @@ export interface TrialOptions {
   project: string;
   json?: boolean;
   markdown?: boolean;
+  html?: boolean;
   ignore?: string[];
   brief?: boolean;
   failOn?: FailOn;
@@ -29,6 +31,7 @@ export interface TrialOptions {
 
 function render(charges: Charge[], options: TrialOptions): string {
   if (options.json) return JSON.stringify(charges, null, 2);
+  if (options.html) return renderHtml(charges);
   return options.markdown ? renderMarkdown(charges) : renderTrial(charges);
 }
 
