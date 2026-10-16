@@ -40,6 +40,14 @@ describe("womm diff options", () => {
   });
 });
 
+describe("HTML output", () => {
+  it("prints a page", () => {
+    const { stdout } = womm("trial", "--against", "b.json", "--mine", "a.json", "--html");
+    expect(stdout).toContain("<!doctype html>");
+    expect(stdout).toContain("Node.js 18.0.0");
+  });
+});
+
 describe("output formats", () => {
   it("prints diff as JSON", () => {
     const [entry] = JSON.parse(womm("diff", "a.json", "b.json", "--json").stdout);
