@@ -52,10 +52,21 @@ womm trial --against works.womm.json
 | `womm diff <a> <b>` | Compares two snapshots |
 | `womm trial --against <file>` | Compares, checks the project, and gives verdicts |
 | `womm certify` | Issues a joke certificate if project requirements are met |
+| `womm explain <rule>` | Explains one known cause |
 | `womm rules list` | Lists known causes |
 | `womm rules check [dir]` | Validates rule files |
 
-Add `--json` or `--markdown` to `womm trial` for other formats.
+Useful options for `womm trial`:
+
+| Option | What it does |
+| --- | --- |
+| `--json`, `--markdown`, `--html` | Other output formats |
+| `--brief` | Hides acquitted charges |
+| `--ignore <ids>` | Leaves out specific charges |
+| `--fail-on <level>` | Chooses when to exit with 1: `guilty`, `suspicious` or `never` |
+| `--rules <dir>` | Adds your team's rules |
+
+Teams can share settings in a [`.womm.yaml`](docs/team-settings.md) file.
 
 ## How verdicts work
 
@@ -65,7 +76,7 @@ Add `--json` or `--markdown` to `womm trial` for other formats.
 | **Suspicious** | A meaningful difference or a known issue that may affect you, such as a major version gap or a missing environment variable |
 | **Acquitted** | Differs, but is unlikely to matter |
 
-These are informed guesses with the evidence shown, not proof. `womm trial` exits with 1 if anything is guilty.
+These are informed guesses with the evidence shown, not proof. `womm` compares setups and doesn't run your code. See [How verdicts are reached](docs/verdicts.md).
 
 ## Privacy
 
