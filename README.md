@@ -105,7 +105,10 @@ Always review a snapshot before sharing it.
 
 The easiest first contribution is one [rule](docs/writing-rules.md) or one [tool](docs/adding-tools.md). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-All rules are listed in [docs/rules.md](docs/rules.md).
+- [All known causes](docs/rules.md)
+- [How it's built](docs/architecture.md)
+- [Good first issues](docs/good-first-issues.md)
+- [FAQ](docs/faq.md)
 
 ## License
 
