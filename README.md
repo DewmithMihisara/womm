@@ -78,6 +78,19 @@ Teams can share settings in a [`.womm.yaml`](docs/team-settings.md) file.
 
 These are informed guesses with the evidence shown, not proof. `womm` compares setups and doesn't run your code. See [How verdicts are reached](docs/verdicts.md).
 
+## In CI
+
+Save a snapshot from a machine where the project works, commit it, then compare CI against it:
+
+```yaml
+- uses: actions/checkout@v4
+- uses: OWNER/womm@main # Replace OWNER with this repository's owner
+  with:
+    against: .womm/works.womm.json
+```
+
+The report appears in the job summary. Set `fail-on-guilty: "false"` to report without failing.
+
 ## Privacy
 
 Snapshots are meant to be shared, so they record as little as possible. See [docs/privacy.md](docs/privacy.md).
