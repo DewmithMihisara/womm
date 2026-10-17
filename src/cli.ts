@@ -38,10 +38,12 @@ Options:
   --project <dir>           Project folder to read (default: current folder)
   --json                    Print results as JSON
   --markdown                Print results as Markdown
+  --html                    Print results as an HTML page
   --ignore <ids>            Comma-separated charges to leave out of a trial
   --brief                   Hide acquitted charges
   --fail-on <level>         Exit 1 on guilty (default), suspicious or never
   --rules <dir>             Also use rules from this folder
+  --badge <file>            In certify, also save a README badge
   -h, --help                Show this help
   -v, --version             Show the version
 `;
@@ -60,6 +62,8 @@ export async function main(argv: string[]): Promise<number> {
       "exit-code": { type: "boolean" },
       json: { type: "boolean" },
       markdown: { type: "boolean" },
+      html: { type: "boolean" },
+      badge: { type: "string" },
       ignore: { type: "string" },
       brief: { type: "boolean" },
       "fail-on": { type: "string" },
@@ -89,7 +93,11 @@ export async function main(argv: string[]): Promise<number> {
     return explainCommand(id);
   }
   if (command === "certify") {
-    return certifyCommand({ project: values.project ?? ".", output: values.output });
+    return certifyCommand({
+      project: values.project ?? ".",
+      output: values.output,
+      badge: values.badge,
+    });
   }
   if (command === "rules") {
     const [action, directory] = rest;
@@ -114,6 +122,7 @@ export async function main(argv: string[]): Promise<number> {
       project: values.project ?? ".",
       json: values.json,
       markdown: values.markdown,
+      html: values.html,
       ignore: values.ignore?.split(","),
       brief: values.brief,
     });

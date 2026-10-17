@@ -31,6 +31,25 @@ describe("womm certify", () => {
     expect(readFileSync(join(dir, "cert.svg"), "utf8")).toContain("<svg");
   });
 
+  it("saves a badge on request, containing fixed text only", () => {
+    const name = project("badged", {
+      "package.json": JSON.stringify({ engines: { node: ">=1" } }),
+    });
+    const result = womm(
+      "certify",
+      "--project",
+      name,
+      "-o",
+      "badged.svg",
+      "--badge",
+      "badge.svg",
+    );
+    expect(result.status).toBe(0);
+    const badge = readFileSync(join(dir, "badge.svg"), "utf8");
+    expect(badge).toContain("my machine");
+    expect(badge).not.toContain("badged");
+  });
+
   it("denies a certificate and explains why", () => {
     const name = project("old", {
       "package.json": JSON.stringify({ engines: { node: "<1" } }),
