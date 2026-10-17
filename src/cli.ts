@@ -43,6 +43,7 @@ Options:
   --brief                   Hide acquitted charges
   --fail-on <level>         Exit 1 on guilty (default), suspicious or never
   --rules <dir>             Also use rules from this folder
+  --badge <file>            In certify, also save a README badge
   -h, --help                Show this help
   -v, --version             Show the version
 `;
@@ -62,6 +63,7 @@ export async function main(argv: string[]): Promise<number> {
       json: { type: "boolean" },
       markdown: { type: "boolean" },
       html: { type: "boolean" },
+      badge: { type: "string" },
       ignore: { type: "string" },
       brief: { type: "boolean" },
       "fail-on": { type: "string" },
@@ -91,7 +93,11 @@ export async function main(argv: string[]): Promise<number> {
     return explainCommand(id);
   }
   if (command === "certify") {
-    return certifyCommand({ project: values.project ?? ".", output: values.output });
+    return certifyCommand({
+      project: values.project ?? ".",
+      output: values.output,
+      badge: values.badge,
+    });
   }
   if (command === "rules") {
     const [action, directory] = rest;

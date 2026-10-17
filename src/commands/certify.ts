@@ -1,5 +1,6 @@
 import { writeFile } from "node:fs/promises";
 import { basename, resolve } from "node:path";
+import { renderBadge } from "../certificate/badge.js";
 import { renderCertificate } from "../certificate/svg.js";
 import { certify } from "../certify.js";
 import { missingEnvKeys } from "../project/envkeys.js";
@@ -9,6 +10,7 @@ import { takeSnapshot } from "../snapshot.js";
 export interface CertifyOptions {
   project: string;
   output?: string;
+  badge?: string;
 }
 
 /** Exits 1 when uncertified, so it can guard a setup script. */
@@ -37,5 +39,9 @@ export async function certifyCommand(options: CertifyOptions): Promise<number> {
   const today = new Date().toISOString().slice(0, 10);
   await writeFile(output, renderCertificate(name, result.results, today));
   console.log(`Certified. It works on your machine. Certificate saved to ${output}.`);
+  if (options.badge) {
+    await writeFile(options.badge, renderBadge());
+    console.log(`Badge saved to ${options.badge}.`);
+  }
   return 0;
 }
