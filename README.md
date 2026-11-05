@@ -52,10 +52,21 @@ womm trial --against works.womm.json
 | `womm diff <a> <b>` | Compares two snapshots |
 | `womm trial --against <file>` | Compares, checks the project, and gives verdicts |
 | `womm certify` | Issues a joke certificate if project requirements are met |
+| `womm explain <rule>` | Explains one known cause |
 | `womm rules list` | Lists known causes |
 | `womm rules check [dir]` | Validates rule files |
 
-Add `--json` or `--markdown` to `womm trial` for other formats.
+Useful options for `womm trial`:
+
+| Option | What it does |
+| --- | --- |
+| `--json`, `--markdown`, `--html` | Other output formats |
+| `--brief` | Hides acquitted charges |
+| `--ignore <ids>` | Leaves out specific charges |
+| `--fail-on <level>` | Chooses when to exit with 1: `guilty`, `suspicious` or `never` |
+| `--rules <dir>` | Adds your team's rules |
+
+Teams can share settings in a [`.womm.yaml`](docs/team-settings.md) file.
 
 ## How verdicts work
 
@@ -65,7 +76,20 @@ Add `--json` or `--markdown` to `womm trial` for other formats.
 | **Suspicious** | A meaningful difference or a known issue that may affect you, such as a major version gap or a missing environment variable |
 | **Acquitted** | Differs, but is unlikely to matter |
 
-These are informed guesses with the evidence shown, not proof. `womm trial` exits with 1 if anything is guilty.
+These are informed guesses with the evidence shown, not proof. `womm` compares setups and doesn't run your code. See [How verdicts are reached](docs/verdicts.md).
+
+## In CI
+
+Save a snapshot from a machine where the project works, commit it, then compare CI against it:
+
+```yaml
+- uses: actions/checkout@v4
+- uses: OWNER/womm@main # Replace OWNER with this repository's owner
+  with:
+    against: .womm/works.womm.json
+```
+
+The report appears in the job summary. Set `fail-on-guilty: "false"` to report without failing.
 
 ## Privacy
 
@@ -81,7 +105,10 @@ Always review a snapshot before sharing it.
 
 The easiest first contribution is one [rule](docs/writing-rules.md) or one [tool](docs/adding-tools.md). See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-All rules are listed in [docs/rules.md](docs/rules.md).
+- [All known causes](docs/rules.md)
+- [How it's built](docs/architecture.md)
+- [Good first issues](docs/good-first-issues.md)
+- [FAQ](docs/faq.md)
 
 ## License
 
