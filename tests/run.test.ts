@@ -31,6 +31,10 @@ describe("runCommand", () => {
 });
 
 describe("windowsShimCall", () => {
+  it.each(["date", "DATE", "time", "type", "del"])("refuses built-in %s", (name) => {
+    expect(windowsShimCall(name, ["--version"])).toBeNull();
+  });
+
   it("builds a cmd.exe call for plain words", () => {
     expect(windowsShimCall("npm", ["--version"])).toEqual([
       "cmd.exe",
