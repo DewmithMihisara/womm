@@ -19,7 +19,7 @@ SUSPICIOUS Python 3.12 removed distutils
 ACQUITTED  Git 2.47.0
            Theirs: 2.52.0
 
-The court recommends dealing with the guilty parties first.
+1 guilty, 1 suspicious, 1 acquitted. The court recommends dealing with the guilty parties first.
 ```
 
 ## Install
