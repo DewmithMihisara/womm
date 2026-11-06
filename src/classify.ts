@@ -28,6 +28,8 @@ export function isSuspicious(difference: Difference): boolean {
   // Theirs works with a tool yours lacks. The reverse is much less telling.
   if (difference.kind === "only-b") return true;
   if (difference.kind === "only-a") return false;
+  // These contain numbers but aren't versions, so "major gaps" mean nothing.
+  if (difference.id.startsWith("hw.") || difference.id === "os.release") return false;
   const a = semver.coerce(difference.a);
   const b = semver.coerce(difference.b);
   if (!a || !b) return false;

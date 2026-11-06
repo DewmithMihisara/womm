@@ -12,6 +12,11 @@ describe("runCommand", () => {
     expect(out).toBe("err");
   });
 
+  it("gives tools an immediate end of input", async () => {
+    const script = "process.stdin.resume();process.stdin.on('end',()=>console.log('ended'))";
+    expect(await runCommand(process.execPath, ["-e", script])).toBe("ended");
+  });
+
   it("returns null for a missing tool", async () => {
     expect(await runCommand("womm-no-such-tool", [])).toBeNull();
   });
@@ -31,6 +36,10 @@ describe("runCommand", () => {
 });
 
 describe("windowsShimCall", () => {
+  it.each(["date", "DATE", "time", "type", "del"])("refuses built-in %s", (name) => {
+    expect(windowsShimCall(name, ["--version"])).toBeNull();
+  });
+
   it("builds a cmd.exe call for plain words", () => {
     expect(windowsShimCall("npm", ["--version"])).toEqual([
       "cmd.exe",

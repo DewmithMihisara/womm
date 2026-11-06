@@ -23,6 +23,12 @@ describe("isSuspicious", () => {
     expect(isSuspicious(diff("docker", null, "27.0.0", "only-b"))).toBe(true);
   });
 
+  it("clears hardware and OS release differences", () => {
+    expect(isSuspicious(diff("hw.cores", "8", "16", "changed"))).toBe(false);
+    expect(isSuspicious(diff("hw.memory", "16", "32", "changed"))).toBe(false);
+    expect(isSuspicious(diff("os.release", "10.0.26200", "6.8.0", "changed"))).toBe(false);
+  });
+
   it("clears a tool only you have", () => {
     expect(isSuspicious(diff("docker", "27.0.0", null, "only-a"))).toBe(false);
   });

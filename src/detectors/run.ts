@@ -9,6 +9,12 @@ const TIMEOUT_MS = 15000;
 const SAFE_WORD = /^[\w.\-=/]+$/;
 
 /**
+ * Commands built into cmd.exe that share a name with a tool we check. On Windows
+ * `date` isn't GNU date: it reads or sets the system clock. Never call those.
+ */
+const CMD_BUILTINS = new Set(["date", "time", "type", "dir", "del", "copy", "move"]);
+
+/**
  * Windows looks in the current folder before PATH, so a hostile repository could
  * supply its own npm.cmd or git.exe and have it executed. Commands therefore run
  * from a neutral folder, with current-folder lookup switched off in cmd.exe.
@@ -25,7 +31,7 @@ export function windowsSafeOptions(
 function exec(command: string, args: string[]): Promise<string | null> {
   const safety = process.platform === "win32" ? windowsSafeOptions() : {};
   return new Promise((resolve) => {
-    execFile(
+    const child = execFile(
       command,
       args,
       { timeout: TIMEOUT_MS, windowsHide: true, encoding: "utf8", ...safety },
@@ -35,6 +41,7 @@ function exec(command: string, args: string[]): Promise<string | null> {
         resolve(stdout.trim() || stderr.trim() || null);
       },
     );
+    child.stdin?.end();
   });
 }
 
@@ -43,6 +50,7 @@ export function windowsShimCall(
   command: string,
   args: string[],
 ): [string, string[]] | null {
+  if (CMD_BUILTINS.has(command.toLowerCase())) return null;
   if (![command, ...args].every((word) => SAFE_WORD.test(word))) return null;
   return ["cmd.exe", ["/d", "/s", "/c", [command, ...args].join(" ")]];
 }
