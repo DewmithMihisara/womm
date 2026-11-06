@@ -31,7 +31,7 @@ export function windowsSafeOptions(
 function exec(command: string, args: string[]): Promise<string | null> {
   const safety = process.platform === "win32" ? windowsSafeOptions() : {};
   return new Promise((resolve) => {
-    execFile(
+    const child = execFile(
       command,
       args,
       { timeout: TIMEOUT_MS, windowsHide: true, encoding: "utf8", ...safety },
@@ -41,6 +41,7 @@ function exec(command: string, args: string[]): Promise<string | null> {
         resolve(stdout.trim() || stderr.trim() || null);
       },
     );
+    child.stdin?.end();
   });
 }
 
