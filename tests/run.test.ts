@@ -12,6 +12,11 @@ describe("runCommand", () => {
     expect(out).toBe("err");
   });
 
+  it("gives tools an immediate end of input", async () => {
+    const script = "process.stdin.resume();process.stdin.on('end',()=>console.log('ended'))";
+    expect(await runCommand(process.execPath, ["-e", script])).toBe("ended");
+  });
+
   it("returns null for a missing tool", async () => {
     expect(await runCommand("womm-no-such-tool", [])).toBeNull();
   });
